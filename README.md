@@ -23,4 +23,4 @@ EcontrArte es una plataforma en línea dedicada a la exploración, apreciación 
 EcontrArte es un destino en línea para descubrir, apreciar y poseer arte de todo tipo, uniendo a la comunidad artística y a los amantes del arte en una experiencia enriquecedora.
 
 
-*<img width="323" alt="Captura de pantalla 2023-09-08 a la(s) 12 49 18" src="https://github.com/ikerismak/Encontrarte-e-commerce/assets/70924158/78e6fd1f-8d96-44ea-8c98-48a3e659d5c4">
+*<img width="1000" alt="Captura de pantalla 2023-09-08 a la(s) 12 49 18" src="https://github.com/ikerismak/Encontrarte-e-commerce/assets/70924158/78e6fd1f-8d96-44ea-8c98-48a3e659d5c4">
