@@ -2,7 +2,8 @@
 EcontrArte es una plataforma en línea dedicada a la exploración, apreciación y adquisición de obras de arte únicas y diversas. Nuestra misión es conectar a amantes del arte, coleccionistas y artistas de todo el mundo en un espacio virtual donde la creatividad florece y la belleza se encuentra en cada rincón.
 
 
-**Nombre del eCommerce:** EcontrArte
+**Nombre del eCommerce:
+* EcontrArte
 
 **Descripción:**
 EcontrArte es una plataforma en línea dedicada a la exploración, apreciación y adquisición de obras de arte únicas y diversas. Nuestra misión es conectar a amantes del arte, coleccionistas y artistas de todo el mundo en un espacio virtual donde la creatividad florece y la belleza se encuentra en cada rincón.
@@ -20,3 +21,6 @@ EcontrArte es una plataforma en línea dedicada a la exploración, apreciación 
 5. **Eventos y Subastas:** EcontrArte organiza eventos y subastas periódicas para dar a los usuarios la oportunidad de adquirir obras exclusivas y participar en emocionantes oportunidades de compra.
 
 EcontrArte es un destino en línea para descubrir, apreciar y poseer arte de todo tipo, uniendo a la comunidad artística y a los amantes del arte en una experiencia enriquecedora.
+
+
+*<img width="323" alt="Captura de pantalla 2023-09-08 a la(s) 12 49 18" src="https://github.com/ikerismak/Encontrarte-e-commerce/assets/70924158/78e6fd1f-8d96-44ea-8c98-48a3e659d5c4">
