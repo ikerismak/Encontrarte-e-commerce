@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/main-page.css">
+
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header class="bg-ligth text-black text-center py-1">
+      <h3 class="display-4">Mi Landing Page</h3>
+      <p class="lead">Bienvenido a nuestra página web</p>
+    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mi Sitio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form class="form-inline my-2 my-lg-0 d-lg-none order-lg-last">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Buscar"
+          aria-label="Buscar"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Buscar
+        </button>
+      </form>
+    </nav>
+
+    <!-- Main Gallery-->
+    <section id="caracteristicas" class="section py-4">
+      <div class="container-fluid p-0 px-1 py-0">
+        <div class="row">
+          <!-- Columna 1 -->
+          <div class="col-md-1"></div>
+
+          <div class="col-md-4">
+            <div class="row h-100">
+              <div class="col-12 img-container-main">
+                <img
+                  src="./assets/main-gallery/image-main-grid-05.jpg"
+                  alt="Imagen 3a"
+                  class="img-fluid image-gallery-05"
+
+                />
+              </div>
+              <div class="col-12  pb-5 img-container-main-02">
+                <img
+                  src="./assets//main-gallery/image-main-grid-06.jpg"
+                  alt="Imagen 3b"
+                  class="img-fluid image-gallery-06"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Columna 2 -->
+          <div class="col-md-2">
+            <div class="row h-100">
+              <div
+                class="col-12 img-container-main-02 position-relative column-three"
+              >
+                <img
+                  src="./assets/main-gallery/image-main-grid-02.jpg "
+                  alt="Imagen 2a"
+                  class="img-fluid h-100 image-gallery-07"
+
+                />
+
+                <div class="text-container-two">
+                  <p>Texto encima de la imagen</p>
+                </div>
+              </div>
+              <div
+                class="col-12  m-0 pb-5 img-container-main-02 position-relative column-two"
+              >
+                <img
+                  src="./assets/main-gallery/image-main-grid-03.jpg"
+                  alt="Imagen 2b"
+                  class="img-fluid h-100 image-gallery-03"
+                />
+
+                <div class="text-container-two">
+                  <p>Texto encima de la imagen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Columna 3 -->
+
+          <div class="col-md-4 m-0 p-0  pb-5">
+            <div class="col-12 p-0 m-0 h-100 column1">
+              <img
+                src="./assets/main-gallery/image-main-grid-01.jpg"
+                alt="Imagen 1"
+                class="img-fluid h-100 image-gallery-01"
+              />
+              <div class="text-container">
+                <p>Texto encima de la imagen</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <button class="btn-bajar">
+            <span class="material-symbols-outlined"> expand_more </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner 1 -->
+
+    <div class="container-fluid banner">
+      <h1 class="display-4">¡Bienvenido a nuestro sitio!</h1>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
+    </div>
+
+    <!-- seccion 2 -->
+
+    <div class="container-fluid banner-title">
+      <h1 class="display-4">#Artist of the month</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, iste.
+      </p>
+    </div>
+
+    <section id="caracteristicas" class="section py-4 seccion-main-artist">
+      <div class="container-fluid px-1 py-0">
+        <div class="row">
+          <!-- Columna 1 -->
+
+          <div class="col-md-1"></div>
+          <!-- Columna 2 -->
+
+          <div class="col-md-5 m-0 p-2 pb-5">
+            <div class="col-12 p-0 m-0 h-100 column1">
+              <img
+                src="./assets/main-gallery/artist.jpg"
+                alt="Imagen 1"
+                class="img-fluid h-100 image-gallery-01"
+
+              />
+              <div class="text-container">
+                <p>Texto encima de la imagen</p>
+              </div>
+            </div>
+          </div>
+          <!-- Columna 4 -->
+
+          <div class="col-md-5 p-4">
+            <div class="row h-100">
+              <div class="col-12 img-container-main">
+                <img
+                  src="./assets/main-gallery/image-main-grid-05.jpg"
+                  alt="Imagen 3a"
+                  class="img-fluid image-gallery-05"
+
+                />
+              </div>
+              <div class="col-12 img-container-main-02">
+                <img
+                  src="./assets/main-gallery/image-main-grid-06.jpg"
+                  alt="Imagen 3b"
+                  class="img-fluid image-gallery-06"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna 5 -->
+
+          <div class="col-md-1"></div>
+          <button class="btn-bajar">
+            <span class="material-symbols-outlined"> expand_more </span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Acerca de nosotros -->
+
+    <!-- Banner 3 -->
+
+    <section id="contacto" class="section section-images-categories">
+      <div class="container-fluid banner-title-categories">
+        <h1 class="display-4">#Artist of the month</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, iste.
+        </p>
+      </div>
+      <div class="container ">
+        <div class="row">
+          <!-- Primera columna -->
+          <div class=" col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="./assets/categories/grafitti.jpg"
+                class="card-img-top"
+                alt="Imagen 2"
+              />
+              <div class="card-body">
+                <button class="btn btn-dark btn-block toggle-description">
+                  <span class="toggle-icon"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </button>
+                <p class="card-text mt-3 description" style="display: none">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Consequatur sint ullam doloremque tempore, expedita quo
+                  reprehenderit velit placeat voluptatem, quod aspernatur earum
+                  animi vel tempora odio consequuntur alias eaque rem!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Segunda columna -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="./assets/categories/seccion_drawing.jpg"
+                class="card-img-top"
+                alt="Imagen 2"
+              />
+              <div class="card-body">
+                <button class="btn btn-dark btn-block toggle-description">
+                  <span class="toggle-icon"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </button>
+                <p class="card-text mt-3 description" style="display: none">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Consequatur sint ullam doloremque tempore, expedita quo
+                  reprehenderit velit placeat voluptatem, quod aspernatur earum
+                  animi vel tempora odio consequuntur alias eaque rem!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tercera columna -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="./assets/categories/photography.jpg"
+                class="card-img-top"
+                alt="Imagen 2"
+              />
+              <div class="card-body">
+                <button class="btn btn-dark btn-block toggle-description">
+                  <span class="toggle-icon"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </button>
+                <p class="card-text mt-3 description" style="display: none">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Consequatur sint ullam doloremque tempore, expedita quo
+                  reprehenderit velit placeat voluptatem, quod aspernatur earum
+                  animi vel tempora odio consequuntur alias eaque rem!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Cuarta columna -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <img
+                 src="./assets/categories/seccion_aqua.jpg"
+                class="card-img-top"
+                alt="Imagen 2"
+              />
+              <div class="card-body">
+                <button class="btn btn-dark btn-block toggle-description">
+                  <span class="toggle-icon"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </button>
+                <p class="card-text mt-3 description" style="display: none">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Consequatur sint ullam doloremque tempore, expedita quo
+                  reprehenderit velit placeat voluptatem, quod aspernatur earum
+                  animi vel tempora odio consequuntur alias eaque rem!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid banner-paper">
+      <h1 class="paper-title-section">#Best Sales</h1>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-1 team-member">
+          </div>
+
+
+          <div class="col-md-2 team-member">
+            <img src="./assets/profile-images/perfil-1.jpg" alt="Integrante 1">
+            <h5>Nombre Integrante 1</h5>
+            <p>Cargo Integrante 1</p>
+          </div>
+
+          <div class="col-md-2 team-member">
+            <img src="./assets/profile-images/perfil-2.jpg" alt="Integrante 2">
+            <h5>Nombre Integrante 2</h5>
+            <p>Cargo Integrante 2</p>
+          </div>
+
+          <div class="col-md-2 team-member">
+            <img src="./assets/profile-images/perfil-3.jpg" alt="Integrante 3">
+            <h5>Nombre Integrante 3</h5>
+            <p>Cargo Integrante 3</p>
+          </div>
+
+          <div class="col-md-2 team-member">
+            <img src="./assets/profile-images/perfil-4.jpg" alt="Integrante 4">
+            <h5>Nombre Integrante 4</h5>
+            <p>Cargo Integrante 4</p>
+          </div>
+
+          <div class="col-md-2 team-member">
+            <img src="./assets/profile-images/perfil-5.jpg" alt="Integrante 5">
+            <h5>Nombre Integrante 5</h5>
+            <p>Cargo Integrante 5</p>
+          </div>
+        </div>
+
+
+        <div class="col-md-1 team-member">
+        </div>
+        <div class="row contact-info">
+          <div class="col-md-6 offset-md-3">
+            <p>Email: info@example.com</p>
+            <p>Teléfono: (123) 456-7890</p>
+          </div>
+        </div>
+        <div class="row brand-info">
+          <div class="col-md-6 ">
+            <p class="brand">&copy; 2023 Mi Marca Registrada. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Script para mostrar/ocultar la descripción cuando se hace clic en el botón
+      const buttons = document.querySelectorAll(".toggle-description");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const card = button.closest(".card");
+          const description = card.querySelector(".description");
+          const icon = card.querySelector(".toggle-icon i");
+          card.classList.toggle("expanded");
+
+          console.log(card.classList);
+          if (card.classList.contains("expanded")) {
+            icon.classList.remove("fa-chevron-down");
+            icon.classList.add("fa-chevron-up");
+            description.style.display = "block";
+          } else {
+            icon.classList.remove("fa-chevron-up");
+            icon.classList.add("fa-chevron-down");
+            description.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
