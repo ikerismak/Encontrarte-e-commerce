@@ -1,0 +1,48 @@
+
+#contenedorTituloAcercaDeNosotros{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorDelContenidoAcercaDeNosotros{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* align-content: center; */
+}
+.contenidoAcercaDeNosotros{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   width: fit-content;
+   /* border: 3px solid #D0417E; */
+   border-radius: 13px;
+    /* background-color: #D9D9D9; */
+}
+.contenedorRedDeContacto{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.contenedorImgIntegrante{
+display: flex;
+align-items: center;
+justify-content:center;
+/* background-color: #D9D9D9; */
+/* border-bottom: solid 3px #D0417E; */
+height: 90px;
+width: 90px;
+
+}
+.contenedorImgIntegrante img{
+    /* background-color: #D9D9D9; */
+    object-fit: fill;
+    height: 100%;
+    width: 100%;    
+    }
+    #contenedorTextopresentacionNombre{
+        border-bottom: 3px solid #D0417E;
+    }
+    
+
+
