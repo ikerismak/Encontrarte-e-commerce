@@ -1,0 +1,262 @@
+#columnder{
+    display: flex;
+    
+   
+}
+/*descripcion de la obra en general*/
+#descrobrgrl{
+    max-width: 500px;
+    text-align: justify;
+    margin-top: 50px;
+    
+    
+}
+/*descripcion de la obra*/
+#descripciobr{
+    margin-top: 150px;
+    
+   
+    
+}
+
+#caracobr{
+    margin-top: 100px;
+    background-color: #c71c5d;
+
+}
+    
+
+    
+
+/*imagen principal*/
+#imprpal{
+    width: 500px;
+    height:401px;
+    
+}
+#imprpal1{
+  width: 500px;
+  height: 400px;
+  
+}
+#imprpal2{
+  width: 500px;
+  height: 400px;
+  
+}
+.linea-vertical {
+    border-left: 1px solid #000; /* Color de la línea y grosor */
+            height: 700px; /* Altura de la línea */
+            margin: 20px;
+}
+/*productos relacionados*/
+#prodrel{
+    margin-left: 20px;
+    display: flex;
+}
+.linea-horizontal{
+    border-bottom: 1px solid black; /* Estilo de la línea horizontal */
+    width: 1100px;
+    text-align: center;
+    height: 15px;
+    
+}
+.carousel-inner{
+    text-align: center;
+}
+.image-with-text {
+
+    font-weight: bold;
+    font-size:medium;
+    margin-top: 50px;
+    display: inline-block;
+    margin: 50px; /* Espacio entre las imágenes y el texto */
+    vertical-align: top; /* Alineación superior para que el texto esté alineado con la parte superior de la imagen */
+  }
+  .image-with-text img{
+
+    border-radius: 12px;
+  }
+
+#carouselExample{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#carouselExample img{
+    margin: 5%;
+}
+.carousel-control-prev{
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 150px;
+    border-radius: 20px;
+    
+    
+}
+.carousel-control-next{
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 150px;
+    border-radius: 20px;
+    
+}
+
+#cuadrocompras{
+    padding: 40px;
+    background-color: rgb(241, 240, 240);
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#botonescar{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: -50px; /* Espacio superior para separar los círculos del carrusel */
+  }
+  #botonescar button {
+    width: 20px; /* Ancho del círculo */
+    height: 20px; /* Altura del círculo */
+    border-radius: 50%; /* Borde circular */
+    background-color: #c71c5d; /* Color de fondo de los círculos inactivos */
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Espaciado interno */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    z-index: 999;
+  }
+
+#ocultarboton1{
+    opacity: 0;
+}
+#ocultarboton2{
+    opacity: 0;
+}
+.btn-outline-secondary {
+    background-color: rgb(240,240,240);
+    color: rgb(20, 20, 20); /* Cambia el color del texto para que sea visible en el fondo */
+    border: 2px solid rgb(100, 100, 100);
+   
+    padding: 5px;
+    
+}
+.btn-outline-secondary1 {
+    background-color: rgb(240, 240, 240);
+    color: rgb(148,42,87); /* Cambia el color del texto para que sea visible en el fondo */
+    border: 2px solid rgb(148,42,87);
+    font-weight: bold;
+ 
+    
+}
+.btn:hover {
+    background-color: rgb(204, 72, 127); /* Color de fondo cuando el mouse pasa sobre el botón */
+}
+#btncompra{
+    margin-bottom: 10px;
+}
+
+  .circular-button {
+    width: 20px; /* Ancho del botón */
+    height: 20px; /* Altura del botón */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    background-color: #ffffff; /* Color de fondo predeterminado */
+    color: white; /* Color del texto del botón */
+    border: 2px solid rgb(72, 73, 72); /* Elimina el borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: 2px; /* Elimina el contorno predeterminado */
+    margin-right: 30px;
+  }
+  .circular-button.selected {
+    background-color: rgb(204, 72, 127);
+    
+  }
+  .botonselectr{
+    display: flex;
+    align-items: center;
+    
+  }
+  /* Estilo para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  /* Estilo para el contenido de la ventana modal */
+  .modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    
+  }
+  
+  /* Estilo para el botón de cierre (X) */
+  .cerrar {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para la miniatura de la imagen */
+  .imagen-miniatura {
+    max-width: 100px;
+    cursor: pointer;
+  }
+
+#btncantidad{
+  margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+#quantity {
+    font-size: 24px;
+    margin: 0 10px;
+}
+#subtractButton {
+  font-size: 24px;
+  border-radius: 20px;
+  padding-top: 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#addButton {
+  font-size: 24px;
+  border-radius: 20px;
+  padding-top: 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*pantala que muestra objetos a comprar*/
+#cantpant{
+  font-size: smaller;
+  padding: 5px;
+  background-color: #ffffff;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid black; /* Estilo de la línea*/
+ }
+
+ footer{
+  text-align: center;
+  background-color: #000;
+  color: white;
+  margin-top: 59px;
+  height: 100px;
+
+ }
+ 
+
