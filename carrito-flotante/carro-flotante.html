@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/carro-flotante.CSS">
+</head>
+
+
+<body>
+
+    <div class="container  carrito-flotante-contenedor carrito">
+        <header>
+            <hr>
+            <h2 class="titulosRosa centrado">MI CARRITO</h2>
+            <h5 class="centrado obras">"3" OBRAS EN MI CARRITO</h5>
+        </header>
+        <!--Fila 1-->
+        <hr>
+        <div class="row" class="col-sm-12 col-md-4 col-lg-4">
+           <!--Columna 1    Imagen de producto-->
+           <div class="col-sm-3 col-md-4 col-lg-4 imagen-producto-carrito-flotante"> 
+               <img src="./assets/img/Imagen-muestra-producto-1.jpg" class="card-img-top" alt="imagen 1" >
+           </div>
+           <!--Columna 2-->
+           <div class="col-sm-7 col-md-8 col-lg-8 ">
+               <div class="card-body">
+                    <!--Columna 2.1-->
+                    <div class="col cerrar">
+                        <!--Columna 2.1.1   Nombre del producto-->
+                        <div class="col-sm-11 col-md-9 col-lg-11">
+                            <h5 class="card-title">Nombre de la obra</h5>
+                        </div>
+                        <!--Columna 2.1.2   Boton eliminar producto-->
+                        <div class="col-sm-1 col-md-3 col-lg-1">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                   <h6 class="nombre-artista">Nombre del artista</h6>
+                   <br>
+                   <!--Tamano del producto-->
+                    <p class="centrado tamano-obra">Tamaño x Tamaño</p> 
+                    <br>
+                    <!--Columna 2.2-->
+                    <div class="row">
+                        <!--Columna 2.2.1   contador de piezas-->
+                        <div class="col-5">
+                            <div class="row contador-piezas">
+                                <!--Columna 2.2.1.1-->
+                                <div class="col-3">
+                                    <a class="controlCantidad">-</a>
+                                </div>
+                                <!--Columna 2.2.1.2-->
+                                <div class="col-3">
+                                    <p style="text-decoration: underline;">1</p>
+                                </div>
+                                <!--Columna 2.2.1.3-->
+                                <div class="col-3">
+                                    <a class="controlCantidad">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Columna 2.2.2   Precio de la pieza-->
+                        <div class="col-7" >
+                            <p class="precio"> $ 1,000.00</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--Fila 2-->
+       <hr>
+        <div class="row" class="col-sm-12 col-md-4 col-lg-4">
+           <!--Columna 1    Imagen de producto-->
+           <div class="col-sm-3 col-md-4 col-lg-4 imagen-producto-carrito-flotante"> 
+               <img src="./assets/img/Imagen-muestra-producto-2.jpg" class="card-img-top" alt="imagen 1" >
+           </div>
+           <!--Columna 2-->
+           <div class="col-sm-7 col-md-8 col-lg-8 ">
+               <div class="card-body">
+                    <!--Columna 2.1-->
+                    <div class="col cerrar">
+                        <!--Columna 2.1.1   Nombre del producto-->
+                        <div class="col-sm-11 col-md-9 col-lg-11">
+                            <h5 class="card-title">Nombre de la obra</h5>
+                        </div>
+                        <!--Columna 2.1.2   Boton eliminar producto-->
+                        <div class="col-sm-1 col-md-3 col-lg-1">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                   <h6 class="nombre-artista">Nombre del artista</h6>
+                   <br>
+                   <!--Tamano del producto-->
+                    <p class="centrado tamano-obra">Tamaño x Tamaño</p> 
+                    <br>
+                    <!--Columna 2.2-->
+                    <div class="row">
+                        <!--Columna 2.2.1   contador de piezas-->
+                        <div class="col-5">
+                            <div class="row contador-piezas">
+                                <!--Columna 2.2.1.1-->
+                                <div class="col-3">
+                                    <a class="controlCantidad">-</a>
+                                </div>
+                                <!--Columna 2.2.1.2-->
+                                <div class="col-3">
+                                    <p style="text-decoration: underline;">1</p>
+                                </div>
+                                <!--Columna 2.2.1.3-->
+                                <div class="col-3">
+                                    <a class="controlCantidad">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Columna 2.2.2   Precio de la pieza-->
+                        <div class="col-7" >
+                            <p class="precio"> $ 1,000.00</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!--Fila 3-->
+      <hr>
+        <div class="row" class="col-sm-12 col-md-4 col-lg-4">
+           <!--Columna 1    Imagen de producto-->
+           <div class="col-sm-3 col-md-4 col-lg-4 imagen-producto-carrito-flotante"> 
+               <img src="./assets/img/Imagen-muestra-producto-3.jpg" class="card-img-top" alt="imagen 1" >
+           </div>
+           <!--Columna 2-->
+           <div class="col-sm-7 col-md-8 col-lg-8 ">
+               <div class="card-body">
+                    <!--Columna 2.1-->
+                    <div class="col cerrar">
+                        <!--Columna 2.1.1   Nombre del producto-->
+                        <div class="col-sm-11 col-md-9 col-lg-11">
+                            <h5 class="card-title">Nombre del artista</h5>
+                        </div>
+                        <!--Columna 2.1.2   Boton eliminar producto-->
+                        <div class="col-sm-1 col-md-3 col-lg-1">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                   <h6 class="nombre-artista">Nombre del artista</h6>
+                   <br>
+                   <!--Tamano del producto-->
+                    <p class="centrado tamano-obra">Tamaño x Tamaño</p> 
+                    <br>
+                    <!--Columna 2.2-->
+                    <div class="row">
+                        <!--Columna 2.2.1   contador de piezas-->
+                        <div class="col-5">
+                            <div class="row contador-piezas">
+                                <!--Columna 2.2.1.1-->
+                                <div class="col-3">
+                                    <a class="controlCantidad">-</a>
+                                </div>
+                                <!--Columna 2.2.1.2-->
+                                <div class="col-3">
+                                    <p style="text-decoration: underline;">1</p>
+                                </div>
+                                <!--Columna 2.2.1.3-->
+                                <div class="col-3">
+                                    <a class="controlCantidad">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Columna 2.2.2   Precio de la pieza-->
+                        <div class="col-7" >
+                            <p class="precio"> $ 1,000.00</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <footer>
+        <hr>
+        <!--Fila-->
+        <div class="row">
+            <!--Columna 1 -->
+            <div class="col-5">
+                <button class="btn btn-light realizar-pago">Realizar pago</button>
+            </div>
+            <!--Columna 2 -->
+            <div class="col-3">
+                <p class="sub-total">Subtotal = </p>
+            </div>
+            <!--Columna 2 -->
+            <div class="col-4">
+                <p class="total-footer">$500,700.00</p>
+            </div>
+        </div>
+        
+        
+       </footer>
+   </div>
+      
+
+      
+
+      
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
