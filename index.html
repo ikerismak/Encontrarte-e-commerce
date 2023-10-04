@@ -19,7 +19,6 @@
     />
     <link rel="stylesheet" href="./src/styles/main-page.css">
     <link rel="stylesheet" href="./src/styles/styleBarraDeNavegacion.css">
-
     <!-- Styles and links register -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,11 +27,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/styles/registro.css" />
-
     <title>Landing Page</title>
   </head>
   <body>
-    <!-- Encabezado -->
     <!-- Navabar -->
     <header>
       <!-- pagina nav Bar de arriba abajo la voy a dividir por bloques(divs) que tendran divs adentro de cosas que se tengan que agrupar-->
@@ -235,8 +232,6 @@
       </div>
       <!-- <i class="bi bi-list"></i> -->
     </header>
-    <!-- Button trigger modal -->
-
     <!-- Modal -->
     <div
       class="modal fade"
@@ -483,17 +478,20 @@
       <div class="container-fluid p-0 px-1 py-0">
         <div class="row">
           <!-- Columna 1 -->
-          <div class="col-md-1"></div>
-
-          <div class="col-md-4">
+          <div class="col-md-1 empty-column-gallery"></div>
+           <!-- Columna 2 -->
+          <div class="col-md-4 column-gallery-one">
             <div class="row h-100">
-              <div class="col-12 img-container-main">
+              <div class="col-12 img-container-main-01">
                 <img
                   src="./src/assets/main-gallery/image-main-grid-05.jpg"
                   alt="Imagen 3a"
                   class="img-fluid image-gallery-05"
 
                 />
+                <div class="text-container-five">
+                  <p>Texto encima de la imagen</p>
+                </div>
               </div>
               <div class="col-12  pb-5 img-container-main-02">
                 <img
@@ -501,14 +499,18 @@
                   alt="Imagen 3b"
                   class="img-fluid image-gallery-06"
                 />
+
+                <div class="text-container-four">
+                  <p>Texto encima de la imagen</p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Columna 2 -->
+          <!-- Columna 3 -->
           <div class="col-md-2">
             <div class="row h-100">
               <div
-                class="col-12 img-container-main-02 position-relative column-three"
+                class="col-12 img-container-main-03 position-relative column-three"
               >
                 <img
                   src="./src/assets/main-gallery/image-main-grid-02.jpg "
@@ -517,12 +519,12 @@
 
                 />
 
-                <div class="text-container-two">
+                <div class="text-container-three">
                   <p>Texto encima de la imagen</p>
                 </div>
               </div>
               <div
-                class="col-12  m-0 pb-5 img-container-main-02 position-relative column-two"
+                class="col-12   img-container-main-04 position-relative column-two"
               >
                 <img
                   src="./src/assets/main-gallery/image-main-grid-03.jpg"
@@ -536,10 +538,9 @@
               </div>
             </div>
           </div>
-          <!-- Columna 3 -->
-
-          <div class="col-md-4 m-0 p-0  pb-5">
-            <div class="col-12 p-0 m-0 h-100 column1">
+          <!-- Columna 4 -->
+          <div class="col-md-4  img-container-main-05 ">
+            <div class="col-12  h-100 column1">
               <img
                 src="./src/assets/main-gallery/image-main-grid-01.jpg"
                 alt="Imagen 1"

@@ -21,9 +21,14 @@
       .column1 {
         height: 100%;
         position: relative;
+      }
 
+      .column1 img{
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
       }
+
+
+
 
       /* Estilo del contenedor con texto */
       .text-container {
@@ -195,80 +200,43 @@
           transform: translate(-50%, -50%) translateY(0);
         }
       }
-      @media (max-width: 767px) {
-
-        .img-container-main{
-
-          margin: 0;
-          pad: 0;
-          width: 100%;
-          box-shadow: none;
 
 
-        }
-        .img-container-main-02{
+    .card {
+      transition: all 0.3s ease;
+      height: 300px; /* Altura inicial de la tarjeta */
+    }
 
-            background-color:aqua;
-            margin-bottom: -30px;
-            padding: 0;
+    .card.expanded {
+      height: 700px; /* Altura expandida de la tarjeta */
+    }
 
+    .toggle-icon i {
+      color: rgb(26, 26, 26); /* Cambia este valor al color que desees */
+    }
+    .card-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 
-        }
+    .card-body button {
+      background-color: white;
+      border: none;
+      border-radius: 50%;
+    }
 
-        .img-container-main-03{
+    .section-images-categories {
+      margin-top: 100px;
+      margin-bottom: 400px;
+      height: 700px;
+    }
+    .seccion-main-artist {
+      background: linear-gradient(to bottom, black, white);
+    }
 
-          background-color:aqua;
-          margin-bottom: -30px;
-          padding: 0;
-
-
-          }
-
-          .img-container-main-05{
-
-            background-color:aqua;
-            margin-bottom: -30px;
-            padding: 0;
-
-
-            }
-      }
-
-      .card {
-        transition: all 0.3s ease;
-        height: 300px; /* Altura inicial de la tarjeta */
-      }
-
-      .card.expanded {
-        height: 700px; /* Altura expandida de la tarjeta */
-      }
-
-      .toggle-icon i {
-        color: rgb(26, 26, 26); /* Cambia este valor al color que desees */
-      }
-      .card-body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      .card-body button {
-        background-color: white;
-        border: none;
-        border-radius: 50%;
-      }
-
-      .section-images-categories {
-        margin-top: 100px;
-        margin-bottom: 400px;
-        height: 700px;
-      }
-      .seccion-main-artist {
-        background: linear-gradient(to bottom, black, white);
-      }
-
-      .footer {
+    .footer {
       background-color: #f8f9fa;
       padding: 20px 0;
     }
@@ -304,4 +272,122 @@
 
       background-color: #000000;
       color: white;
+    }
+
+    @media (max-width: 767px) {
+
+
+      .img-container-main{
+
+        margin: 0;
+        pad: 0;
+        width: 100%;
+        box-shadow: none;
+
+
+      }
+      .img-container-main-02{
+
+          margin-bottom: -30px;
+          padding: 0;
+
+
+      }
+
+      .img-container-main-03{
+
+        background-color:aqua;
+        margin-bottom: -30px;
+        padding: 0;
+
+
+        }
+
+        .img-container-main-05{
+
+          background-color:aqua;
+          margin-bottom: -30px;
+          padding: 0;
+
+
+          }
+    }
+
+    .empty-column-gallery{
+    }
+
+    .column-gallery-one{
+    }
+
+    .img-container-main-01{
+      padding: 0px 5px 5px 5px;
+      position: relative;
+    }
+
+    .text-container-three{
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(26, 26, 26, 0.7);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .text-container-four{
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(181, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .text-container-five{
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(181, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+
+
+    .img-container-main-02{
+      padding: 5px 5px 0px 5px;
+      height: 100%;
+      position: relative;
+    }
+
+    .img-container-main-03{
+      padding: 0px 5px 5px 5px;
+
+    }
+
+    .img-container-main-04{
+      padding: 5px 5px 45px 5px;
+      margin: 0;
+
+    }
+
+    .img-container-main-05{
+      margin:0;
+      padding: 0 0 45px 5px;
+
+    }
+
+
+    .img-container-main-01 img,
+    .img-container-main-02 img,
+    .img-container-main-03 img,
+    .img-container-main-04 img,
+    .img-container-main-05 img,
+    .img-container-main-06 img{
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     }
