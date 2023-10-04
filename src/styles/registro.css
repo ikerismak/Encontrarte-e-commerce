@@ -1,0 +1,48 @@
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+
+#logo{
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 100px;
+}
+
+p{
+    text-align: center;
+    font-size: small;
+    color: rgb(122, 119, 119);
+}
+
+
+
+#botonsubmit{
+    background-color: #D0417E;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 100px;
+}
+
+#botonsubmit:hover{
+    background-color: #f5237eaa;
+}
+
+#red{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.324); /* Desplazamiento horizontal, desplazamiento vertical, desenfoque, color de sombra */
+    padding: 5px 100px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: justify;
+    border-color: rgba(0, 0, 0, 0.197);
+}
+#red:hover{
+    background-color: rgba(0, 0, 0, 0.153);
+}
+
+
+
+
