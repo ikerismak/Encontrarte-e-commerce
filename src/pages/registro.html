@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/registro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="../scripts/toggle.js"></script>
 
 </head>
 
@@ -31,85 +32,156 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <img id="logo" src="../assets/registro/logo-login.png" alt="logo">
-                <div class="modal-header">
-                    <h2 class="fw-bold text-center ">Registrate y encuentra tu obra ideal</h2>
-                </div>
-                <div class="modal-body">
-                    <form>
-
-                        <div class="mb-3">
-                            <label for="exampleInputName1" class="form-label">Nombre completo</label>
-                            <input type="name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp">
-                            <div id="nameHelp" class="form-text"></div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputNumber1" class="form-label">Número de teléfono</label>
-                            <input type="text" class="form-control validanumericos" id="exampleInputNumber1"
-                                aria-describedby="numberHelp">
-                            <div id="numberHelp" class="form-text"></div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text"></div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                            <br>
-                            <p>La contraseña debe tener al menos 8 caracteres e incluir una letra minúscula, una letra
-                                mayúscula y un dígito.</p>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Mantenerme conectado</label>
-                            <br> <br>
-                        </div>
-                        <button type="submit" id="botonsubmit" class="btn btn-primary">Acceso</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-
-                    <div id="redes" class="container text-center my-5">
-                        <div class="row">
-                            <div class="col=12">
-                                <h5>O</h5>
+                <div class="modal-registro">
+                    <div class="modal-header">
+                        <h2 class="fw-bold text-center ">Registrate y encuentra tu obra ideal</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+    
+                            <div class="mb-3">
+                                <label for="exampleInputName1" class="form-label">Nombre completo</label>
+                                <input type="name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp">
+                                <div id="nameHelp" class="form-text"></div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <!-- Boton de Facebook -->
-                                <button id="red">
-                                    <i class="bi bi-facebook"></i> Continuar con Facebook
-                                </button>
+                            <div class="mb-3">
+                                <label for="exampleInputNumber1" class="form-label">Número de teléfono</label>
+                                <input type="text" class="form-control validanumericos" id="exampleInputNumber1"
+                                    aria-describedby="numberHelp">
+                                <div id="numberHelp" class="form-text"></div>
                             </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col=12">
-                                <!-- Boton de Google -->
-                                <button id="red">
-                                    <i class="bi bi-google"></i> Continuar con Google
-                                </button>
+    
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text"></div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
                                 <br>
-                                <p>Al hacer clic en Registrarse o Continuar con Google o Facebook, acepta los Terminos
-                                    de uso y la Politica de privacidad de EncontrArte y acepta recibir correos
-                                    electrónicos de EncontrArte.</p>
+                                <p>La contraseña debe tener al menos 8 caracteres e incluir una letra minúscula, una letra
+                                    mayúscula y un dígito.</p>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Mantenerme conectado</label>
+                                <br> <br>
+                            </div>
+                            <button type="submit" id="botonsubmit" class="btn btn-primary">Acceso</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+    
+                        <div id="redes" class="container text-center my-5">
+                            <div class="row">
+                                <div class="col=12">
+                                    <h5>O</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <!-- Boton de Facebook -->
+                                    <button id="red">
+                                        <i class="bi bi-facebook"></i> Continuar con Facebook
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col=12">
+                                    <!-- Boton de Google -->
+                                    <button id="red">
+                                        <i class="bi bi-google"></i> Continuar con Google
+                                    </button>
+                                    <br>
+                                    <p>Al hacer clic en Registrarse o Continuar con Google o Facebook, acepta los Terminos
+                                        de uso y la Politica de privacidad de EncontrArte y acepta recibir correos
+                                        electrónicos de EncontrArte.</p>
+                                </div>
                             </div>
                         </div>
+    
+    
+    
+                        <div class="my-3">
+                            
+                            <button type="submit" id="toggle-signup" class="btn-toggle">Ya tienes cuenta? Inicia sesión</button>
+                        </div>
+    
+    
+    
                     </div>
-
-
-
-                    <div class="my-3">
-                        <span>Ya tienes cuenta? <a href="./login.html">Inicia sesión</a></span>
+                </div>
+                
+                <div class="modal-login visibilty">
+                    <div class="modal-header">
+                        <h2 class="fw-bold text-center ">Bienvenido a EncontrArte</h2>
                     </div>
-
-
-
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <br>
+                                <div id="olvidar-contra" style="text-align: right">
+                                    <a href="#">Has olvidado tu contraseña?</a>
+                                </div>
+                                <!-- <p>¿Has olvidado tu contraseña?</p> <br> -->
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Mantenerme conectado</label>
+                                <br> <br>
+                            </div>
+                            <button type="submit" id="botonsubmit" class="btn btn-primary">Acceso</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+    
+                        <div id="redes" class="container text-center my-5">
+                            <div class="row">
+                                <div class="col=12">
+                                    <h5>O</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <!-- Boton de Facebook -->
+                                    <button id="red">
+                                        <i class="bi bi-facebook"></i> Continuar con Facebook
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col=12">
+                                    <!-- Boton de Google -->
+                                    <button id="red">
+                                        <i class="bi bi-google"></i> Continuar con Google
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <div class="my-3">
+                            
+                            <button type="submit" id="toggle-login" class="btn-toggle">No tienes cuenta?
+                                Registrate</button>
+                        </div>
+    
+    
+    
+                    </div>
                 </div>
                 <footer>
                     <div class="d-block d-sm-none">

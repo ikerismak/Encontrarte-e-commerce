@@ -9,19 +9,12 @@ body{
 }
 
 p{
-    text-align: center;
+    text-align: right;
     font-size: small;
-    color: rgb(122, 119, 119);
 }
 
-.btn-toggle {
-    padding: 0;
-    color: #d0417e;
-    background: none;
-    border: none;
-}
-.visibilty {
-    display: none;
+#olvidar-contra {
+    align-items: center;
 }
 
 #botonsubmit{
