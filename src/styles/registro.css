@@ -23,6 +23,18 @@ p{
 .visibilty {
     display: none;
 }
+.btn-modalview{
+    padding: 0;
+    color: #d0417e;
+    background: none;
+    border: none;
+}
+.btn-modalview:hover{
+    padding: 0;
+    color: #d0417e;
+    background: none;
+    border: none;
+}
 
 #botonsubmit{
     background-color: #D0417E;
