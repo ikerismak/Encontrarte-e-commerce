@@ -18,59 +18,122 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./src/styles/main-page.css">
+    <link rel="stylesheet" href="./src/styles/styleBarraDeNavegacion.css">
 
     <title>Landing Page</title>
   </head>
   <body>
     <!-- Encabezado -->
-    <header class="bg-ligth text-black text-center py-1">
-      <h3 class="display-4">Mi Landing Page</h3>
-      <p class="lead">Bienvenido a nuestra página web</p>
-    </header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">Mi Sitio</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Acerca de</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-          </ul>
+     <header>
+        <!-- pagina nav Bar de arriba abajo la voy a dividir por bloques(divs) que tendran divs adentro de cosas que se tengan que agrupar-->
+        <div class="bloque1" id="bloque1">
+            <div class="logoRedSocial redesSociales">
+                <div class="contenedorLogoRS">
+                    <!--Cada uno de lo logos tendrán su propio div para ajutar su tamaño al contenedor-->
+                    <a href="https://www.instagram.com/">
+                        <img class="logoInstagram logoRS" src="/src/assets/ImgnavBar&acercaDeNosotros/Instagram.png" alt="">
+                    </a>
+                </div>
+
+                <div class="contenedorLogoRS" id="contenedorLogoFacebook">
+                    <a href="https://www.facebook.com/">
+                        <img id="facebookLogo" class="logoFacebook logoRS" src="/src/assets/ImgnavBar&acercaDeNosotros/facebook.png"
+                            alt="">
+                    </a> <!--Al ser el logo de FB mas grande se le dará un tratamiento distinto-->
+                </div>
+                <div class="contenedorLogoRS">
+                    <a href="https://www.whatsapp.com/">    
+                    <img class="logoWhatsApp logoRS" src="/src/assets/ImgnavBar&acercaDeNosotros/WhatsApp.png" alt="">
+                </a>
+                </div>
+
+            </div><!--Cierre de el div de redes sociales-->
+            <div id="contenedorLogoCabecera logoNavbar">
+                <a href="./Inicio.html">
+                <img id="logoCabecera" src="/src/assets/ImgnavBar&acercaDeNosotros/Logo.png" alt="">
+            </a>
+            </div><!--Cierre del div del logo -->
+            <div id="botoneraCabecera">
+
+                <div id="loginBoton" class="contenedorBotonCabecera">
+                    <div class="contenedorImgBotonCabecera" id="contenedorLoginCabecera">
+                        <img id="loginImg" src="/src/assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
+                    </div>
+                    <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
+                </div><!-- Cierre del login-->
+                <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
+                    <div class="contenedorImgBotonCabecera" id="contenedorImgFavoriteBotonCabecera">
+                        <img id="favoriteImg" src="/src/assets/ImgnavBar&acercaDeNosotros/Favorite.png" alt="">
+                    </div>
+                    <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">Favoritos</p>
+                    <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
+                </div><!-- Cierre del favorite-->
+                <div class="contenedorBotonCabecera" id="contenedorCarritoComprasCabecera">
+                    <div class="contenedorImgBotonCabecera" id="contenedorImgCarritoBotonCabecera">
+                        <img id="CarritoImg" src="/src/assets/ImgnavBar&acercaDeNosotros/carrito.png" alt="">
+                    </div>
+
+
+                    <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
+
+                </div><!-- Cierre del botón de compras-->
+            </div><!--Cierre botoneraCabecera-->
+
+            <div class="userID">
+                <div id="contenedorImgUserCabecera">
+                    <img id="imgPerfilUser" src="/src/assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png" alt="">
+                </div>
+                <p class="textoNormal" id="welcomeUser">Bienvenido (agregar usuario)</p>
+
+            </div> <!-- cierre de la personalización de la bienvenida de usuario-->
+
+
+
+        </div><!--Cierre del bloque1-->
+        <div class="bloque2 navBar">
+
+            <!-- <nav id="navList"> -->
+            <button id="botonAbrir" type="button"><img id="burguerMenu" src="/src/assets/ImgnavBar&acercaDeNosotros/vector Menu.png"
+                    alt=""></button>
+            <div id="contenedorNavList">
+                <button id="botonCerrar" type="button"><i class="bi bi-x-square"></i></button>
+                <ul id="navList">
+
+                    <li id="inicio">
+                        <a class="textoNormal" href="./Inicio.html" target="_blank" rel="noopener noreferrer">Inicio</a>
+                    </li>
+                    <!--Se agregó el link con target blank para que abra el link en una nueva pestaña, y  ya que esté el navbar terminado cambiar la dirección de la pestaña actual-->
+                    <li id="productos">
+                        <a class="textoNormal" href="./productos.html" target="_blank"
+                            rel="noopener noreferrer">Productos</a>
+                    </li>
+                    <li id="Artistas">
+                        <a class="textoNormal" href="./index.html" target="_blank"
+                            rel="noopener noreferrer">Artistas</a>
+                    </li>
+                    <li id="Nosotros">
+                        <a class="textoNormal" href="./nosotros.html" target="_blank"
+                            rel="noopener noreferrer">Nosotros</a>
+                    </li>
+                    <li id="Contactanos">
+                        <a class="textoNormal" href="./contactanos.html" target="_blank"
+                            rel="noopener noreferrer">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div><!--Cierre del bloque 2 -->
+        <div class="bloqueBuscador">
+            <div class="bloqueNegroBuscador"></div>
+            <div id="contenedorBarraBusqueda">
+                <img id="lupaBarraBusqueda" src="/src/assets/ImgnavBar&acercaDeNosotros/Lupa.png" alt="">
+                <input id="barraBusqueda" type="text">
+            </div>
+            <div class="bloqueNegroBuscador"></div>
         </div>
-      </div>
-      <form class="form-inline my-2 my-lg-0 d-lg-none order-lg-last">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Buscar"
-          aria-label="Buscar"
-        />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Buscar
-        </button>
-      </form>
-    </nav>
+        <!-- <i class="bi bi-list"></i> -->
+
+    </header>
 
     <!-- Main Gallery-->
     <section id="caracteristicas" class="section py-4">
@@ -419,5 +482,7 @@
         });
       });
     </script>
+      <script src="./src/scripts/scriptBarraDeNavegacion.js"></script>
+
   </body>
 </html>

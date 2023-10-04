@@ -1,0 +1,203 @@
+body{
+    font-family:'Roboto Mono', monospace;
+}
+
+.carrito-flotante-contenedor{
+    max-height: auto;
+}
+
+.imagen-producto-carrito-flotante{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* max-height: 200px;*/
+}
+
+.imagen-producto-carrito-flotante img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.titulosRosa{
+    color: #D0417E;
+    font-weight: 800;
+}
+
+.controlCantidad{
+    text-decoration: none;
+    color: black;
+}
+
+.controlCantidad:hover{
+    cursor: pointer;
+}
+.realizar-pago{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #D0417E;
+    box-shadow: 0px 3px 5px 0px #D0417E;
+    /* background-color: hsl(0, 0%, 100%);
+    color: #D0417E;
+    font-weight: 600;
+    text-align:  center;
+    font-size: 17px;
+    padding-top:10px ;
+    padding-bottom:10px ;
+    border-radius: 15%;
+    box-shadow: 1px 1px 1px 1px #D0417E; */
+}
+
+.sub-total{
+    font-size: 13px;
+    font-weight: bold;
+    padding-top:13px ;
+    text-align: left;
+}
+
+.total-footer{
+    font-size: 16px;
+    font-weight: bold;
+    padding-top:10px ;
+    text-align: left;
+}
+
+
+
+.carrito{
+    background-color: #e0e3e9;
+    position: fixed;
+    right:  20px;
+    top: 15px;
+    border-radius: 4%;
+    box-shadow: 1px 1px 10px 10px #d1cdcd;
+    width: 430px;
+    height: 600px;
+    padding-bottom: 13px;
+    overflow-y: scroll;
+}
+
+
+@media (max-width: 834px){  /*Vista Tableta*/
+    .carrito{
+        background-color: #e0e3e9;
+        position: fixed;
+        right:  20px;
+        top: 15px;
+        border-radius: 4%;
+        box-shadow: 1px 1px 10px 10px #d1cdcd;
+        width: 430px;
+        height: 600px;
+        padding-bottom: 13px;
+        overflow-y: scroll;
+    }
+    .titulosRosa{
+        font-size: 30px;
+    }
+    .obras{
+        font-size: 18px;
+    }
+    .card-title{
+        font-size: 18px;
+    }
+    .nombre-artista{
+        font-size: 16px;
+    }
+    .tamano-obra{
+        font-size: 15px;
+    }
+    .btn-close{
+        padding-left: 95px;
+    }
+    .precio{
+        text-align: right;
+    }
+}
+
+@media (max-width: 400px){  /*Vista Mobile*/
+    .carrito{
+        background-color: #e0e3e9;
+        position: fixed;
+        right:  20px;
+        top: 15px;
+        border-radius: 4%;
+        box-shadow: 1px 1px 10px 10px #d1cdcd;
+        width: 350px;
+        height: 600px;
+        padding-bottom: 13px;
+        overflow-y: scroll;
+    }
+    img{
+        max-width: 70%;
+        max-height: 70%;
+        background-size: cover;
+    }
+    .titulosRosa{
+        font-size: 30px;
+    }
+    .obras{
+        font-size: 16px;
+    }
+    .card-title{
+        font-size: 18px;
+    }
+    .nombre-artista{
+        font-size: 14px;
+    }
+    .tamano-obra{
+        font-size: 16px;
+    }
+    .btn-close{
+        padding-left: 50px;
+    }
+    .cerrar{
+        display: flex;
+        justify-content: center;
+    }
+    .realizar-pago{
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        border-radius: 10px;
+        color: #D0417E;
+        box-shadow: 0px 3px 5px 0px #D0417E;
+        /* background-color: hsl(0, 0%, 100%);
+        color: #D0417E;
+        font-weight: 600;
+        text-align:  center;
+        font-size: 17px;
+        padding-top:10px ;
+        padding-bottom:10px ;
+        border-radius: 15%;
+        box-shadow: 1px 1px 1px 1px #D0417E; */
+    }
+    
+    .sub-total{
+        font-size: 10px;
+        font-weight: bold;
+        padding-top:13px ;
+        text-align: left;
+    }
+    
+    .total-footer{
+        font-size: 15px;
+        font-weight: bold;
+        padding-top:8px ;
+        text-align: left;
+    }
+}
+
+.cerrar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio{
+    text-align: right;
+}
+
+.centrado{
+    text-align: center;
+}
+
