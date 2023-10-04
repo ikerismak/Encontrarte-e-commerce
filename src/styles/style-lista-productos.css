@@ -1,0 +1,113 @@
+
+body{
+    min-height: 100vh; /* Establece una altura mínima igual al 100% de la altura visible del viewport */
+  background-color: #f0f0f0; /* Solo para que sea visible el espacio adicional */
+}
+
+
+#banerlogo{
+    background-color: rgb(208, 65, 126);
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10%;
+    margin-top: 800px;
+    
+}
+#titulopinturas{
+    text-align: center;
+    margin-bottom: 20%;
+    
+}
+#contenidocategorias{
+    border-top: 50px solid transparent;
+
+}
+
+#fondoizq{
+    background-color: rgb(163, 163, 163);
+    position: static;
+    height: 110%;
+    width: 95%;
+  
+}
+
+
+footer{
+    color: white;
+    text-align: center;
+    background: black;
+    height: 70px;
+    border-top: 2px solid rgba(2, 2, 2, 0.24);  
+    /*  poner footer abajo */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#banner{
+    background-color: blueviolet;
+    text-align: center;
+}
+
+#listaobjetos li{
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
+    margin-bottom: 5px; /* Espacio opcional entre elementos */
+    width: 85%;
+    
+    
+}
+
+#imagenes2{
+    display: flex;
+}
+
+  #imagenes1{
+    display: flex;
+    
+}
+
+
+.card {
+            
+margin: 5%;
+        
+}
+        
+    
+.card-body{
+    size: 10rem;
+    height: 5rem;
+    background-color: rgb(217, 217,217, 0.7);
+ }
+    
+.card-text{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+            
+}
+
+
+#tablcatr{
+    background-color: rgb(217, 217, 217);
+  
+
+}
+#botoncategoryes{
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    padding: 6px 12px; /* Espaciado más pequeño */
+    background-color: rgb(208, 65, 126);
+}
+
+#contboton{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedorcards{
+    display: flex;
+}
+
