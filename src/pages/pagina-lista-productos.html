@@ -11,16 +11,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Popper.js (si Bootstrap lo requiere) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-
+    
+    
 
 
 
@@ -145,22 +137,27 @@
     <!--Aqui inician las columnas con contenido debajode la navbar/////////////////////////////////////////-->
     <div class="row">
         <!--\\\\\\\\\\\\\\\\\\\\\\\\\Categorias en Celular y tableta/////////////////////////-->
-        <div id="tablcatr" class="row d-block d-sm-none d-md-none">
+        <div id="fondobotontablet">
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <h1>
                     <h1><b><span style="color: rgb(208, 65, 126);">P</span>inturas</b></h1>
                 </h1>
             </div>
+            <!-- Este es el boton que se muestra en dispositivos moviles/////////////////////////// -->
             <div id="contboton" class="col-sm-8 col-md-8 col-lg-8">
-                <div class="dropdown ">
-                    <button id="botoncategoryes" class="btn btn-secondary dropdown-toggle" type="button"
-                        data-bs-toggle="dropdown " aria-expanded="false">
-                        <strong style="color: black;">Categorias</strong>
+                <div class="fondo-oscuro" id="fondo-oscuro"></div>
+                <div class="dropdown">
+                    <button id="boton" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorias
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul id="ventanaflotante" class="dropdown-menu dropdown-menu-center">
+                      <li><a class="dropdown-item" href="#">Pinturas al Oleo</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Acuarelas</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Acrilicas</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Abstractas</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Paisajisticas</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Retratos</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Impresionistas</a></li>
                     </ul>
                 </div>
             </div>
@@ -170,8 +167,8 @@
         </div>
         <!--\\\\\\\\\\\\\\\\\\Aqui terminan categorias celular y tableta///////////////////////////-->
         <!--Esta es la columna izquierda donde aparecen las categorias de los productos ///////////////////////////////-->
-        <div class="col-lg-4 col-md-4 d-none d-md-block">
-            <aside id="fondoizq">
+        <div id="columnaizq" class="col-lg-4">
+            <div id="fondoizq">
                 <div id="contenidocategorias">
                     <!-- Lista con las categorias de pinturas///////////////////////////////////////////// -->
                     <h1 id="titulopinturas"><b><span style="color: rgb(208, 65, 126);">P</span>inturas</b></h1>
@@ -184,45 +181,38 @@
                         <li><strong>Pinturas Retratos</strong></li>
                         <li><strong>Pinturas Impresionistas</strong></li>
                     </ul>
+                    
                 </div>
-                <div id="banerlogo">
+                 <div id="banerlogo">
                     <img src="../assets/list-products-images/8.png">
-
-                </div>
-            </aside>
+                    </div>
+            </div>
         </div>
         <!--Esta es la columna del lado derecho de la pagina, donde estan las fotos de las pinturas y titulos//////////-->
-        <div class="col-md-8 col-lg-8">
+        <div id="colder" class="col-lg-8 col-md-12">
             <!-- Este es el contenedor de las imagenes por categoria //////////////////////////////////-->
-            <h3><b>-Pinturas al Oleo-</b></h3>
+            <h3 id="titulocategoria"><b>-Pinturas al Oleo-</b></h3>
                 <!-- Aqui inicia el carrusel //////////////////////////////////////////////////// -->
                 <div id="carouselExampleIndicators2" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                      </div>
+                    
                       <div class="carousel-inner">
                         <div class="carousel-item active">
                             <!-- Aqui van 3  tarjetas dentro del carrusel//////////////////////////////// -->
                             <div class="contenedorcards">
                                 <div id="tarjeta89" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"El bosque magico"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta90" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Sinfonia de colores celestiales"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta91" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 11.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 11.png"class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"La tarde de ayer"</p>
                                     </div>
@@ -233,19 +223,19 @@
                         <div class="carousel-item">
                             <div class="contenedorcards">
                                 <div id="tarjeta92" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/pexels-steve-johnson-1585325.jpg" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/pexels-steve-johnson-1585325.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <p class="card-text">"Memoriasdel futuro"</p>
+                                        <p class="card-text">"Memorias del futuro"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta93" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/pexels-eberhard-grossgasteiger-2086361.jpg" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/pexels-eberhard-grossgasteiger-2086361.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"La ciudad de la magia"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta94" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"El reamanecer"</p>
                                     </div>
@@ -256,19 +246,19 @@
                         <div class="carousel-item">
                             <div class="contenedorcards" >
                                 <div id="tarjeta95" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Amnesia"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta96" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/pexels-mrishmarinaalekseevna-7042639.jpg" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/pexels-mrishmarinaalekseevna-7042639.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Buscando la razon"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta97" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"La noche de ayer"</p>
                                     </div>
@@ -293,32 +283,25 @@
                 <h3><b>Recomendados...</b></h3>
                 <!-- Aqui inicia el carrusel //////////////////////////////////////////////////// -->
                 <div id="carouselExampleIndicators1" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                      </div>
+                
                       <div class="carousel-inner">
                         <div class="carousel-item active" >
                             <!-- Aqui van 3  tarjetas dentro del carrusel//////////////////////////////// -->
                             <div class="contenedorcards">
                                 <div id="tarjeta98" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Sinfonia de colores celestiales"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta99" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"El mar"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta100" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/pexels-thirdman-6732554.jpg" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/pexels-thirdman-6732554.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"La orquesta del trial"</p>
                                     </div>
@@ -329,19 +312,19 @@
                         <div class="carousel-item" >
                             <div class="contenedorcards">
                                 <div id="tarjeta101" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 10.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 10.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Tetradas"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta102" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 12.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 12.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"El Existir"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta103" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Nubes del atardecer"</p>
                                     </div>
@@ -352,19 +335,19 @@
                         <div class="carousel-item">
                             <div class="contenedorcards" >
                                 <div id="tarjeta104" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/pexels-suzy-hazelwood-1762973.jpg" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/pexels-suzy-hazelwood-1762973.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Manchas de mi memoria"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta105" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/pexels-eberhard-grossgasteiger-2086361.jpg" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/pexels-eberhard-grossgasteiger-2086361.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Pensamientos ausentes"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta106" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Katatonia"</p>
                                     </div>
@@ -389,35 +372,28 @@
 
 
                 <!-- Este es el contenedor de los usuarios tambien buscaron//////////////////////////////////////  -->
-                <h3><b>Obras relcionadas...</b></h3>
+                <h3><b>Obras relacionadas...</b></h3>
                 <!-- Aqui inicia el carrusel //////////////////////////////////////////////////// -->
                 <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                       </div>
+                
                        <div class="carousel-inner">
                         <div class="carousel-item active" >
                             <!-- Aqui van 3  tarjetas dentro del carrusel//////////////////////////////// -->
                             <div class="contenedorcards">
                                 <div id="tarjeta89" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Onix"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta90" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"El despertar"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta91" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"El sonido del color"</p>
                                     </div>
@@ -428,19 +404,19 @@
                         <div class="carousel-item" >
                             <div class="contenedorcards">
                                 <div id="tarjeta92" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Bailando en Da"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta93" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Monett"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta94" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 15.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Artix"</p>
                                     </div>
@@ -451,19 +427,19 @@
                         <div class="carousel-item">
                             <div class="contenedorcards" >
                                 <div id="tarjeta95" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 12.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 12.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Nueit"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta96" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 13.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Cortinas danzantes"</p>
                                     </div>
                                 </div>
                                 <div id="tarjeta97" class="card" style="width: 15rem;">
-                                    <img src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
+                                    <img class="imagentarjeta" src="../assets/list-products-images/image 14.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">"Color a ti"</p>
                                     </div>
@@ -494,12 +470,17 @@
             
 
 
-            <script src="./assets/scripts/contactos.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="/src/scripts/scriptBarraDeNavegacion.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/ScriptListaDeProductos.js"></script>
 
-            </body>
+
+
+ </body>
 
 </html>
