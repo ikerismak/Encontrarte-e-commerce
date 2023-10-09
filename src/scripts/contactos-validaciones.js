@@ -1,8 +1,11 @@
+
+//aqui se guardan las expresiones regulares
 const regexMensage = /^[a-zA-Z0-9áéíóúüñÁÉÍÓÚÜÑ,?!.()\s]+$/;
 const regexTelefono = /^\d{10}$/;
 const regexCorreo = /^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regexNombre = /^[A-Za-záéíóúüñÁÉÍÓÚÜÑ]{2,20}$/;
 
+//guardamos las expresiones  en un objeto
 const regexPattern = {
     nombre: regexNombre,
     apellido: regexNombre,
@@ -11,6 +14,8 @@ const regexPattern = {
     mensaje: regexMensage,
 
 }
+
+//limite del minimo y maximo para los campos
 const limiteInput = {
     nombre: { min: 3, max: 20, },
     apellido: { min: 2, max: 20, },
@@ -20,6 +25,8 @@ const limiteInput = {
 
 }
 
+
+//objeto con todos los mensajes a mostrar
 const mensajesDeError = {
 
     nombre: {
@@ -60,7 +67,7 @@ const mensajesDeError = {
 
 };
 
-
+//funcion para validar que tipo de error para mostrar mensaje y el status es existe error o no
 function TipoDeError(tipoDeInput, valorDelInput) {
     if (valorDelInput.length == 0) {
         console.log("zero");
@@ -84,45 +91,52 @@ function TipoDeError(tipoDeInput, valorDelInput) {
     return ["valido", true]
 
 }
-
+//funcion para agregar las clase  y mostrar el mensaje por medio del dom
 function mostrarMensajeDeError(tipoDeInput, tipoDeError, estadoDelError, elemento) {
+    //agregamos al elemento padre la clase para mostrar el mensaje
     elemento.parentElement.classList.add("was-validated");
+    //returna un true si  la validacion fue exitosa y false si fue invalido
     if (estadoDelError) {
+
+        //si la validacion es true  limpiamos el mensaje 
         elemento.setCustomValidity("")
         elemento.parentElement.querySelector(".valid-feedback").textContent = "";
         return true
     } else {
+        //si la validacion es falsa agregamos un mensaje 
         elemento.setCustomValidity(" ")
         elemento.parentElement.querySelector(".invalid-feedback").textContent =
             mensajesDeError[tipoDeInput][tipoDeError];
         return false
     }
 }
+//validamos los inputs y textare
 export function validarInput(input) {
-    const tipoDeInput = input.dataset.type;
-    const valorDelInput = input.value;
+    const tipoDeInput = input.dataset.type; //tipo del  dataset para sabe que input fue ingresado
+    const valorDelInput = input.value; //valor del imput
+    //obtenemos el mensaje si fue  invalido y el estado false para un mensaje y true no mostrar y otro para no link
     const error = TipoDeError(tipoDeInput, valorDelInput);
-
+    // retornamos un false o true si  la validacion fue exitoso o erronea
     return mostrarMensajeDeError(tipoDeInput, error[0], error[1], input)
 
 }
 
 
 
-
+//validamos los select
 export function validarOptiones(input) {
 
-    const tipoDeInput = input.dataset.option;
-    const valorDelInput = input.value;
-    const errorEstado = valorDelInput.length !== 0;
+    const tipoDeInput = input.dataset.option;//tipo del  dataset para sabe que input fue ingresado
+    const valorDelInput = input.value; //valor del input
+    const errorEstado = valorDelInput.length !== 0; //si  existe error
     return mostrarMensajeDeError(tipoDeInput, "vacio", errorEstado, input)
 
 }
 
-
+//validamos los checkbox
 export function validarCheckbox(input) {
-    const tipoDeInput = input.dataset.check;
-    const errorEstado = input.checked;
+    const tipoDeInput = input.dataset.check;//tipo del  dataset para sabe que input fue ingresado
+    const errorEstado = input.checked; //estado del checkbox para ver si existe error
     return mostrarMensajeDeError(tipoDeInput, "vacio", errorEstado, input)
 
 
