@@ -245,7 +245,7 @@ width: 100%;
 height: 100%;
 }
 
-#botonAbrir {
+.menuBurguerContenedor {
     position: absolute;
     right: 0px;
     visibility: hidden;
@@ -340,6 +340,10 @@ border-right: none;
         justify-content: initial;
         width: 35%;
 
+    }
+
+    .menuBurguerContenedor{
+        visibility: visible;
     }
 
     #contenedorNavList {
