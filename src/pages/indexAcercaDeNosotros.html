@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/styleIndexAcercaDeNosotros.css">
+</head>
+
+    <link rel="stylesheet" href="../styles/styleBarraDeNavegacion.css">
+
+    <!-- Styles and links register -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/registro.css" />
+
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     <!-- Popper.js (si Bootstrap lo requiere) -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+
+     <!-- Bootstrap JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <!-- AQUI ACABA -->
+
+<body>
+    <!--Inicio de  la barra de navegación -->
+ <!-- Navabar -->
+ <header>
+    <!-- pagina nav Bar de arriba abajo la voy a dividir por bloques(divs) que tendran divs adentro de cosas que se tengan que agrupar-->
+    <div class="bloque1" id="bloque1">
+      <div class="logoRedSocial redesSociales">
+        <div class="contenedorLogoRS">
+          <!--Cada uno de lo logos tendrán su propio div para ajutar su tamaño al contenedor-->
+          <a href="https://www.instagram.com/">
+            <img
+              class="logoInstagram logoRS"
+              src="../assets/ImgnavBar&acercaDeNosotros/Instagram.png"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <div class="contenedorLogoRS" id="contenedorLogoFacebook">
+          <a href="https://www.facebook.com/">
+            <img
+              id="facebookLogo"
+              class="logoFacebook logoRS"
+              src="../assets/ImgnavBar&acercaDeNosotros/facebook.png"
+              alt=""
+            />
+          </a>
+          <!--Al ser el logo de FB mas grande se le dará un tratamiento distinto-->
+        </div>
+        <div class="contenedorLogoRS">
+          <a href="https://www.whatsapp.com/">
+            <img
+              class="logoWhatsApp logoRS"
+              src="../assets/ImgnavBar&acercaDeNosotros/WhatsApp.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <!--Cierre de el div de redes sociales-->
+      <div id="contenedorLogoCabecera logoNavbar">
+        <a href="./Inicio.html">
+          <img
+            id="logoCabecera"
+            src="../assets/ImgnavBar&acercaDeNosotros/Logo.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <!--Cierre del div del logo -->
+      <div id="botoneraCabecera">
+        <div id="loginBoton" class="contenedorBotonCabecera">
+          <div
+            class="contenedorImgBotonCabecera"
+            id="contenedorLoginCabecera"
+          >
+            <img
+              id="loginImg"
+              src="../assets/ImgnavBar&acercaDeNosotros/Enter.png"
+              alt=""
+            />
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary texto textoBotoneraCabecera btn-modalview"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Log in
+          </button>
+        </div>
+        <!-- Cierre del login-->
+        <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
+          <div
+            class="contenedorImgBotonCabecera"
+            id="contenedorImgFavoriteBotonCabecera"
+          >
+            <img
+              id="favoriteImg"
+              src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png"
+              alt=""
+            />
+          </div>
+          <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">
+            Favoritos
+          </p>
+          <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
+        </div>
+        <!-- Cierre del favorite-->
+        <div
+          class="contenedorBotonCabecera"
+          id="contenedorCarritoComprasCabecera"
+        >
+          <div
+            class="contenedorImgBotonCabecera"
+            id="contenedorImgCarritoBotonCabecera"
+          >
+            <img
+              id="CarritoImg"
+              src="../assets/ImgnavBar&acercaDeNosotros/carrito.png"
+              alt=""
+            />
+          </div>
+
+          <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
+        </div>
+        <!-- Cierre del botón de compras-->
+      </div>
+      <!--Cierre botoneraCabecera-->
+
+      <div class="userID">
+        <div id="contenedorImgUserCabecera">
+          <a href="">  <img
+            id="imgPerfilUser"
+            src="../assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png"
+            alt=""
+          /></a>
+
+        </div>
+        <p class="textoNormal" id="welcomeUser">
+          Bienvenido (agregar usuario)
+        </p>
+      </div>
+      <!-- cierre de la personalización de la bienvenida de usuario-->
+    </div>
+    <!--Cierre del bloque1-->
+    <div class="bloque2 navBar">
+      <!-- <nav id="navList"> -->
+      <button id="botonAbrir" type="button">
+        <img
+          id="burguerMenu"
+          src="../assets/ImgnavBar&acercaDeNosotros/vector Menu.png"
+          alt=""
+        />
+      </button>
+      <div id="contenedorNavList">
+        <button id="botonCerrar" type="button">
+          <i class="bi bi-x-square"></i>
+        </button>
+        <ul id="navList">
+          <li id="inicio">
+            <a
+              class="textoNormal"
+              href="../../index.html"
+              rel="noopener noreferrer"
+              >Inicio</a
+            >
+          </li>
+          <!--Se agregó el link con target blank para que abra el link en una nueva pestaña, y  ya que esté el navbar terminado cambiar la dirección de la pestaña actual-->
+          <li id="productos">
+            <a
+              class="textoNormal"
+              href="./pagina-productos.html"
+              rel="noopener noreferrer"
+              >Productos</a
+            >
+          </li>
+          <li id="Artistas">
+            <a
+              class="textoNormal"
+              href="./index.html"
+              rel="noopener noreferrer"
+              >Artistas</a
+            >
+          </li>
+          <li id="Nosotros">
+            <a
+              class="textoNormal"
+              href="./nosotros.html"
+              rel="noopener noreferrer"
+              >Nosotros</a
+            >
+          </li>
+          <li id="Contactanos">
+            <a
+              class="textoNormal"
+              href="./contactos.html"
+              rel="noopener noreferrer"
+              >Contactanos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--Cierre del bloque 2 -->
+    <div class="bloqueBuscador">
+      <div class="bloqueNegroBuscador"></div>
+      <div id="contenedorBarraBusqueda">
+        <img
+          id="lupaBarraBusqueda"
+          src="../assets/ImgnavBar&acercaDeNosotros/Lupa.png"
+          alt=""
+        />
+        <input id="barraBusqueda" type="text" />
+      </div>
+      <div class="bloqueNegroBuscador"></div>
+    </div>
+    <!-- <i class="bi bi-list"></i> -->
+  </header>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <img id="logo" src="../assets/registro/logo-login.png" alt="logo" />
+        <div class="modal-registro">
+          <div class="modal-header">
+            <h2 class="fw-bold text-center">
+              Registrate y encuentra tu obra ideal
+            </h2>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputName1" class="form-label"
+                  >Nombre completo</label
+                >
+                <input
+                  type="name"
+                  class="form-control"
+                  id="exampleInputName1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="nameHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputNumber1" class="form-label"
+                  >Número de teléfono</label
+                >
+                <input
+                  type="text"
+                  class="form-control validanumericos"
+                  id="exampleInputNumber1"
+                  aria-describedby="numberHelp"
+                />
+                <div id="numberHelp" class="form-text"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Correo electrónico</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+                <br />
+                <p>
+                  La contraseña debe tener al menos 8 caracteres e incluir una
+                  letra minúscula, una letra mayúscula y un dígito.
+                </p>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Mantenerme conectado</label
+                >
+                <br />
+                <br />
+              </div>
+              <button type="submit" id="botonsubmit" class="btn btn-primary">
+                Acceso
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div id="redes" class="container text-center my-5">
+              <div class="row">
+                <div class="col=12">
+                  <h5>O</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <!-- Boton de Facebook -->
+                  <button id="red">
+                    <i class="bi bi-facebook"></i> Continuar con Facebook
+                  </button>
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col=12">
+                  <!-- Boton de Google -->
+                  <button id="red">
+                    <i class="bi bi-google"></i> Continuar con Google
+                  </button>
+                  <br />
+                  <p>
+                    Al hacer clic en Registrarse o Continuar con Google o
+                    Facebook, acepta los Terminos de uso y la Politica de
+                    privacidad de EncontrArte y acepta recibir correos
+                    electrónicos de EncontrArte.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-3">
+              <button type="submit" id="toggle-signup" class="btn-toggle">
+                Ya tienes cuenta? Inicia sesión
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-login visibilty">
+          <div class="modal-header">
+            <h2 class="fw-bold text-center">Bienvenido a EncontrArte</h2>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Correo electrónico</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+                <br />
+                <div id="olvidar-contra" style="text-align: right">
+                  <a href="#">Has olvidado tu contraseña?</a>
+                </div>
+                <!-- <p>¿Has olvidado tu contraseña?</p> <br> -->
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Mantenerme conectado</label
+                >
+                <br />
+                <br />
+              </div>
+              <button type="submit" id="botonsubmit" class="btn btn-primary">
+                Acceso
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div id="redes" class="container text-center my-5">
+              <div class="row">
+                <div class="col=12">
+                  <h5>O</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <!-- Boton de Facebook -->
+                  <button id="red">
+                    <i class="bi bi-facebook"></i> Continuar con Facebook
+                  </button>
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col=12">
+                  <!-- Boton de Google -->
+                  <button id="red">
+                    <i class="bi bi-google"></i> Continuar con Google
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-3">
+              <button type="submit" id="toggle-login" class="btn-toggle">
+                No tienes cuenta? Registrate
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="d-block d-sm-none">
+            <div class="text-center">
+              <div class="divider"></div>
+            </div>
+
+            <div class="text-center footer-social">
+              <h6>SIGUENOS EN:</h6>
+              <button id="reds" class="btn">
+                <i class="bi bi-facebook"></i>
+              </button>
+              <button id="reds" class="btn">
+                <i class="bi bi-instagram"></i>
+              </button>
+              <button id="reds" class="btn">
+                <i class="bi bi-whatsapp"></i>
+              </button>
+              <!-- Agrega más iconos de redes sociales si es necesario -->
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!--fin div class col-->
+  </div>
+
+    <div class="m-5" id="contenedorTituloAcercaDeNosotros">
+        <span id="tituloAcercaDeNosotros">Nuestro equipo de trabajo</span>
+    </div>
+
+    <div class="contenedorDelContenidoAcercaDeNosotros">
+
+
+
+        <div class="container" id="contenedorTarjetasPresentacion" >
+            <div class="row">
+            <div class="contenedorTarjetaPresentacionIntegrantes col-sm-12 col-md-6 col-lg-4" id="">
+                <div class="contenedorImgIntegrante" id="">
+                    <img src="../assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteMarco.png" alt="">
+                </div>
+                <div class="contenedorTextoPresentacion" id="contenedorTextopresentacionNombre">
+                    <span class="textoPresentacion" id="nombreIntegrantePresentacion">Marco Uriel Alvarado Galván</span>
+                </div>
+                <div class="contenedorDatosDeContacto">
+                    <div class="contenedorRedDeContacto" id="contenedorLinkedin">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoLinkedin" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Linkedin_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoLinkedin" class="contenedorTextoPresentacion">
+                            <span> Marco Uriel Alvarado Galván</span>
+                        </div>
+                    </div>
+
+                    <div class="contenedorRedDeContacto" id="contenedorGitHub">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGitHub" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _github_ (1).png" alt="">
+                        </div>
+                        <div id="contenedorTextoGitHub" class="contenedorTextoPresentacion">
+                            <span> MarcoAG16</span>
+                        </div>
+                    </div>
+                    <div class="contenedorRedDeContacto" id="contenedorGmail">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGmail" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Gmail_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoGmail" class="contenedorTextoPresentacion">
+                            <span>marcouriel.alvarado16@gmail.com</span>
+                        </div>
+                    </div>
+                    </div> <!--Cierre del contenedor de datos de contacto-->
+
+
+            </div> <!--Cierre de tarjeta de presentación 1-->
+
+                <!--Inicio Tarjeta de presentación 2-->
+
+            <div class="contenedorTarjetaPresentacionIntegrantes col-sm-12 col-md-6 col-lg-4" id="">
+                <div class="contenedorImgIntegrante" id="">
+                    <img src="../assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteAlicia.png" alt="">
+                </div>
+                <div class="contenedorTextoPresentacion" id="contenedorTextopresentacionNombre">
+                    <span class="textoPresentacion" id="nombreIntegrantePresentacion">Alicia Gabriela Diaz Villaseñor</span>
+                </div>
+                <div class="contenedorDatosDeContacto">
+                    <div class="contenedorRedDeContacto" id="contenedorLinkedin">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoLinkedin" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Linkedin_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoLinkedin" class="contenedorTextoPresentacion">
+                            <span> Alicia Gabriela Diaz Villaseñor</span>
+                        </div>
+                    </div>
+
+                    <div class="contenedorRedDeContacto" id="contenedorGitHub">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGitHub" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _github_ (1).png" alt="">
+                        </div>
+                        <div id="contenedorTextoGitHub" class="contenedorTextoPresentacion">
+                            <span> Ali09Diaz</span>
+                        </div>
+                    </div>
+                    <div class="contenedorRedDeContacto" id="contenedorGmail">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGmail" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Gmail_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoGmail" class="contenedorTextoPresentacion">
+                            <span> alicia09diazv@gmail.com</span>
+                        </div>
+                    </div>
+                    </div> <!--Cierre del contenedor de datos de contacto-->
+
+
+            </div> <!--Cierre de tarjeta de presentación -->
+
+
+              <!--Inicio Tarjeta de presentación 3-->
+
+              <div class="contenedorTarjetaPresentacionIntegrantes col-sm-12 col-md-6 col-lg-4" id="">
+                <div class="contenedorImgIntegrante" id="">
+                    <img src="../assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteAngel-modified (1).png" alt="">
+                </div>
+                <div class="contenedorTextoPresentacion" id="contenedorTextopresentacionNombre">
+                    <span class="textoPresentacion" id="nombreIntegrantePresentacion"> Ángel Gustavo Ek Tun</span>
+                </div>
+
+                <div class="contenedorDatosDeContacto">
+                    <div class="contenedorRedDeContacto" id="contenedorLinkedin">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoLinkedin" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Linkedin_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoLinkedin" class="contenedorTextoPresentacion">
+                            <span> Ángel Gustavo Ek</span>
+                        </div>
+                    </div>
+
+                    <div class="contenedorRedDeContacto" id="contenedorGitHub">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGitHub" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _github_ (1).png" alt="">
+                        </div>
+                        <div id="contenedorTextoGitHub" class="contenedorTextoPresentacion">
+                            <span> gusgux</span>
+                        </div>
+                    </div>
+                    <div class="contenedorRedDeContacto" id="contenedorGmail">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGmail" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Gmail_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoGmail" class="contenedorTextoPresentacion">
+                            <span> en_ge_l@hotmail.com</span>
+                        </div>
+                    </div>
+                    </div> <!--Cierre del contenedor de datos de contacto-->
+
+
+            </div> <!--Cierre de tarjeta de presentación -->
+
+
+                          <!--Inicio Tarjeta de presentación 4-->
+
+                          <div class="contenedorTarjetaPresentacionIntegrantes col-sm-12 col-md-6 col-lg-4" id="">
+                            <div class="contenedorImgIntegrante" id="">
+                                <img src="../assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegrantePepe.png" alt="">
+                            </div>
+                            <div class="contenedorTextoPresentacion" id="contenedorTextopresentacionNombre">
+                                <span class="textoPresentacion" id="nombreIntegrantePresentacion">José Ángel Hernández Torres</span>
+                            </div>
+                            <div class="contenedorDatosDeContacto">
+                                <div class="contenedorRedDeContacto" id="contenedorLinkedin">
+                                    <!-- para guardar una red: linkedin Gmail o github-->
+                                    <div id="contenedorlogoLinkedin" class="contenedorLogo">
+                                        <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Linkedin_.png" alt="">
+                                    </div>
+                                    <div id="contenedorTextoLinkedin" class="contenedorTextoPresentacion">
+                                        <span> José Ángel Hernández Torres</span>
+                                    </div>
+                                </div>
+
+                                <div class="contenedorRedDeContacto" id="contenedorGitHub">
+                                    <!-- para guardar una red: linkedin Gmail o github-->
+                                    <div id="contenedorlogoGitHub" class="contenedorLogo">
+                                        <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _github_ (1).png" alt="">
+                                    </div>
+                                    <div id="contenedorTextoGitHub" class="contenedorTextoPresentacion">
+                                        <span> Angelhdz98</span>
+                                    </div>
+                                </div>
+                                <div class="contenedorRedDeContacto" id="contenedorGmail">
+                                    <!-- para guardar una red: linkedin Gmail o github-->
+                                    <div id="contenedorlogoGmail" class="contenedorLogo">
+                                        <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Gmail_.png" alt="">
+                                    </div>
+                                    <div id="contenedorTextoGmail" class="contenedorTextoPresentacion">
+                                        <span> hernandeztorresjoseangel@gmail.com</span>
+                                    </div>
+                                </div>
+                                </div> <!--Cierre del contenedor de datos de contacto-->
+
+
+                        </div> <!--Cierre de tarjeta de presentación -->
+
+                                      <!--Inicio Tarjeta de presentación 5-->
+
+              <div class="contenedorTarjetaPresentacionIntegrantes col-sm-12 col-md-6 col-lg-4" id="">
+                <div class="contenedorImgIntegrante" id="">
+                    <img src="../assets//ImgnavBar&acercaDeNosotros/FotoPerfilIntegrantePaola.png" alt="">
+                </div>
+                <div class="contenedorTextoPresentacion" id="contenedorTextopresentacionNombre">
+                    <span class="textoPresentacion" id="nombreIntegrantePresentacion">Ana Paola Rábago Gómez</span>
+                </div>
+                <div class="contenedorDatosDeContacto">
+                    <div class="contenedorRedDeContacto" id="contenedorLinkedin">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoLinkedin" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Linkedin_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoLinkedin" class="contenedorTextoPresentacion">
+                            <span>Paola Rábago Gómez</span>
+                        </div>
+                    </div>
+
+                    <div class="contenedorRedDeContacto" id="contenedorGitHub">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGitHub" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _github_ (1).png" alt="">
+                        </div>
+                        <div id="contenedorTextoGitHub" class="contenedorTextoPresentacion">
+                            <span> Paolarg04</span>
+                        </div>
+                    </div>
+                    <div class="contenedorRedDeContacto" id="contenedorGmail">
+                        <!-- para guardar una red: linkedin Gmail o github-->
+                        <div id="contenedorlogoGmail" class="contenedorLogo">
+                            <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Gmail_.png" alt="">
+                        </div>
+                        <div id="contenedorTextoGmail" class="contenedorTextoPresentacion">
+                            <span>ap.rabagog@gmail.com</span>
+                        </div>
+                    </div>
+                    </div> <!--Cierre del contenedor de datos de contacto-->
+
+
+            </div> <!--Cierre de tarjeta de presentación -->
+
+
+                          <!--Inicio Tarjeta de presentación 6-->
+
+                          <div class="contenedorTarjetaPresentacionIntegrantes col-sm-12 col-md-6 col-lg-4" id="">
+                            <div class="contenedorImgIntegrante" id="">
+                                <img src="../assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteIker.png" alt="">
+                            </div>
+                            <div class="contenedorTextoPresentacion" id="contenedorTextopresentacionNombre">
+                                <span class="textoPresentacion" id="nombreIntegrantePresentacion">Iker Ismak Santos Toscano</span>
+                            </div>
+                            <div class="contenedorDatosDeContacto">
+                                <div class="contenedorRedDeContacto" id="contenedorLinkedin">
+                                    <!-- para guardar una red: linkedin Gmail o github-->
+                                    <div id="contenedorlogoLinkedin" class="contenedorLogo">
+                                        <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Linkedin_.png" alt="">
+                                    </div>
+                                    <div id="contenedorTextoLinkedin" class="contenedorTextoPresentacion">
+                                        <span> Iker Ismak Toscano Santos</span>
+                                    </div>
+                                </div>
+
+                                <div class="contenedorRedDeContacto" id="contenedorGitHub">
+                                    <!-- para guardar una red: linkedin Gmail o github-->
+                                    <div id="contenedorlogoGitHub" class="contenedorLogo">
+                                        <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _github_ (1).png" alt="">
+                                    </div>
+                                    <div id="contenedorTextoGitHub" class="contenedorTextoPresentacion">
+                                        <span> ikerismak</span>
+                                    </div>
+                                </div>
+                                <div class="contenedorRedDeContacto" id="contenedorGmail">
+                                    <!-- para guardar una red: linkedin Gmail o github-->
+                                    <div id="contenedorlogoGmail" class="contenedorLogo">
+                                        <img src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _Gmail_.png" alt="">
+                                    </div>
+                                    <div id="contenedorTextoGmail" class="contenedorTextoPresentacion">
+                                        <span>ikerismak@gmail.com</span>
+                                    </div>
+                                </div>
+                                </div> <!--Cierre del contenedor de datos de contacto-->
+
+
+                        </div> <!--Cierre de tarjeta de presentación -->
+
+
+
+        </div><!--Cierre del row -->
+        </div><!--Cierre del contenedor de tarjetas -->
+        </div>
+    </div>
+
+    <script src="./assets/scripts/IndexAcercaDeNosotros.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
