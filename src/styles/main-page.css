@@ -114,7 +114,7 @@
         color: white;
       }
       .banner {
-        background: url("../assets/main-gallery/doodles-5960094.jpg") center/cover no-repeat;
+        background: url("../assets/main-gallery/doodles-5960094.webp") center/cover no-repeat;
         color: rgb(29, 29, 29);
         text-align: center;
         padding: 50px 0;
@@ -126,7 +126,7 @@
 
       .banner-paper {
         position: relative;
-        background: url("../assets/main-gallery/pexels-iconcom-479444.jpg") center/cover no-repeat;
+        background: url("../assets/main-gallery/pexels-iconcom-479444.webp") center/cover no-repeat;
         color: rgb(29, 29, 29);
         text-align: center;
         padding: 50px 0;
