@@ -1,0 +1,94 @@
+ 
+.contenedorDescripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+   width: 100%;
+    height: fit-content;
+    gap: 23px;
+}
+ 
+/* 
+
+ */
+ 
+.contenedorAcercaDeMi{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+
+
+
+
+.botonCategorias span{
+
+    object-fit: fill;
+
+}
+.contenedorImagenPerfilArtista{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.contenedorImagenPerfilArtista img{
+ 
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    
+} 
+.bloqueArtista{
+    margin: 30px;
+    
+}
+.botonCategorias{
+    background-color: #D0417E;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 100px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+#acercaDeMi{
+    font-family: Roboto Mono;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 27px;
+}
+.contenedorDescripcion span{
+   color: black; 
+    display: flex;
+font-family: Roboto Mono;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 27px;
+text-align: justify;
+}
+
+#bloque1{
+    align-items: center;
+}
+
+.tituloImagenPerfilArtista{
+    background-color: #0000008F;
+    position: absolute;
+    bottom: 25px;
+
+    max-width: 95%;
+    color: white;
+    font-size: 24.069px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
