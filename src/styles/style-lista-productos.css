@@ -1,7 +1,9 @@
 
+
 body{
     min-height: 100vh; /* Establece una altura mínima igual al 100% de la altura visible del viewport */
   background-color: #f0f0f0; /* Solo para que sea visible el espacio adicional */
+
 }
 
 
@@ -10,26 +12,33 @@ body{
     display: flex;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
-    padding: 10%;
-    margin-top: 800px;
+    padding: 2%;
+    margin-top: 272%;
+    
+  
     
 }
 #titulopinturas{
     text-align: center;
-    margin-bottom: 20%;
+    margin-bottom: 8%;
     
 }
-#contenidocategorias{
-    border-top: 50px solid transparent;
-
-}
-
 #fondoizq{
     background-color: rgb(163, 163, 163);
     position: static;
-    height: 110%;
     width: 95%;
-  
+    height: 1800px;
+    padding: 0;
+    position: relative;
+    
+}
+#columnaizq{
+    padding: 0;
+    
+}
+#titulocategoria{
+    margin: 5%;
+    font-size: xx-large;
 }
 
 
@@ -45,26 +54,30 @@ footer{
     bottom: 0;
     width: 100%;
 }
+#contenidocategorias{
+    position: sticky;
+    top: 0; /* Pegar en la parte superior del contenedor */
+    border-top: 50px solid transparent;
 
-#banner{
-    background-color: blueviolet;
-    text-align: center;
 }
+
 
 #listaobjetos li{
     border-bottom: 1.5px solid #000;
     padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
     margin-bottom: 5px; /* Espacio opcional entre elementos */
     width: 85%;
+    line-height: 30px;
+    font-size: larger;
     
     
 }
-
-#imagenes2{
-    display: flex;
+.imagentarjeta{
+    height: 320px;
 }
 
-  #imagenes1{
+
+#imagenes1{
     display: flex;
     
 }
@@ -73,6 +86,8 @@ footer{
 .card {
             
 margin: 5%;
+transition: transform 0.3s; /* Agrega una transición suave para una animación gradual */
+
         
 }
         
@@ -81,33 +96,175 @@ margin: 5%;
     size: 10rem;
     height: 5rem;
     background-color: rgb(217, 217,217, 0.7);
- }
+    
+    
+}
+    
+.card:hover {
+    transform: scale(1.1); /* Escala la tarjeta al 110% de su tamaño original en el hover */
+}
     
 .card-text{
     font-size: 18px;
     text-align: center;
     font-weight: bold;
+    color: #000;
             
 }
 
-
-#tablcatr{
-    background-color: rgb(217, 217, 217);
-  
-
-}
-#botoncategoryes{
-    font-size: 14px; /* Tamaño de fuente más pequeño */
-    padding: 6px 12px; /* Espaciado más pequeño */
-    background-color: rgb(208, 65, 126);
-}
-
 #contboton{
-    text-align: center;
-    margin-bottom: 20px;
+    
+    margin-top: 2%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    margin-left: 15%;
 }
+#boton{
+    font-size: 20px; /* Tamaño de fuente más pequeño */
+    padding: 15px 40px; /* Espaciado más pequeño */
+    background-color: rgb(208, 65, 126);
+    margin: 0 auto; /* Centra horizontalmente solo el botón */
+}
+#fondobotontablet{
+    background-color: rgb(217, 217,217, 0.7);
+}
+
 
 .contenedorcards{
     display: flex;
 }
 
+
+v
+#ventanaflotante li{
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
+    margin-bottom: 5px; /* Espacio opcional entre elementos */
+    width: 85%;
+    line-height: 30px;
+    font-size: larger;
+    
+    
+}
+.fondo-oscuro {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
+    z-index: 100; /* Asegura que el fondo oscuro esté en la parte superior */
+    display: none; /* Inicialmente oculto */
+}
+/*tableta/////////////////////////////   */
+@media (max-width: 1024px) {
+    #columnaizq {
+        display: none; /* Oculta la columna */
+    }
+    #ventanaflotante{
+   
+        width: 400px;
+        height: 560px;
+        margin-left: 200px;
+    
+    }
+    #ventanaflotante li{
+        border-bottom: 1.5px solid #000;
+        padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
+        margin-bottom: 40px; /* Espacio opcional entre elementos */
+        width: 100%;
+        line-height: 30px;
+        font-size:xx-large;
+        text-align: center;
+       
+        
+        
+        
+    }
+    
+    #colder {
+        width: 100%;
+        height: 1800px;
+        
+    }
+    .card-text{
+        font-size: 15px;
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+    }
+}
+/* iphone /////////////////////////////////////// */
+@media (max-width: 400px) {
+        #columnaizq {
+            display: none; /* Oculta la columna */
+        }
+        .imagentarjeta{
+            height: 150px;
+        }
+        #ventanaflotante{
+   
+            width: 250px;
+            height: 350px;
+            margin-left: 200px;
+           
+        }
+        #ventanaflotante li{
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
+            margin-bottom: 5px; /* Espacio opcional entre elementos */
+            width: 100%;
+            line-height: 30px;
+            font-size: larger;
+            text-align: center;
+            
+            
+        }
+        .card {
+            transition: none;
+            margin: 3%;       
+            }
+        .card:hover {
+                transform: none; /* Restaura el valor original de transformación */
+            }
+        
+        #contboton{
+    
+            margin-top: 2%;
+            margin-bottom: 5%;
+            align-items: center; /* Centra verticalmente solo el botón */
+            justify-content: center; /* Centra horizontalmente el contenido */
+            margin-left: 3%;
+        }
+        
+        #colder {
+            width: 100%;
+            height: 1100px;
+        }
+        #boton{
+            font-size: 20px; /* Tamaño de fuente más pequeño */
+            padding: 10px 30px; /* Espaciado más pequeño */
+            background-color: rgb(208, 65, 126);
+            margin: 0 auto; /* Centra horizontalmente solo el botón */
+        }
+        .card-text{
+            font-size: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #000;
+            
+        }
+}
+/* pc ////////////////////////////////////////////*/
+@media (min-width: 1025px) {
+    #boton {
+        display: none;
+    }
+    #fondobotontablet{
+        background-color: rgb(217, 217,217, 0.7);
+        display: none;
+    }
+    
+    }
+   
