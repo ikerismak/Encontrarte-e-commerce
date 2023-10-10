@@ -1,115 +1,147 @@
-export function validar(input) {
-    const tipoDeInput = input.dataset.type;
-    console.log(tipoDeInput, input.validity)
 
-    if (validadores[tipoDeInput]) {
-        validadores[tipoDeInput](input)
-    }
+//aqui se guardan las expresiones regulares
+const regexMensage = /^[a-zA-Z0-9áéíóúüñÁÉÍÓÚÜÑ,?!.()\s]+$/;
+const regexTelefono = /^\d{10}$/;
+const regexCorreo = /^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const regexNombre = /^[A-Za-záéíóúüñÁÉÍÓÚÜÑ]{2,20}$/;
 
-    if (input.validity.valid) {
-
-        input.parentElement.classList.remove("input-container--invalid");
-        input.parentElement.querySelector(".invalid-feedback").textContent = "";
-    } else {
-        input.parentElement.classList.add("was-validated");
-        input.parentElement.querySelector(".invalid-feedback").textContent =
-            mostrarMensajeDeError(tipoDeInput, input);
-    }
+//guardamos las expresiones  en un objeto
+const regexPattern = {
+    nombre: regexNombre,
+    apellido: regexNombre,
+    correo: regexCorreo,
+    telefono: regexTelefono,
+    mensaje: regexMensage,
 
 }
 
-const expresionTelefono = /^[0-9]{10}$/;
-const expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const expresionNombres = /^[A-Za-z]+ [A-Za-z]+$/
+//limite del minimo y maximo para los campos
+const limiteInput = {
+    nombre: { min: 3, max: 20, },
+    apellido: { min: 2, max: 20, },
+    correo: { min: 5, max: 30, },
+    telefono: { min: 10, max: 10, },
+    mensaje: { min: 25, max: 500, },
 
-const tipoDeErrores = [
-    "valueMissing",
-    "typeMismatch",
-    "patternMismatch",
-    "customError",
-    "tooShort"
-];
+}
 
+
+//objeto con todos los mensajes a mostrar
 const mensajesDeError = {
 
     nombre: {
-        patternMismatch: "un nombre con al menos 3 letras",
-        valueMissing: "El campo nombre no puede estar vacío",
+        vacio: "Campo requerido escriba un nombre",
+        invalido: "Solo se aceptan letras ",
+        minimo: "longitud minima de " + limiteInput.nombre.min + " letras",
+        maximo: "longitud maxima de " + limiteInput.nombre.max + " letras"
+
     },
     apellido: {
-        patternMismatch: "un apellido con al menos 2 letras",
-        valueMissing: "El campo nombre no puede estar vacío",
+        vacio: "Campo requerido escriba un apellido",
+        invalido: "Solo se aceptan letras",
+        minimo: "longitud minima de " + limiteInput.apellido.min + " letras",
+        maximo: "longitud maxima de " + limiteInput.apellido.max + " letras"
     },
-    email: {
-        valueMissing: "El campo correo no puede estar vacío",
-        typeMismatch: "El correo no es válido",
-    },
-    password: {
-        valueMissing: "El campo contraseña no puede estar vacío",
-        patternMismatch:
-            "Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.",
-    },
-    motivo: {
-        valueMissing: "Escribe un mensaje",
-        tooShort: "Debes escribir al menos 25 letras",
+    correo: {
+        vacio: "Campo requerido escriba un correo",
+        invalido: "Correo Invalido solo se aceptan numeros,letras,puntos y guiones bajo",
+        minimo: "longitud minima de " + limiteInput.correo.min + " caracteres",
+        maximo: "longitud maxima de " + limiteInput.correo.max + " caracteres"
     },
     telefono: {
-        valueMissing: "El campo no puede estar vacío",
-        patternMismatch: "El formato requerido es xxxxxxxxxx 10 digitos",
+        vacio: "Campo requerido escriba numero teléfonico",
+        invalido: "El formato requerido es 999999999 digitos",
+        minimo: "longitud minima de " + limiteInput.telefono.min + " digitos",
+        maximo: "longitud maxima de " + limiteInput.telefono.max + " digitos"
     },
-    direccion: {
-        valueMissing: "El campo no puede estar vacío",
-        typeMismatch: "La direccion debe contener entre 10 a 40 caracteres",
+    mensaje: {
+        vacio: "Campo requerido deje un mensaje",
+        invalido: "Mensaje invalido solo se permite los letras,numeros y los caracteres ,?!.()",
+        minimo: "Escriba un mensaje con " + limiteInput.mensaje.min + " letras minimo",
+        maximo: "Escriba un mensaje con " + limiteInput.mensaje.max + " letras maximo"
     },
-    ciudad: {
-        valueMissing: "El campo no puede estar vacío",
-        typeMismatch: "La direccion debe contener entre 10 a 40 caracteres",
+    checkbox: {
+        vacio: "Acepte el acuerdo de Términos y Condiciones."
     },
-    estado: {
-        valueMissing: "El campo no puede estar vacío",
-        typeMismatch: "La direccion debe contener entre 10 a 40 caracteres",
-    },
+    select: { vacio: "seleciones una opción" },
+
 };
 
-
-const validadores = {
-    nacimiento: (input) => validarNacimiento(input),
-    mail: "",
-
-}
-
-
-function mostrarMensajeDeError(tipoDeInput, input) {
-    let mensaje = "";
-    tipoDeErrores.forEach((error) => {
-        if (input.validity[error]) {
-            // console.log(tipoDeInput, error);
-            /* console.log(tipoDeInput, error);
-            console.log(input.validity[error]);
-            );*/
-            mensaje = mensajesDeError[tipoDeInput][error];
-
-        }
-    });
-    return mensaje;
-}
-
-function validarNacimiento(input) {
-    const fechaCliente = new Date(input.value);
-    let mensaje = "";
-    if (!mayorDeEdad(fechaCliente)) {
-        mensaje = "Debes tener al menos 18 años de edad";
+//funcion para validar que tipo de error para mostrar mensaje y el status es existe error o no
+function TipoDeError(tipoDeInput, valorDelInput) {
+    if (valorDelInput.length == 0) {
+        console.log("zero");
+        return ["vacio", false]
     }
-    input.setCustomValidity(mensaje);
-}
-function mayorDeEdad(fecha) {
-    const fechaActual = new Date();
-    const diferenciaFechas = new Date(
-        fecha.getUTCFullYear() + 18,
-        fecha.getUTCMonth(),
-        fecha.getUTCDate());
-    return diferenciaFechas <= fechaActual;
+    if (valorDelInput.length < limiteInput[tipoDeInput].min) {
+        console.log("min");
+        return ["minimo", false]
+    }
+    if (valorDelInput.length > limiteInput[tipoDeInput].max) {
+        console.log("max");
+        return ["maximo", false]
+    }
+
+    if (!regexPattern[tipoDeInput].test(valorDelInput)) {
+        console.log("invalido", valorDelInput);
+
+        return ["invalido", false]
+    }
+
+    return ["valido", true]
 
 }
+//funcion para agregar las clase  y mostrar el mensaje por medio del dom
+function mostrarMensajeDeError(tipoDeInput, tipoDeError, estadoDelError, elemento) {
+    //agregamos al elemento padre la clase para mostrar el mensaje
+    elemento.parentElement.classList.add("was-validated");
+    //returna un true si  la validacion fue exitosa y false si fue invalido
+    if (estadoDelError) {
+
+        //si la validacion es true  limpiamos el mensaje 
+        elemento.setCustomValidity("")
+        elemento.parentElement.querySelector(".valid-feedback").textContent = "";
+        return true
+    } else {
+        //si la validacion es falsa agregamos un mensaje 
+        elemento.setCustomValidity(" ")
+        elemento.parentElement.querySelector(".invalid-feedback").textContent =
+            mensajesDeError[tipoDeInput][tipoDeError];
+        return false
+    }
+}
+//validamos los inputs y textare
+export function validarInput(input) {
+    const tipoDeInput = input.dataset.type; //tipo del  dataset para sabe que input fue ingresado
+    const valorDelInput = input.value; //valor del imput
+    //obtenemos el mensaje si fue  invalido y el estado false para un mensaje y true no mostrar y otro para no link
+    const error = TipoDeError(tipoDeInput, valorDelInput);
+    // retornamos un false o true si  la validacion fue exitoso o erronea
+    return mostrarMensajeDeError(tipoDeInput, error[0], error[1], input)
+
+}
+
+
+
+//validamos los select
+export function validarOptiones(input) {
+
+    const tipoDeInput = input.dataset.option;//tipo del  dataset para sabe que input fue ingresado
+    const valorDelInput = input.value; //valor del input
+    const errorEstado = valorDelInput.length !== 0; //si  existe error
+    return mostrarMensajeDeError(tipoDeInput, "vacio", errorEstado, input)
+
+}
+
+//validamos los checkbox
+export function validarCheckbox(input) {
+    const tipoDeInput = input.dataset.check;//tipo del  dataset para sabe que input fue ingresado
+    const errorEstado = input.checked; //estado del checkbox para ver si existe error
+    return mostrarMensajeDeError(tipoDeInput, "vacio", errorEstado, input)
+
+
+}
+
+
 
 
