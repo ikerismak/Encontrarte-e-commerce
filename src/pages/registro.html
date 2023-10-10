@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -10,27 +11,27 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./src/styles/main-page.css">
-    <link rel="stylesheet" href="./src/styles/styleBarraDeNavegacion.css">
-    <!-- Styles and links register -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/styles/registro.css" />
-    <title>Landing Page</title>
+    <link rel="stylesheet" href="../styles/registro.css" />
+    <link rel="stylesheet" href="../styles/styleBarraDeNavegacion.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script defer src="../scripts/toggle.js"></script>
+    <script defer src="../scripts/scriptBarraDeNavegacion.js"></script>
   </head>
+
   <body>
-    <!-- Navabar -->
+    <!--comienza navbar-->
     <header>
       <!-- pagina nav Bar de arriba abajo la voy a dividir por bloques(divs) que tendran divs adentro de cosas que se tengan que agrupar-->
       <div class="bloque1" id="bloque1">
@@ -40,7 +41,7 @@
             <a href="https://www.instagram.com/">
               <img
                 class="logoInstagram logoRS"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Instagram.png"
+                src="../assets/ImgnavBar&acercaDeNosotros/Instagram.png"
                 alt=""
               />
             </a>
@@ -51,7 +52,7 @@
               <img
                 id="facebookLogo"
                 class="logoFacebook logoRS"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/facebook.png"
+                src="../assets/ImgnavBar&acercaDeNosotros/facebook.png"
                 alt=""
               />
             </a>
@@ -61,7 +62,7 @@
             <a href="https://www.whatsapp.com/">
               <img
                 class="logoWhatsApp logoRS"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/WhatsApp.png"
+                src="../assets/ImgnavBar&acercaDeNosotros/WhatsApp.png"
                 alt=""
               />
             </a>
@@ -72,7 +73,7 @@
           <a href="./Inicio.html">
             <img
               id="logoCabecera"
-              src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Logo.png"
+              src="../assets/ImgnavBar&acercaDeNosotros/Logo.png"
               alt=""
             />
           </a>
@@ -86,7 +87,7 @@
             >
               <img
                 id="loginImg"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Enter.png"
+                src="../assets/ImgnavBar&acercaDeNosotros/Enter.png"
                 alt=""
               />
             </div>
@@ -108,7 +109,7 @@
             >
               <img
                 id="favoriteImg"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Favorite.png"
+                src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png"
                 alt=""
               />
             </div>
@@ -126,15 +127,11 @@
               class="contenedorImgBotonCabecera"
               id="contenedorImgCarritoBotonCabecera"
             >
-            <a href="./src/components/carrito-flotante.html">
               <img
-              id="CarritoImg"
-              src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/carrito.png"
-              alt=""
-            />
-
-            </a>
-
+                id="CarritoImg"
+                src="../assets/ImgnavBar&acercaDeNosotros/carrito.png"
+                alt=""
+              />
             </div>
 
             <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
@@ -145,12 +142,11 @@
 
         <div class="userID">
           <div id="contenedorImgUserCabecera">
-            <a href="">  <img
+            <img
               id="imgPerfilUser"
-              src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png"
+              src="../assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png"
               alt=""
-            /></a>
-
+            />
           </div>
           <p class="textoNormal" id="welcomeUser">
             Bienvenido (agregar usuario)
@@ -164,7 +160,7 @@
         <button id="botonAbrir" type="button">
           <img
             id="burguerMenu"
-            src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/vector Menu.png"
+            src="../assets/ImgnavBar&acercaDeNosotros/vector Menu.png"
             alt=""
           />
         </button>
@@ -176,7 +172,8 @@
             <li id="inicio">
               <a
                 class="textoNormal"
-                href="./index.html"
+                href="./Inicio.html"
+                target="_blank"
                 rel="noopener noreferrer"
                 >Inicio</a
               >
@@ -185,7 +182,8 @@
             <li id="productos">
               <a
                 class="textoNormal"
-                href="./src/pages/pagina-productos.html"
+                href="./productos.html"
+                target="_blank"
                 rel="noopener noreferrer"
                 >Productos</a
               >
@@ -194,6 +192,7 @@
               <a
                 class="textoNormal"
                 href="./index.html"
+                target="_blank"
                 rel="noopener noreferrer"
                 >Artistas</a
               >
@@ -201,7 +200,8 @@
             <li id="Nosotros">
               <a
                 class="textoNormal"
-                href="../Encontrarte-e-commerce/src/pages/indexAcercaDeNosotros.html"
+                href="./nosotros.html"
+                target="_blank"
                 rel="noopener noreferrer"
                 >Nosotros</a
               >
@@ -209,7 +209,8 @@
             <li id="Contactanos">
               <a
                 class="textoNormal"
-                href="./src/pages/contactos.html"
+                href="./contactanos.html"
+                target="_blank"
                 rel="noopener noreferrer"
                 >Contactanos</a
               >
@@ -223,7 +224,7 @@
         <div id="contenedorBarraBusqueda">
           <img
             id="lupaBarraBusqueda"
-            src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Lupa.png"
+            src="../assets/ImgnavBar&acercaDeNosotros/Lupa.png"
             alt=""
           />
           <input id="barraBusqueda" type="text" />
@@ -232,6 +233,8 @@
       </div>
       <!-- <i class="bi bi-list"></i> -->
     </header>
+    <!-- Button trigger modal -->
+
     <!-- Modal -->
     <div
       class="modal fade"
@@ -244,7 +247,7 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-          <img id="logo" src="../Encontrarte-e-commerce/src/assets/registro/logo-login.png" alt="logo" />
+          <img id="logo" src="../assets/registro/logo-login.png" alt="logo" />
           <div class="modal-registro">
             <div class="modal-header">
               <h2 class="fw-bold text-center">
@@ -472,363 +475,13 @@
       </div>
       <!--fin div class col-->
     </div>
+    <!-- fin div class row-->
 
-    <!-- Main Gallery-->
-    <section id="caracteristicas" class="section py-4">
-      <div class="container-fluid p-0 px-1 py-0">
-        <div class="row">
-          <!-- Columna 1 -->
-          <div class="col-md-1 empty-column-gallery"></div>
-           <!-- Columna 2 -->
-          <div class="col-md-4 column-gallery-one">
-            <div class="row h-100">
-              <div class="col-12 img-container-main-01">
-                <img
-                  src="./src/assets/main-gallery/image-main-grid-05.jpg"
-                  alt="Imagen 3a"
-                  class="img-fluid image-gallery-05"
-
-                />
-                <div class="text-container-five">
-                  <p>Texto encima de la imagen</p>
-                </div>
-              </div>
-              <div class="col-12  pb-5 img-container-main-02">
-                <img
-                  src="./src/assets/main-gallery/image-main-grid-06.jpg"
-                  alt="Imagen 3b"
-                  class="img-fluid image-gallery-06"
-                />
-
-                <div class="text-container-four">
-                  <p>Texto encima de la imagen</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 3 -->
-          <div class="col-md-2">
-            <div class="row h-100">
-              <div
-                class="col-12 img-container-main-03 position-relative column-three"
-              >
-                <img
-                  src="./src/assets/main-gallery/image-main-grid-02.jpg "
-                  alt="Imagen 2a"
-                  class="img-fluid h-100 image-gallery-07"
-
-                />
-
-                <div class="text-container-three">
-                  <p>Texto encima de la imagen</p>
-                </div>
-              </div>
-              <div
-                class="col-12   img-container-main-04 position-relative column-two"
-              >
-                <img
-                  src="./src/assets/main-gallery/image-main-grid-03.jpg"
-                  alt="Imagen 2b"
-                  class="img-fluid h-100 image-gallery-03"
-                />
-
-                <div class="text-container-two">
-                  <p>Texto encima de la imagen</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 4 -->
-          <div class="col-md-4  img-container-main-05 ">
-            <div class="col-12  h-100 column1">
-              <img
-                src="./src/assets/main-gallery/image-main-grid-01.jpg"
-                alt="Imagen 1"
-                class="img-fluid h-100 image-gallery-01"
-              />
-              <div class="text-container">
-                <p>Texto encima de la imagen</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-          <button class="btn-bajar">
-            <span class="material-symbols-outlined"> expand_more </span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Banner 1 -->
-
-    <div class="container-fluid banner">
-      <h1 class="display-4">¡Bienvenido a nuestro sitio!</h1>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
-    </div>
-
-    <!-- seccion 2 -->
-
-    <div class="container-fluid banner-title">
-      <h1 class="display-4">#Artist of the month</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, iste.
-      </p>
-    </div>
-
-    <section id="caracteristicas" class="section py-4 seccion-main-artist">
-      <div class="container-fluid px-1 py-0">
-        <div class="row">
-          <!-- Columna 1 -->
-
-          <div class="col-md-1"></div>
-          <!-- Columna 2 -->
-
-          <div class="col-md-5 m-0 p-2 pb-5">
-            <div class="col-12 p-0 m-0 h-100 column1">
-              <img
-                src="./src/assets/main-gallery/artist.jpg"
-                alt="Imagen 1"
-                class="img-fluid h-100 image-gallery-01"
-
-              />
-              <div class="text-container">
-                <p>Texto encima de la imagen</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 4 -->
-
-          <div class="col-md-5 p-4">
-            <div class="row h-100">
-              <div class="col-12 img-container-main">
-                <img
-                  src="./src/assets/main-gallery/image-main-grid-05.jpg"
-                  alt="Imagen 3a"
-                  class="img-fluid image-gallery-05"
-
-                />
-              </div>
-              <div class="col-12 img-container-main-02">
-                <img
-                  src="./src/assets/main-gallery/image-main-grid-06.jpg"
-                  alt="Imagen 3b"
-                  class="img-fluid image-gallery-06"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna 5 -->
-
-          <div class="col-md-1"></div>
-          <button class="btn-bajar">
-            <span class="material-symbols-outlined"> expand_more </span>
-          </button>
-        </div>
-      </div>
-    </section>
-    <!--Categories -->
-
-    <section id="contacto" class="section section-images-categories">
-      <div class="container-fluid banner-title-categories">
-        <h1 class="display-4">#Artist of the month</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, iste.
-        </p>
-      </div>
-      <div class="container ">
-        <div class="row">
-          <!-- Primera columna -->
-          <div class=" col-lg-3 col-md-6 mb-4">
-            <div class="card">
-              <img
-                src="./src/assets/categories/grafitti.jpg"
-                class="card-img-top"
-                alt="Imagen 2"
-              />
-              <div class="card-body">
-                <button class="btn btn-dark btn-block toggle-description">
-                  <span class="toggle-icon"
-                    ><i class="fas fa-chevron-down"></i
-                  ></span>
-                </button>
-                <p class="card-text mt-3 description" style="display: none">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Consequatur sint ullam doloremque tempore, expedita quo
-                  reprehenderit velit placeat voluptatem, quod aspernatur earum
-                  animi vel tempora odio consequuntur alias eaque rem!
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Segunda columna -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card">
-              <img
-                src="./src/assets/categories/seccion_drawing.jpg"
-                class="card-img-top"
-                alt="Imagen 2"
-              />
-              <div class="card-body">
-                <button class="btn btn-dark btn-block toggle-description">
-                  <span class="toggle-icon"
-                    ><i class="fas fa-chevron-down"></i
-                  ></span>
-                </button>
-                <p class="card-text mt-3 description" style="display: none">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Consequatur sint ullam doloremque tempore, expedita quo
-                  reprehenderit velit placeat voluptatem, quod aspernatur earum
-                  animi vel tempora odio consequuntur alias eaque rem!
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Tercera columna -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card">
-              <img
-                src="./src/assets/categories/photography.jpg"
-                class="card-img-top"
-                alt="Imagen 2"
-              />
-              <div class="card-body">
-                <button class="btn btn-dark btn-block toggle-description">
-                  <span class="toggle-icon"
-                    ><i class="fas fa-chevron-down"></i
-                  ></span>
-                </button>
-                <p class="card-text mt-3 description" style="display: none">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Consequatur sint ullam doloremque tempore, expedita quo
-                  reprehenderit velit placeat voluptatem, quod aspernatur earum
-                  animi vel tempora odio consequuntur alias eaque rem!
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Cuarta columna -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card">
-              <img
-                 src="./src/assets/categories/seccion_aqua.jpg"
-                class="card-img-top"
-                alt="Imagen 2"
-              />
-              <div class="card-body">
-                <button class="btn btn-dark btn-block toggle-description">
-                  <span class="toggle-icon"
-                    ><i class="fas fa-chevron-down"></i
-                  ></span>
-                </button>
-                <p class="card-text mt-3 description" style="display: none">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Consequatur sint ullam doloremque tempore, expedita quo
-                  reprehenderit velit placeat voluptatem, quod aspernatur earum
-                  animi vel tempora odio consequuntur alias eaque rem!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container-fluid banner-paper">
-      <h1 class="paper-title-section">#Best Sales</h1>
-
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-1 team-member">
-          </div>
-
-
-          <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-1.jpg" alt="Integrante 1">
-            <h5>Nombre Integrante 1</h5>
-            <p>Cargo Integrante 1</p>
-          </div>
-
-          <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-2.jpg" alt="Integrante 2">
-            <h5>Nombre Integrante 2</h5>
-            <p>Cargo Integrante 2</p>
-          </div>
-
-          <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-3.jpg" alt="Integrante 3">
-            <h5>Nombre Integrante 3</h5>
-            <p>Cargo Integrante 3</p>
-          </div>
-
-          <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-4.jpg" alt="Integrante 4">
-            <h5>Nombre Integrante 4</h5>
-            <p>Cargo Integrante 4</p>
-          </div>
-
-          <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-5.jpg" alt="Integrante 5">
-            <h5>Nombre Integrante 5</h5>
-            <p>Cargo Integrante 5</p>
-          </div>
-        </div>
-
-
-        <div class="col-md-1 team-member">
-        </div>
-        <div class="row contact-info">
-          <div class="col-md-6 offset-md-3">
-            <p>Email: info@example.com</p>
-            <p>Teléfono: (123) 456-7890</p>
-          </div>
-        </div>
-        <div class="row brand-info">
-          <div class="col-md-6 ">
-            <p class="brand">&copy; 2023 Mi Marca Registrada. Todos los derechos reservados.</p>
-          </div>
-        </div>
-      </div>
-      </footer>
+    <script src="../scripts/registo.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      // Script para mostrar/ocultar la descripción cuando se hace clic en el botón
-      const buttons = document.querySelectorAll(".toggle-description");
-
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const card = button.closest(".card");
-          const description = card.querySelector(".description");
-          const icon = card.querySelector(".toggle-icon i");
-          card.classList.toggle("expanded");
-
-          console.log(card.classList);
-          if (card.classList.contains("expanded")) {
-            icon.classList.remove("fa-chevron-down");
-            icon.classList.add("fa-chevron-up");
-            description.style.display = "block";
-          } else {
-            icon.classList.remove("fa-chevron-up");
-            icon.classList.add("fa-chevron-down");
-            description.style.display = "none";
-          }
-        });
-      });
-    </script>
-     <script defer src="./src/scripts/toggle.js"></script>
-     <script defer src="./src/scripts/scriptBarraDeNavegacion.js"></script>
-     <script src="../Encontrarte-e-commerce/src/scripts/registo.js"></script>
-      <script src="./src/scripts/scriptBarraDeNavegacion.js"></script>
-
   </body>
 </html>
