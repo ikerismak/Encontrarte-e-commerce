@@ -14,7 +14,8 @@ p {
     color: rgb(122, 119, 119);
 }
 
-.btn-toggle {
+.btn-toggle,
+.login-boton {
     padding: 0;
     color: #d0417e;
     background: none;
@@ -88,3 +89,9 @@ p {
 #botonCerrar {
     position: absolute;
 }
+
+/*.modal-visible {
+    visibility: visible;
+    display: contents;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.324);
+}*/

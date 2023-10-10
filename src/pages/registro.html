@@ -45,42 +45,47 @@
         </div>
 
       </div><!--Cierre de el div de redes sociales-->
-      <div id="contenedorLogoCabecera logoNavbar">
-        <a href="./Inicio.html">
+      <div class="contenedorLogoCabecera logoNavbar">
+        <a href="../../index.html">
           <img id="logoCabecera" src="../assets/ImgnavBar&acercaDeNosotros/Logo.png" alt="">
         </a>
       </div><!--Cierre del div del logo -->
       <div id="botoneraCabecera">
 
         <div id="loginBoton" class="contenedorBotonCabecera">
-          <div class="contenedorImgBotonCabecera" id="contenedorLoginCabecera">
-            <button type="button" class="btn btn-primary texto textoBotoneraCabecera btn-modalview "
-              data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
-              <!-- falta agregar el texto de log in -->
-            </button>
 
+
+          <div class="" id="contenedorLoginCabecera">
+
+            <!--<img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">-->
+            <button type="button" class="login-boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
+            </button>
+            <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
           </div>
 
-          <!-- <button type="button" class="btn btn-primary texto textoBotoneraCabecera btn-modalview " data-bs-toggle="modal" data-bs-target="#staticBackdrop">Log in
 
-                </button> -->
+
 
         </div><!-- Cierre del login-->
+
         <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
-          <div class="contenedorImgBotonCabecera" id="contenedorImgFavoriteBotonCabecera">
-            <img id="favoriteImg" src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png" alt="">
-          </div>
-          <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">Favoritos</p>
-          <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
+          <a class="linkBotonCabecera" href="">
+
+            <div class="contenedorImgBotonCabecera" id="contenedorImgFavoriteBotonCabecera">
+              <img id="favoriteImg" src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png" alt="">
+            </div>
+            <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">Favoritos</p>
+            <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
+          </a>
         </div><!-- Cierre del favorite-->
         <div class="contenedorBotonCabecera" id="contenedorCarritoComprasCabecera">
-          <div class="contenedorImgBotonCabecera" id="contenedorImgCarritoBotonCabecera">
-            <img id="CarritoImg" src="../assets/ImgnavBar&acercaDeNosotros/carrito.png" alt="">
-          </div>
-
-
-          <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
+          <a class="linkBotonCabecera" href="../components/carrito-flotante.html">
+            <div class="contenedorImgBotonCabecera" id="contenedorImgCarritoBotonCabecera">
+              <img id="CarritoImg" src="../assets/ImgnavBar&acercaDeNosotros/carrito.png" alt="">
+            </div>
+            <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
+          </a> <!--De esta manera hago que tanto el texto como el png sean botones que direccionan a donde mismo-->
 
         </div><!-- Cierre del botón de compras-->
       </div><!--Cierre botoneraCabecera-->
@@ -99,27 +104,32 @@
     <div class="bloque2 navBar">
 
       <!-- <nav id="navList"> -->
-      <button id="botonAbrir" type="button"><img id="burguerMenu"
-          src="../assets/ImgnavBar&acercaDeNosotros/vector Menu.png" alt=""></button>
+      <!-- <button id="botonAbrir" type="button"> -->
+      <div class="menuBurguerContenedor">
+        <span class="barraMenu1"></span>
+        <span class="barraMenu2"></span>
+        <span class="barraMenu3"></span>
+      </div>
+      <!-- </button> -->
       <div id="contenedorNavList">
-        <button id="botonCerrar" type="button"><i class="bi bi-x-square"></i></button>
+        <!-- <button id="botonCerrar" type="button"><i class="bi bi-x-square"></i></button> -->
         <ul id="navList">
 
           <li id="inicio">
-            <a class="textoNormal" href="./Inicio.html" target="_blank" rel="noopener noreferrer">Inicio</a>
+            <a class="textoNormal" href="../../index.html" rel="noopener noreferrer">Inicio</a>
           </li>
           <!--Se agregó el link con target blank para que abra el link en una nueva pestaña, y  ya que esté el navbar terminado cambiar la dirección de la pestaña actual-->
           <li id="productos">
-            <a class="textoNormal" href="./productos.html" target="_blank" rel="noopener noreferrer">Productos</a>
+            <a class="textoNormal" href="../pages/Pagina del producto.html" rel="noopener noreferrer">Productos</a>
           </li>
           <li id="Artistas">
-            <a class="textoNormal" href="./index.html" target="_blank" rel="noopener noreferrer">Artistas</a>
+            <a class="textoNormal" href="../../index.html" rel="noopener noreferrer">Artistas</a>
           </li>
           <li id="Nosotros">
-            <a class="textoNormal" href="./nosotros.html" target="_blank" rel="noopener noreferrer">Nosotros</a>
+            <a class="textoNormal" href="../pages/indexAcercaDeNosotros.html" rel="noopener noreferrer">Nosotros</a>
           </li>
           <li id="Contactanos">
-            <a class="textoNormal" href="./contactanos.html" target="_blank" rel="noopener noreferrer">Contactanos</a>
+            <a class="textoNormal" href="../pages/indexAcercaDeNosotros.html" rel="noopener noreferrer">Contáctanos</a>
           </li>
         </ul>
       </div>
@@ -135,16 +145,26 @@
     </div>
     <!-- <i class="bi bi-list"></i> -->
 
-  </header> <!--termina navbar-->
+  </header>
   <!-- Button trigger modal -->
 
   <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 
     </button> -->
 
+  <!--///////
+    <button type="button" class="btn btn-primary texto textoBotoneraCabecera btn-modalview "
+              data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
+              <!-- falta agregar el texto de log in 
+            </button>
+          -->
+
+  <!-- Button trigger modal -->
+
+
   <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <img id="logo" src="../assets/registro/logo-login.png" alt="logo">
@@ -355,8 +375,10 @@
       </div>
 
 
-    </div> <!--fin div class col-->
-  </div> <!-- fin div modal fade -->
+    </div>
+  </div>
+
+
 
 
   <script src="../scripts/registro-validacion.js"></script>
@@ -365,6 +387,11 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
+
+  <!-- document.queryselector (.modal)
+document.queryselector(.linkBotonCabecera)
+linkbotonCabecera.classList.add("modal-visible");
+addeventlistener(click, ,=>{}); -->
 
 </body>
 
