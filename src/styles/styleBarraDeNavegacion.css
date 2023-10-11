@@ -355,6 +355,8 @@ border-right: none;
         background-color: #D9D9D9;
         visibility:hidden;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5); 
+        z-index: 2;
+
 
     }
     #contenedorNavList.visible{
