@@ -15,21 +15,48 @@
         <img src="../assets/ImgnavBar&acercaDeNosotros/Rectangle.png" alt="">
         <span class="tituloImagenPerfilArtista">#María Sandoval</span>
     </div>
-    <div class="contenedorAcercaDeMi col-lg-9 col-md-6 col-sm-12">
+    <!-- <div id="cajaContenedorAcercaDeMi"> -->
+    <div class="contenedorAcercaDeMi col-lg-9 col-md-6 col-sm-12" style="padding-right: 5%;
+    padding-left: 5%;">
         <span id="acercaDeMi">Acerca de mi</span>
     
     <div class="contenedorDescripcion">
-        <span>Soy María Sandoval, una apasionada artista iniciada en el urbano que crea obras únicas inspiradas en la naturaleza, cultura, ciencia, y sobre todo la calle. Mi tienda en línea presenta pinturas vibrantes y esculturas digitales. La web me conecta con amantes del arte de todo el mundo. Explora mi arte y únete a la conversación en mi blog Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime excepturi ipsa autem cum! Ab quo illum molestiae hic magnam, ex dolor consequatur. Quaerat explicabo, itaque vel commodi ea exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus repudiandae tempore sed? Numquam aut quas doloribus perspiciatis nihil repellendus voluptas illum ea, error laboriosam, assumenda vero distinctio ipsum! Facere..
+        <span>Soy María Sandoval, una apasionada artista iniciada en el urbano que crea obras únicas inspiradas en la naturaleza, cultura, ciencia, y sobre todo la calle. Mi tienda en línea presenta pinturas vibrantes y esculturas digitales. La web me conecta con amantes del arte de todo el mundo. Explora mi arte y únete a la conversación en mi blog.
         </span>
-        <button class="botonCategorias">
-            <span>
-            categorías
-        </span>
-        </button>
+        
+            <!-- <div class="dropdown botonCategorias"> -->
+                <button class="btn btn-secondary dropdown-toggle botonCategorias" type="button" style="background-color: #D0417E;" data-bs-toggle="dropdown" aria-expanded="false">Categorías
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Categoría1</a></li>
+                  <li><a class="dropdown-item" href="#">Categoría2</a></li>
+                  <li><a class="dropdown-item" href="#">Categoría3</a></li>
+                </ul>
+              </div>
+        
+    <!-- </div> -->
+</div><!-- Cierre contenedorAcercaDeMi -->
+</div>
+<!-- </div> -->
+ </div> 
+ <div class="row" id="bloqueObras">
+   
+    <div class="card col-lg-3 col-md-4 col-sm-12 cuadroObra" style="padding: 0px; border: none; border-radius:0px" ><!--hago uso de los estilos en linea para poder cambiar valores que tiene la clase de bootstrap y no permite cambiar con css-->
+         <div class="contenedorObra">
+        <img src="../assets/ImgnavBar&acercaDeNosotros/image 19.png" class="card-img-top" alt="...">
+        <span class="tituloObra">#tituloObra</span>
+        <div class="card-body">
+          <p class="card-text descripcionObra">Descripción de la obra/información </p>
+        </div>
     </div>
-</div>
-</div>
- </div> <!--Quitamos el container para manejar los margenes a nuestro antojo-->
+      </div>      <!-- cierre de la primera obra -->
+
+
+    </div>
+
+
+
+ </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

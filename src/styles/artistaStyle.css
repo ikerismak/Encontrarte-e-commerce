@@ -16,6 +16,12 @@
     display: flex;
     flex-direction: column;
     gap: 23px;
+    /* margin: 50px; */
+}
+.cajaContenedorAcercaDeMi{
+width: 60%;
+margin: 0%;
+margin-bottom: 0%;
 }
 
 
@@ -92,3 +98,49 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
+
+
+.cuadroObra{
+    /* width: 18rem; */
+    border: 3px solid black;
+    padding: 0px;
+    --bs-card-cap-padding-x: 0rem;
+}
+
+.descripcionObra{
+    height: fit-content;
+    max-height: 120px;
+    left: 7%;
+}
+
+.tituloObra{
+    position: absolute;
+    top: 55%;
+    background-color:#0000008F;
+    color: white;
+    left:0px;
+
+    font-family: Roboto Mono;
+font-size: 27.531px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    
+}
+#bloqueObras{
+    margin: 30px;
+}
+.card{
+    padding: 0px;
+}
+/* .cuadroObra{
+    border-radius: 0px;
+    margin: 10px;
+} */
+.contenedorObra{ 
+    width: 87%; 
+    border: 6px solid black;
+    
+
+
+} 
