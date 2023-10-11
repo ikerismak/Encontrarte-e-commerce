@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Contáctanos</title>
     <!-- Font de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,8 +75,9 @@
           </div>
         </div>
         <!--Cierre de el div de redes sociales-->
-        <div id="contenedorLogoCabecera logoNavbar">
-          <a href="./Inicio.html">
+
+        <div class="contenedorLogoCabecera logoNavbar">
+          <a href="../../index.html">
             <img
               id="logoCabecera"
               src="../assets/ImgnavBar&acercaDeNosotros/Logo.png"
@@ -86,52 +88,67 @@
         <!--Cierre del div del logo -->
         <div id="botoneraCabecera">
           <div id="loginBoton" class="contenedorBotonCabecera">
-            <div
-              class="contenedorImgBotonCabecera"
-              id="contenedorLoginCabecera"
-            >
-              <img
-                id="loginImg"
-                src="../assets/ImgnavBar&acercaDeNosotros/Enter.png"
-                alt=""
-              />
-            </div>
-            <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
+
+            <a class="linkBotonCabecera" href="../pages/registro.html">
+              <div
+                class="contenedorImgBotonCabecera"
+                id="contenedorLoginCabecera"
+              >
+                <img
+                  id="loginImg"
+                  src="../assets/ImgnavBar&acercaDeNosotros/Enter.png"
+                  alt=""
+                />
+              </div>
+              <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
+            </a>
           </div>
           <!-- Cierre del login-->
           <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
-            <div
-              class="contenedorImgBotonCabecera"
-              id="contenedorImgFavoriteBotonCabecera"
-            >
-              <img
-                id="favoriteImg"
-                src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png"
-                alt=""
-              />
-            </div>
-            <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">
-              Favoritos
-            </p>
-            <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
+            <a class="linkBotonCabecera" href="">
+              <div
+                class="contenedorImgBotonCabecera"
+                id="contenedorImgFavoriteBotonCabecera"
+              >
+                <img
+                  id="favoriteImg"
+                  src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png"
+                  alt=""
+                />
+              </div>
+              <p
+                id="resaltar"
+                class="textoBotoneraCabecera textoNormal resaltar"
+              >
+                Favoritos
+              </p>
+              <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
+            </a>
           </div>
           <!-- Cierre del favorite-->
           <div
             class="contenedorBotonCabecera"
             id="contenedorCarritoComprasCabecera"
           >
-            <div
-              class="contenedorImgBotonCabecera"
-              id="contenedorImgCarritoBotonCabecera"
+            <a
+              class="linkBotonCabecera"
+              href="../components/carrito-flotante.html"
             >
-              <img
-                id="CarritoImg"
-                src="../assets/ImgnavBar&acercaDeNosotros/carrito.png"
-                alt=""
-              />
-            </div>
-
-            <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
+              <div
+                class="contenedorImgBotonCabecera"
+                id="contenedorImgCarritoBotonCabecera"
+              >
+                <img
+                  id="CarritoImg"
+                  src="../assets/ImgnavBar&acercaDeNosotros/carrito.png"
+                  alt=""
+                />
+              </div>
+              <p class="texto textoBotoneraCabecera" id="textoCarrito">
+                Carrito
+              </p>
+            </a>
+            <!--De esta manera hago que tanto el texto como el png sean botones que direccionan a donde mismo-->
           </div>
           <!-- Cierre del botón de compras-->
         </div>
@@ -154,23 +171,20 @@
       <!--Cierre del bloque1-->
       <div class="bloque2 navBar">
         <!-- <nav id="navList"> -->
-        <button id="botonAbrir" type="button">
-          <img
-            id="burguerMenu"
-            src="../assets/ImgnavBar&acercaDeNosotros/vector Menu.png"
-            alt=""
-          />
-        </button>
+        <!-- <button id="botonAbrir" type="button"> -->
+        <div class="menuBurguerContenedor">
+          <span class="barraMenu1"></span>
+          <span class="barraMenu2"></span>
+          <span class="barraMenu3"></span>
+        </div>
+        <!-- </button> -->
         <div id="contenedorNavList">
-          <button id="botonCerrar" type="button">
-            <i class="bi bi-x-square"></i>
-          </button>
+          <!-- <button id="botonCerrar" type="button"><i class="bi bi-x-square"></i></button> -->
           <ul id="navList">
             <li id="inicio">
               <a
                 class="textoNormal"
                 href="../../index.html"
-                target="_blank"
                 rel="noopener noreferrer"
                 >Inicio</a
               >
@@ -179,8 +193,7 @@
             <li id="productos">
               <a
                 class="textoNormal"
-                href="./Pagina del producto.html"
-                target="_blank"
+                href="../pages/Pagina del producto.html"
                 rel="noopener noreferrer"
                 >Productos</a
               >
@@ -188,8 +201,7 @@
             <li id="Artistas">
               <a
                 class="textoNormal"
-                href="./index.html"
-                target="_blank"
+                href="../../index.html"
                 rel="noopener noreferrer"
                 >Artistas</a
               >
@@ -197,8 +209,7 @@
             <li id="Nosotros">
               <a
                 class="textoNormal"
-                href="./nosotros.html"
-                target="_blank"
+                href="../pages/indexAcercaDeNosotros.html"
                 rel="noopener noreferrer"
                 >Nosotros</a
               >
@@ -206,11 +217,10 @@
             <li id="Contactanos">
               <a
                 class="textoNormal"
-                href="./contactos.html"
-                target="_blank"
+                href="../pages/indexAcercaDeNosotros.html"
                 rel="noopener noreferrer"
-                >Contáctanos
-              </a>
+                >Contáctanos</a
+              >
             </li>
           </ul>
         </div>
@@ -442,6 +452,7 @@
         </section>
       </section>
     </main>
+
     <!-- contenedor footer -->
     <footer class="footer">
       <p class="head-4">#ArtMovesWorld</p>
@@ -449,6 +460,7 @@
         Generation 2023,Mexico. Derechos reservados ™Generation and Co
       </p>
     </footer>
+
     <!-- script bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

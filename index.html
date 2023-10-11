@@ -17,8 +17,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./src/styles/main-page.css">
-    <link rel="stylesheet" href="./src/styles/styleBarraDeNavegacion.css">
+    <link rel="stylesheet" href="./src/styles/main-page.css" />
+    <link rel="stylesheet" href="./src/styles/styleBarraDeNavegacion.css" />
     <!-- Styles and links register -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,209 +30,13 @@
     <title>Landing Page</title>
   </head>
   <body>
-    <!-- Navabar -->
-    <header>
-      <!-- pagina nav Bar de arriba abajo la voy a dividir por bloques(divs) que tendran divs adentro de cosas que se tengan que agrupar-->
-      <div class="bloque1" id="bloque1">
-        <div class="logoRedSocial redesSociales">
-          <div class="contenedorLogoRS">
-            <!--Cada uno de lo logos tendrán su propio div para ajutar su tamaño al contenedor-->
-            <a href="https://www.instagram.com/">
-              <img
-                class="logoInstagram logoRS"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Instagram.png"
-                alt=""
-              />
-            </a>
-          </div>
+    <header class="nav-container">
 
-          <div class="contenedorLogoRS" id="contenedorLogoFacebook">
-            <a href="https://www.facebook.com/">
-              <img
-                id="facebookLogo"
-                class="logoFacebook logoRS"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/facebook.png"
-                alt=""
-              />
-            </a>
-            <!--Al ser el logo de FB mas grande se le dará un tratamiento distinto-->
-          </div>
-          <div class="contenedorLogoRS">
-            <a href="https://www.whatsapp.com/">
-              <img
-                class="logoWhatsApp logoRS"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/WhatsApp.png"
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
-        <!--Cierre de el div de redes sociales-->
-        <div id="contenedorLogoCabecera logoNavbar">
-          <a href="./Inicio.html">
-            <img
-              id="logoCabecera"
-              src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Logo.png"
-              alt=""
-            />
-          </a>
-        </div>
-        <!--Cierre del div del logo -->
-        <div id="botoneraCabecera">
-          <div id="loginBoton" class="contenedorBotonCabecera">
-            <div
-              class="contenedorImgBotonCabecera"
-              id="contenedorLoginCabecera"
-            >
-              <img
-                id="loginImg"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Enter.png"
-                alt=""
-              />
-            </div>
+      <h1>hola</h1>
 
-            <button
-              type="button"
-              class="btn btn-primary texto textoBotoneraCabecera btn-modalview"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Log in
-            </button>
-          </div>
-          <!-- Cierre del login-->
-          <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
-            <div
-              class="contenedorImgBotonCabecera"
-              id="contenedorImgFavoriteBotonCabecera"
-            >
-              <img
-                id="favoriteImg"
-                src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Favorite.png"
-                alt=""
-              />
-            </div>
-            <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">
-              Favoritos
-            </p>
-            <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
-          </div>
-          <!-- Cierre del favorite-->
-          <div
-            class="contenedorBotonCabecera"
-            id="contenedorCarritoComprasCabecera"
-          >
-            <div
-              class="contenedorImgBotonCabecera"
-              id="contenedorImgCarritoBotonCabecera"
-            >
-            <a href="./src/components/carrito-flotante.html">
-              <img
-              id="CarritoImg"
-              src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/carrito.png"
-              alt=""
-            />
 
-            </a>
 
-            </div>
-
-            <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
-          </div>
-          <!-- Cierre del botón de compras-->
-        </div>
-        <!--Cierre botoneraCabecera-->
-
-        <div class="userID">
-          <div id="contenedorImgUserCabecera">
-            <a href="">  <img
-              id="imgPerfilUser"
-              src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png"
-              alt=""
-            /></a>
-
-          </div>
-          <p class="textoNormal" id="welcomeUser">
-            Bienvenido (agregar usuario)
-          </p>
-        </div>
-        <!-- cierre de la personalización de la bienvenida de usuario-->
-      </div>
-      <!--Cierre del bloque1-->
-      <div class="bloque2 navBar">
-        <!-- <nav id="navList"> -->
-        <button id="botonAbrir" type="button">
-          <img
-            id="burguerMenu"
-            src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/vector Menu.png"
-            alt=""
-          />
-        </button>
-        <div id="contenedorNavList">
-          <button id="botonCerrar" type="button">
-            <i class="bi bi-x-square"></i>
-          </button>
-          <ul id="navList">
-            <li id="inicio">
-              <a
-                class="textoNormal"
-                href="./index.html"
-                rel="noopener noreferrer"
-                >Inicio</a
-              >
-            </li>
-            <!--Se agregó el link con target blank para que abra el link en una nueva pestaña, y  ya que esté el navbar terminado cambiar la dirección de la pestaña actual-->
-            <li id="productos">
-              <a
-                class="textoNormal"
-                href="./src/pages/pagina-productos.html"
-                rel="noopener noreferrer"
-                >Productos</a
-              >
-            </li>
-            <li id="Artistas">
-              <a
-                class="textoNormal"
-                href="./index.html"
-                rel="noopener noreferrer"
-                >Artistas</a
-              >
-            </li>
-            <li id="Nosotros">
-              <a
-                class="textoNormal"
-                href="../Encontrarte-e-commerce/src/pages/indexAcercaDeNosotros.html"
-                rel="noopener noreferrer"
-                >Nosotros</a
-              >
-            </li>
-            <li id="Contactanos">
-              <a
-                class="textoNormal"
-                href="./src/pages/contactos.html"
-                rel="noopener noreferrer"
-                >Contactanos</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--Cierre del bloque 2 -->
-      <div class="bloqueBuscador">
-        <div class="bloqueNegroBuscador"></div>
-        <div id="contenedorBarraBusqueda">
-          <img
-            id="lupaBarraBusqueda"
-            src="../Encontrarte-e-commerce/src/assets/ImgnavBar&acercaDeNosotros/Lupa.png"
-            alt=""
-          />
-          <input id="barraBusqueda" type="text" />
-        </div>
-        <div class="bloqueNegroBuscador"></div>
-      </div>
-      <!-- <i class="bi bi-list"></i> -->
     </header>
-    <!-- Modal -->
     <div
       class="modal fade"
       id="staticBackdrop"
@@ -244,7 +48,11 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-          <img id="logo" src="../Encontrarte-e-commerce/src/assets/registro/logo-login.png" alt="logo" />
+          <img
+            id="logo"
+            src="../Encontrarte-e-commerce/src/assets/registro/logo-login.png"
+            alt="logo"
+          />
           <div class="modal-registro">
             <div class="modal-header">
               <h2 class="fw-bold text-center">
@@ -473,34 +281,35 @@
       <!--fin div class col-->
     </div>
 
-    <!-- Main Gallery-->
+    <!-- Main Gallery seccion 1-->
     <section id="caracteristicas" class="section py-4">
       <div class="container-fluid p-0 px-1 py-0">
         <div class="row">
           <!-- Columna 1 -->
           <div class="col-md-1 empty-column-gallery"></div>
-           <!-- Columna 2 -->
+          <!-- Columna 2 -->
           <div class="col-md-4 column-gallery-one">
             <div class="row h-100">
               <div class="col-12 img-container-main-01">
                 <img
-                  src="./src/assets/main-gallery/image-main-grid-05.jpg"
+                  src="./src/assets/main-gallery/image-main-grid-05.webp"
                   alt="Imagen 3a"
                   class="img-fluid image-gallery-05"
-
                 />
                 <div class="text-container-five">
+                  <h2>#Clasic</h2>
                   <p>Texto encima de la imagen</p>
                 </div>
               </div>
-              <div class="col-12  pb-5 img-container-main-02">
+              <div class="col-12 pb-5 img-container-main-02">
                 <img
-                  src="./src/assets/main-gallery/image-main-grid-06.jpg"
+                  src="./src/assets/main-gallery/image-main-grid-06.webp"
                   alt="Imagen 3b"
                   class="img-fluid image-gallery-06"
                 />
 
                 <div class="text-container-four">
+                  <h2>#Clasic</h2>
                   <p>Texto encima de la imagen</p>
                 </div>
               </div>
@@ -513,40 +322,42 @@
                 class="col-12 img-container-main-03 position-relative column-three"
               >
                 <img
-                  src="./src/assets/main-gallery/image-main-grid-02.jpg "
+                  src="./src/assets/main-gallery/image-main-grid-02.webp "
                   alt="Imagen 2a"
                   class="img-fluid h-100 image-gallery-07"
-
                 />
 
                 <div class="text-container-three">
+                  <h2>#Clasic</h2>
                   <p>Texto encima de la imagen</p>
                 </div>
               </div>
               <div
-                class="col-12   img-container-main-04 position-relative column-two"
+                class="col-12 img-container-main-04 position-relative column-two"
               >
                 <img
-                  src="./src/assets/main-gallery/image-main-grid-03.jpg"
+                  src="./src/assets/main-gallery/image-main-grid-03.webp"
                   alt="Imagen 2b"
                   class="img-fluid h-100 image-gallery-03"
                 />
 
                 <div class="text-container-two">
+                  <h2>#Clasic</h2>
                   <p>Texto encima de la imagen</p>
                 </div>
               </div>
             </div>
           </div>
           <!-- Columna 4 -->
-          <div class="col-md-4  img-container-main-05 ">
-            <div class="col-12  h-100 column1">
+          <div class="col-md-4 img-container-main-05">
+            <div class="col-12 h-100 column1">
               <img
-                src="./src/assets/main-gallery/image-main-grid-01.jpg"
+                src="./src/assets/main-gallery/image-main-grid-01.webp"
                 alt="Imagen 1"
                 class="img-fluid h-100 image-gallery-01"
               />
               <div class="text-container">
+                <h2>#Clasic</h2>
                 <p>Texto encima de la imagen</p>
               </div>
             </div>
@@ -562,8 +373,7 @@
     <!-- Banner 1 -->
 
     <div class="container-fluid banner">
-      <h1 class="display-4">¡Bienvenido a nuestro sitio!</h1>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
+      <a class="btn button-banner-one btn-lg" href="#" role="button">Ver más</a>
     </div>
 
     <!-- seccion 2 -->
@@ -586,10 +396,9 @@
           <div class="col-md-5 m-0 p-2 pb-5">
             <div class="col-12 p-0 m-0 h-100 column1">
               <img
-                src="./src/assets/main-gallery/artist.jpg"
+                src="./src/assets/main-gallery/artist.webp"
                 alt="Imagen 1"
                 class="img-fluid h-100 image-gallery-01"
-
               />
               <div class="text-container">
                 <p>Texto encima de la imagen</p>
@@ -600,20 +409,27 @@
 
           <div class="col-md-5 p-4">
             <div class="row h-100">
-              <div class="col-12 img-container-main">
+              <div class="col-12 img-container-artist-02">
                 <img
-                  src="./src/assets/main-gallery/image-main-grid-05.jpg"
+                  src="./src/assets/main-gallery/artist-01.webp"
                   alt="Imagen 3a"
                   class="img-fluid image-gallery-05"
-
                 />
+
+                <div class="text-container-six-artist">
+                  <p>Texto encima de la imagen</p>
+                </div>
               </div>
-              <div class="col-12 img-container-main-02">
+              <div class="col-12 img-container-artist-03">
                 <img
-                  src="./src/assets/main-gallery/image-main-grid-06.jpg"
+                  src="./src/assets/main-gallery/artist-02.webp"
                   alt="Imagen 3b"
                   class="img-fluid image-gallery-06"
                 />
+
+                <div class="text-container-seven-artist">
+                  <p>Texto encima de la imagen</p>
+                </div>
               </div>
             </div>
           </div>
@@ -631,18 +447,18 @@
 
     <section id="contacto" class="section section-images-categories">
       <div class="container-fluid banner-title-categories">
-        <h1 class="display-4">#Artist of the month</h1>
+        <h1 class="display-4">#Categories</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, iste.
         </p>
       </div>
-      <div class="container ">
-        <div class="row">
+      <div class="container categories-container">
+        <div class="row categories-cards-container">
           <!-- Primera columna -->
-          <div class=" col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4 card-container-column">
             <div class="card">
               <img
-                src="./src/assets/categories/grafitti.jpg"
+                src="./src/assets/categories/grafitti.webp"
                 class="card-img-top"
                 alt="Imagen 2"
               />
@@ -662,10 +478,10 @@
             </div>
           </div>
           <!-- Segunda columna -->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4 card-container-column">
             <div class="card">
               <img
-                src="./src/assets/categories/seccion_drawing.jpg"
+                src="./src/assets/categories/seccion_drawing.webp"
                 class="card-img-top"
                 alt="Imagen 2"
               />
@@ -685,10 +501,10 @@
             </div>
           </div>
           <!-- Tercera columna -->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4 card-container-column">
             <div class="card">
               <img
-                src="./src/assets/categories/photography.jpg"
+                src="./src/assets/categories/photography.webp"
                 class="card-img-top"
                 alt="Imagen 2"
               />
@@ -708,10 +524,10 @@
             </div>
           </div>
           <!-- Cuarta columna -->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4 card-container-column">
             <div class="card">
               <img
-                 src="./src/assets/categories/seccion_aqua.jpg"
+                src="./src/assets/categories/seccion_aqua.webp"
                 class="card-img-top"
                 alt="Imagen 2"
               />
@@ -736,52 +552,61 @@
 
     <div class="container-fluid banner-paper">
       <h1 class="paper-title-section">#Best Sales</h1>
-
     </div>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <div class="row">
-
-          <div class="col-md-1 team-member">
-          </div>
-
+          <div class="col-md-1 team-member"></div>
 
           <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-1.jpg" alt="Integrante 1">
+            <img
+              src="./src/assets/profile-images/perfil-1.jpg"
+              alt="Integrante 1"
+            />
             <h5>Nombre Integrante 1</h5>
             <p>Cargo Integrante 1</p>
           </div>
 
           <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-2.jpg" alt="Integrante 2">
+            <img
+              src="./src/assets/profile-images/perfil-2.jpg"
+              alt="Integrante 2"
+            />
             <h5>Nombre Integrante 2</h5>
             <p>Cargo Integrante 2</p>
           </div>
 
           <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-3.jpg" alt="Integrante 3">
+            <img
+              src="./src/assets/profile-images/perfil-3.jpg"
+              alt="Integrante 3"
+            />
             <h5>Nombre Integrante 3</h5>
             <p>Cargo Integrante 3</p>
           </div>
 
           <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-4.jpg" alt="Integrante 4">
+            <img
+              src="./src/assets/profile-images/perfil-4.jpg"
+              alt="Integrante 4"
+            />
             <h5>Nombre Integrante 4</h5>
             <p>Cargo Integrante 4</p>
           </div>
 
           <div class="col-md-2 team-member">
-            <img src="./src/assets/profile-images/perfil-5.jpg" alt="Integrante 5">
+            <img
+              src="./src/assets/profile-images/perfil-5.jpg"
+              alt="Integrante 5"
+            />
             <h5>Nombre Integrante 5</h5>
             <p>Cargo Integrante 5</p>
           </div>
         </div>
 
-
-        <div class="col-md-1 team-member">
-        </div>
+        <div class="col-md-1 team-member"></div>
         <div class="row contact-info">
           <div class="col-md-6 offset-md-3">
             <p>Email: info@example.com</p>
@@ -789,12 +614,14 @@
           </div>
         </div>
         <div class="row brand-info">
-          <div class="col-md-6 ">
-            <p class="brand">&copy; 2023 Mi Marca Registrada. Todos los derechos reservados.</p>
+          <div class="col-md-6">
+            <p class="brand">
+              &copy; 2023 Mi Marca Registrada. Todos los derechos reservados.
+            </p>
           </div>
         </div>
       </div>
-      </footer>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -824,11 +651,9 @@
           }
         });
       });
+
     </script>
-     <script defer src="./src/scripts/toggle.js"></script>
-     <script defer src="./src/scripts/scriptBarraDeNavegacion.js"></script>
-     <script src="../Encontrarte-e-commerce/src/scripts/registo.js"></script>
-      <script src="./src/scripts/scriptBarraDeNavegacion.js"></script>
+    <script src="./src/scripts/template-literal.js"></script>
 
   </body>
 </html>
