@@ -11,9 +11,141 @@
   --thirdcollor: #010101;
   --extracolor: #cccccc;
 }
+
 html {
   height: 100vh;
   width: 100%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: var(--textcolor);
+  max-width: 1440px;
+}
+.box-container {
+  background-color: var(--backgroundcolor);
+  width: 100%;
+  padding: 0 16px;
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: 40px 0;
+}
+/*stylos del formulario*/
+.form-label {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+}
+.form-control-input {
+  border-left: none;
+}
+.form-control,
+.form-select,
+.form-check-input {
+  resize: none;
+  border: 1px solid var(--thirdcollor);
+}
+.form-check-input:checked {
+  background-color: var(--primarycolor);
+  border-color: var(--primarycolor);
+}
+
+.form-check-input:checked,
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus {
+  resize: none;
+  box-shadow: none;
+  border: 1px solid var(--primarycolor);
+}
+
+.btn-3:hover {
+  color: var(--primarycolor);
+  font-weight: 700;
+  background: #ffffff33;
+  border: 1px solid var(--primarycolor);
+  box-shadow: 0 4px 4px 0 rgba(208, 65, 126, 0.5);
+}
+.btn-3 {
+  width: 100%;
+  color: var(--textcolor);
+  font-weight: 700;
+  background: var(--primarycolor);
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 4px 0 #75757580;
+}
+.btn-3:first-child:active {
+  transform: scale(1.2);
+  color: var(--primarycolor);
+  font-weight: 700;
+  background-color: #c9c9c9;
+  border: 1px solid var(--primarycolor);
+  box-shadow: 0 4px 4px 0 #75757580;
+}
+
+/*stylos de contenedor de imagens*/
+.drop-zone {
+  display: flex;
+  background-color: var(--textcolor);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 2px dashed var(--thirdcollor);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.center-image {
+  padding: 10px;
+  border-radius: 10px;
+}
+.center-image > img {
+  border: 2px solid var(--primarycolor);
+  border-radius: 10px;
+  background-color: var(--backgroundcolor);
+}
+.image-preview-box {
+  position: relative;
+  background-color: var(--backgroundcolor);
+  border-radius: 10px;
+  border: 2px solid var(--primarycolor);
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 5px;
+}
+.image-preview-box .icon-position {
+  position: absolute;
+  top: 63px;
+  left: 88px;
+  font-weight: 600;
+  color: var(--primarycolor);
+}
+.image-preview-box img {
+  padding: 10px;
+
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+/*pinturas sidebar css*/
+/*label*/
+.label-container {
+  background-color: var(--textcolor);
+  border: 1px solid var(--primarycolor);
+  border-radius: 10px;
+  padding: 5px;
+}
+.label-box {
+  background-color: var(--backgroundcolor);
+  border-radius: 10px;
+  padding: 5px;
+}
+.icon-close {
+  font-size: 16px;
 }
 @media (min-width: 576px) {
 }
@@ -36,6 +168,7 @@ html {
  */
 @media (min-width: 1400px) {
 }
+
 .head-1 {
   font-size: 36px;
   line-height: 44px;
