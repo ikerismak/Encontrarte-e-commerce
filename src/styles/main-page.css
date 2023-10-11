@@ -561,7 +561,7 @@
     }
 }
 
-@media only screen and (min-width: 390px) and (max-width: 767px){
+@media only screen and (min-width: 375px) and (max-width: 767px){
   /* Estilos para tabletas y dispositivos con pantalla más grande que 768px */
   /* Puedes agregar tus estilos específicos aquí */
 
