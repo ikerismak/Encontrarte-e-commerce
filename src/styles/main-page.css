@@ -551,11 +551,41 @@
       width: 200px;
     }
 
+
     .text-container-four h2{
         font-size: 18px;
     }
     .text-container-four p{
       font-size: 12px;
+    }
+
+    .text-container-six-artist {
+      top: 40%;
+      left: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 250px;
+    }
+
+
+    .text-container-six-artist p{
+      font-size: 8px;
+    }
+
+    .text-container-seven-artist {
+      top: 40%;
+      left: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 250px;
+    }
+
+
+    .text-container-seven-artist p{
+      font-size: 8px;
+    }
+
+    .img-container-artist-02{
+
+      padding-bottom: 30px;
     }
 
     .section-images-categories{
