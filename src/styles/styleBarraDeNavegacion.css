@@ -254,15 +254,15 @@ height: 100%;
     transition: all 1s;
 
 }
-
+ /* 
 #botonCerrar{
     visibility: hidden;
     position: absolute;
 
 }
- #botonCerrar.visible{
+#botonCerrar.visible{
     visibility: hidden;
-    } 
+    }  */
 
 body {
     /* border: solid 4px #D0417E; */
@@ -355,13 +355,15 @@ border-right: none;
         background-color: #D9D9D9;
         visibility:hidden;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5); 
+        z-index: 2;
+
 
     }
     #contenedorNavList.visible{
         transition: all 500ms;
         right: 0;
     }
-
+/* 
     #botonCerrar {
         position: absolute;
         align-items: center;
@@ -372,11 +374,11 @@ border-right: none;
         background-color: #D9D9D9;
         border: none;
         visibility: hidden;
-    }
+    } */
     
-    #botonCerrar.visible{
+    /* #botonCerrar.visible{
         visibility: visible;
-    }
+    } */
 
     /*
     #botonCerrar.visible{
