@@ -103,7 +103,7 @@ const formlogin = document.getElementById('formularioLogin');
 
 const userTest = {
     email: "prueba@gmail.com",
-    password: "12345",
+    password: "12345678",
 };
 
 
@@ -186,6 +186,33 @@ formlogin.addEventListener('submit', function (event) {
         </div>
         */
 
+/* <div id="botoneraCabecera">
+<div id="loginBoton" class="contenedorBotonCabecera">
+
+  <div class="" id="contenedorLoginCabecera">
+    <!--<img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="" /> -->
+    <button type="button" class="login-boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
+    </button>
+    <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
+  </div>
+
+  </a>
+</div>
+*/
+
+/*
+<div id="botoneraCabecera">
+        <div id="loginBoton" class="contenedorBotonCabecera">
+          
+            <div class="" id="contenedorLoginCabecera">
+              <button type="button" class="login-boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
+                </button>
+            <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
+         </div>
+        </div>
+*/
 
 
 
