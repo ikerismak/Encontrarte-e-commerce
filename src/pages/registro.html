@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="../styles/styleBarraDeNavegacion.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script defer src="../scripts/registro-toggle.js"></script>
-  <script defer src="../scripts/scriptBarraDeNavegacion.js"></script>
+
+  <link rel="stylesheet" href="../styles/burguerMenuAnimacionStyle.css" />
 
 </head>
 
@@ -28,81 +29,83 @@
         <div class="contenedorLogoRS">
           <!--Cada uno de lo logos tendrán su propio div para ajutar su tamaño al contenedor-->
           <a href="https://www.instagram.com/">
-            <img class="logoInstagram logoRS" src="../assets/ImgnavBar&acercaDeNosotros/Instagram.png" alt="">
+            <img class="logoInstagram logoRS" src="../assets/ImgnavBar&acercaDeNosotros/Instagram.png" alt="" />
           </a>
         </div>
 
         <div class="contenedorLogoRS" id="contenedorLogoFacebook">
           <a href="https://www.facebook.com/">
             <img id="facebookLogo" class="logoFacebook logoRS" src="../assets/ImgnavBar&acercaDeNosotros/facebook.png"
-              alt="">
-          </a> <!--Al ser el logo de FB mas grande se le dará un tratamiento distinto-->
+              alt="" />
+          </a>
+          <!--Al ser el logo de FB mas grande se le dará un tratamiento distinto-->
         </div>
         <div class="contenedorLogoRS">
           <a href="https://www.whatsapp.com/">
-            <img class="logoWhatsApp logoRS" src="../assets/ImgnavBar&acercaDeNosotros/WhatsApp.png" alt="">
+            <img class="logoWhatsApp logoRS" src="../assets/ImgnavBar&acercaDeNosotros/WhatsApp.png" alt="" />
           </a>
         </div>
-
-      </div><!--Cierre de el div de redes sociales-->
+      </div>
+      <!--Cierre de el div de redes sociales-->
       <div class="contenedorLogoCabecera logoNavbar">
         <a href="../../index.html">
-          <img id="logoCabecera" src="../assets/ImgnavBar&acercaDeNosotros/Logo.png" alt="">
+          <img id="logoCabecera" src="../assets/ImgnavBar&acercaDeNosotros/Logo.png" alt="" />
         </a>
-      </div><!--Cierre del div del logo -->
+      </div>
+      <!--Cierre del div del logo -->
       <div id="botoneraCabecera">
-
         <div id="loginBoton" class="contenedorBotonCabecera">
 
-
           <div class="" id="contenedorLoginCabecera">
-
-            <!--<img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">-->
+            <!--<img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="" /> -->
             <button type="button" class="login-boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
             </button>
             <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
           </div>
 
-
-
-
-        </div><!-- Cierre del login-->
-
+          </a>
+        </div>
+        <!-- Cierre del login-->
         <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
           <a class="linkBotonCabecera" href="">
-
             <div class="contenedorImgBotonCabecera" id="contenedorImgFavoriteBotonCabecera">
-              <img id="favoriteImg" src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png" alt="">
+              <img id="favoriteImg" src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png" alt="" />
             </div>
-            <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">Favoritos</p>
+            <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">
+              Favoritos
+            </p>
             <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
           </a>
-        </div><!-- Cierre del favorite-->
+        </div>
+        <!-- Cierre del favorite-->
         <div class="contenedorBotonCabecera" id="contenedorCarritoComprasCabecera">
           <a class="linkBotonCabecera" href="../components/carrito-flotante.html">
             <div class="contenedorImgBotonCabecera" id="contenedorImgCarritoBotonCabecera">
-              <img id="CarritoImg" src="../assets/ImgnavBar&acercaDeNosotros/carrito.png" alt="">
+              <img id="CarritoImg" src="../assets/ImgnavBar&acercaDeNosotros/carrito.png" alt="" />
             </div>
-            <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
-          </a> <!--De esta manera hago que tanto el texto como el png sean botones que direccionan a donde mismo-->
-
-        </div><!-- Cierre del botón de compras-->
-      </div><!--Cierre botoneraCabecera-->
+            <p class="texto textoBotoneraCabecera" id="textoCarrito">
+              Carrito
+            </p>
+          </a>
+          <!--De esta manera hago que tanto el texto como el png sean botones que direccionan a donde mismo-->
+        </div>
+        <!-- Cierre del botón de compras-->
+      </div>
+      <!--Cierre botoneraCabecera-->
 
       <div class="userID">
         <div id="contenedorImgUserCabecera">
-          <img id="imgPerfilUser" src="../assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png" alt="">
+          <img id="imgPerfilUser" src="../assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png" alt="" />
         </div>
-        <p class="textoNormal" id="welcomeUser">Bienvenido (agregar usuario)</p>
-
-      </div> <!-- cierre de la personalización de la bienvenida de usuario-->
-
-
-
-    </div><!--Cierre del bloque1-->
+        <p class="textoNormal" id="welcomeUser">
+          Bienvenido (agregar usuario)
+        </p>
+      </div>
+      <!-- cierre de la personalización de la bienvenida de usuario-->
+    </div>
+    <!--Cierre del bloque1-->
     <div class="bloque2 navBar">
-
       <!-- <nav id="navList"> -->
       <!-- <button id="botonAbrir" type="button"> -->
       <div class="menuBurguerContenedor">
@@ -114,7 +117,6 @@
       <div id="contenedorNavList">
         <!-- <button id="botonCerrar" type="button"><i class="bi bi-x-square"></i></button> -->
         <ul id="navList">
-
           <li id="inicio">
             <a class="textoNormal" href="../../index.html" rel="noopener noreferrer">Inicio</a>
           </li>
@@ -133,34 +135,18 @@
           </li>
         </ul>
       </div>
-
-    </div><!--Cierre del bloque 2 -->
+    </div>
+    <!--Cierre del bloque 2 -->
     <div class="bloqueBuscador">
       <div class="bloqueNegroBuscador"></div>
       <div id="contenedorBarraBusqueda">
-        <img id="lupaBarraBusqueda" src="../assets/ImgnavBar&acercaDeNosotros/Lupa.png" alt="">
-        <input id="barraBusqueda" type="text">
+        <img id="lupaBarraBusqueda" src="../assets/ImgnavBar&acercaDeNosotros/Lupa.png" alt="" />
+        <input id="barraBusqueda" type="text" />
       </div>
       <div class="bloqueNegroBuscador"></div>
     </div>
     <!-- <i class="bi bi-list"></i> -->
-
   </header>
-  <!-- Button trigger modal -->
-
-  <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-
-    </button> -->
-
-  <!--///////
-    <button type="button" class="btn btn-primary texto textoBotoneraCabecera btn-modalview "
-              data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
-              <!-- falta agregar el texto de log in 
-            </button>
-          -->
-
-  <!-- Button trigger modal -->
 
 
   <!-- Modal -->
@@ -170,6 +156,7 @@
         <img id="logo" src="../assets/registro/logo-login.png" alt="logo">
 
         <div class="modal-registro"> <!-- inicia modal registro -->
+
           <div class="modal-header">
             <h2 class="fw-bold text-center ">Registrate y encuentra tu obra ideal</h2>
 
@@ -180,7 +167,8 @@
 
               <div class="mb-3 position-relative">
                 <label for="name" class="form-label">Nombre completo</label>
-                <input type="name" class="form-control" required id="inputName" aria-describedby="nameHelp">
+                <input type="name" class="form-control nombre" required id="inputName" aria-describedby="nameHelp"
+                  minlength="5" maxlength="60">
                 <div class="valid-tooltip">
                   Correcto
                 </div>
@@ -191,7 +179,7 @@
               <div class="mb-3 position-relative">
                 <label for="number" class="form-label">Número de teléfono</label>
                 <input type="text" required class="form-control validanumericos" id="inputnumber"
-                  aria-describedby="numberH">
+                  aria-describedby="numberH" minlength="10" maxlength="10">
 
                 <div class="valid-tooltip">
                   Correcto
@@ -203,7 +191,8 @@
 
               <div class="mb-3 position-relative">
                 <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" required class="form-control" id="inputemail" aria-describedby="emailHelp">
+                <input type="email" required class="form-control correoRegistro" id="inputemail"
+                  aria-describedby="emailHelp" minlength="8" maxlength="45" onblur="validarCorreo()">
                 <div class="valid-tooltip">
                   Correcto
                 </div>
@@ -215,7 +204,8 @@
 
               <div class="mb-3 position-relative">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" required class="form-control" id="password">
+                <input type="password" required class="form-control passRegistro1 pass" id="password" minlength="8"
+                  maxlength="25" onblur="validarPass()">
                 <div class="valid-tooltip">
                   Correcto
                 </div>
@@ -226,7 +216,8 @@
               </div>
               <div class="mb-3 position-relative">
                 <label for="confirmpassword" class="form-label">Confirmar contraseña</label>
-                <input type="password" required class="form-control" id="confirmpassword">
+                <input type="password" required class="form-control passRegistro2 pass" id="confirmpassword"
+                  minlength="8" maxlength="25" onblur="validarPass()">
                 <div class="valid-tooltip">
                   Correcto
                 </div>
@@ -237,7 +228,7 @@
                                     mayúscula y un dígito.</p> -->
               </div>
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="inputCheck">
+                <input type="checkbox" class="form-check-input" id="inputCheckBox">
                 <label class="form-check-label" for="labelCheck">Mantenerme conectado</label>
                 <br> <br>
               </div>
@@ -290,20 +281,31 @@
 
         <!-- VENTANA INICIO SESION-->
 
-        <div class="modal-login visibilty"> <!-- header del modal-->
+        <div class="modal-login"> <!-- header del modal-->
           <div class="modal-header">
             <h2 class="fw-bold text-center ">Bienvenido a EncontrArte</h2>
           </div>
           <div class="modal-body">
-            <form> <!-- inicia formulario -->
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text"></div>
+            <form id="formularioLogin" class="needs-validation" novalidate> <!-- inicia formulario -->
+              <div class="mb-3 position-relative">
+                <label for="labelEmail" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="email" required>
+                <div class="valid-tooltip">
+                  Correcto
+                </div>
+                <div class="invalid-tooltip">
+                  Es necesario añadir una contraseña
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+              <div class="mb-3 position-relative">
+                <label for="labelPasswordLogin" class="form-label">Contraseña</label>
+                <input type="password" class="form-control pass" id="inputPassword" required onblur="validarPass()">
+                <div class="valid-tooltip">
+                  Correcto
+                </div>
+                <div class="invalid-tooltip">
+                  Es necesario añadir una contraseña
+                </div>
                 <br>
 
                 <div id="olvidar-contra" style="text-align: right">
@@ -312,11 +314,11 @@
                 <!-- <p>¿Has olvidado tu contraseña?</p> <br> -->
               </div>
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Mantenerme conectado</label>
+                <input type="checkbox" class="form-check-input" id="inputCheck">
+                <label class="form-check-label" for="labelCheck">Mantenerme conectado</label>
                 <br> <br>
               </div>
-              <button type="submit" id="botonsubmit" class="btn btn-primary">Acceso</button>
+              <button type="submit" id="botonsubmit" class="btn btn-primary btnlogin">Acceso</button>
             </form> <!-- termina formulario -->
           </div>
           <div class="modal-footer"> <!-- comienza footer de continuar con redes sociales-->
@@ -381,17 +383,12 @@
 
 
 
-  <script src="../scripts/registro-validacion.js"></script>
   <script src="../scripts/registo.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-
-
-  <!-- document.queryselector (.modal)
-document.queryselector(.linkBotonCabecera)
-linkbotonCabecera.classList.add("modal-visible");
-addeventlistener(click, ,=>{}); -->
+  <script src="../scripts/scriptBarraDeNavegacion.js"></script>
+  <script src="../scripts/animacionMenuHamburguesa.js"></script>
 
 </body>
 
