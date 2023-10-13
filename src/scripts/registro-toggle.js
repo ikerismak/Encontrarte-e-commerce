@@ -171,69 +171,6 @@ formlogin.addEventListener('submit', function (event) {
 
 
 
-
-/*
-
-formlogin.addEventListener('submit', function (event) {
-
-
-    (function () {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-
-        var forms = document.querySelectorAll('.needs-validation');
-        // Loop over them and prevent submission
-        Array.from(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    contador = 0;
-
-                    Array.from(form.elements).forEach(function (element) {
-                        if (element.checkValidity() === false) {
-                            contador++;
-                        }
-                    });
-                    if (contador === 0) {
-                        banderalogin = true;
-                    } else {
-
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-
-            })
-
-
-    })()
-    if (banderalogin) {
-        // Obtiene los valores de los campos del formulario
-
-        let email = document.getElementById('inputEmailLogin').value;
-        let pass = document.getElementById('inputPassword').value;
-
-        if (email === userTest.email && pass === userTest.password) {
-
-            // Crea un objeto JSON con los valores del formulario
-            localStorage.setItem('user', JSON.stringify(userTest));
-
-            setTimeout(() => {
-                modal.style.display = "none";
-                document.querySelector('.modal-backdrop').remove();
-            }, 300);
-
-
-        }
-
-
-    }
-
-    event.preventDefault(); // Evita el envío predeterminado del formulario
-    // Puedes realizar otras acciones aquí, como enviar el objeto JSON a un servidor
-});
-
-*/
-
 /*<div id="botoneraCabecera">
 
     <div id="loginBoton" class="contenedorBotonCabecera">

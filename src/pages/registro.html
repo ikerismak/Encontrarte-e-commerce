@@ -217,7 +217,7 @@
               <div class="mb-3 position-relative">
                 <label for="confirmpassword" class="form-label">Confirmar contraseña</label>
                 <input type="password" required class="form-control passRegistro2 pass" id="confirmpassword"
-                  minlength="8" maxlength="25" onblur="validarPass()">
+                  minlength="8" maxlength="25" onblur="validarPassConfirm()">
                 <div class="valid-tooltip">
                   Correcto
                 </div>
@@ -289,17 +289,19 @@
             <form id="formularioLogin" class="needs-validation" novalidate> <!-- inicia formulario -->
               <div class="mb-3 position-relative">
                 <label for="labelEmail" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="email" required>
+                <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="email" required
+                  onblur="validarCorreoLogin()">
                 <div class="valid-tooltip">
                   Correcto
                 </div>
                 <div class="invalid-tooltip">
-                  Es necesario añadir una contraseña
+                  Es necesario añadir un correo válido
                 </div>
               </div>
               <div class="mb-3 position-relative">
                 <label for="labelPasswordLogin" class="form-label">Contraseña</label>
-                <input type="password" class="form-control pass" id="inputPassword" required onblur="validarPass()">
+                <input type="password" class="form-control pass" id="inputPasswordLogin" required
+                  onblur="validarPassLogin()">
                 <div class="valid-tooltip">
                   Correcto
                 </div>
@@ -348,14 +350,11 @@
               </div>
             </div>
 
-
             <div class="my-3">
 
               <button type="submit" id="toggle-login" class="btn-toggle">No tienes cuenta?
                 Registrate</button>
             </div>
-
-
 
           </div> <!-- termina footer de continuar con redes sociales-->
         </div>
@@ -379,8 +378,6 @@
 
     </div>
   </div>
-
-
 
 
   <script src="../scripts/registo.js"></script>

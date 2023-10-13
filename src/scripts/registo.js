@@ -17,7 +17,6 @@ onload = function () {
     }
 
     nombre.onkeypress = function (e) {
-        console.log(e.keyCode);
         if ((e.keyCode > 64 && e.keyCode < 91) || (e.keyCode > 96 && e.keyCode < 123) || (e.keyCode == 32) || (e.keyCode > 163 && e.keyCode < 166)) {
             return true;
         } else {
@@ -55,7 +54,19 @@ onload = function () {
 function validarCorreo() {
     var correo = document.getElementById('inputemail').value;
     var expr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    console.log(!expr.test(correo));
+
+    if (!expr.test(correo)) {
+        return false;
+    } else {
+        return true;
+    }
+
+}
+
+function validarCorreoLogin() {
+    var correo = document.getElementById('inputemail').value;
+    var expr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
     if (!expr.test(correo)) {
         return false;
     } else {
@@ -67,16 +78,47 @@ function validarCorreo() {
 
 
 function validarPass() {
-    var password = document.getElementsByClassName('pass').value;
+    var password = document.getElementById('password').value;
     var expr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     console.log(!expr.test(password));
+    console.log(password);
     if (!expr.test(password)) {
+        console.log(password);
         return false;
-    }
-    else {
+    } else {
         return true;
     }
 
 }
+function validarPassConfirm() {
+    var password = document.getElementById('confirmpassword').value;
+    var expr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    console.log(!expr.test(password));
+    console.log(password);
+    if (!expr.test(password)) {
+        console.log(password);
+        return false;
+    } else {
+        return true;
+    }
+
+}
+
+
+function validarPassLogin() {
+    var password = document.getElementById('inputPasswordLogin').value;
+    var expr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    console.log(!expr.test(password));
+    console.log(password);
+    if (!expr.test(password)) {
+        console.log(password);
+        return false;
+    } else {
+        return true;
+    }
+
+}
+
+
 
 
