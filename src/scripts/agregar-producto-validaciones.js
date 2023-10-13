@@ -38,7 +38,7 @@ export function formCheckSizes(input) {
 //funcion para validar los datos y mandar erro de las pinturas
 export function formCheckPictures(input) {
     const regex = {
-        titulo: /^[a-zA-Z]+$/,
+        titulo: /^[a-zA-Z\s]+$/,
         certificado: /^[a-zA-Z0-9]+$/,
         descripcion: /[a-zA-Z0-9]/,
     };
