@@ -2,11 +2,12 @@ import { alert, medidas, showError } from "./agregar-producto-script.js";
 let imageCount = 0;
 export const imageUrls = [];
 
+//mostrar alert de bootstrap
 export function showAlert(message) {
     showError.textContent = message
     alert.toggle()
 }
-
+//funcion para el tipo de error segun el input
 export function TipoDeError(tipoDeInput, valorDelInput) {
     if (valorDelInput.length == 0) {
         console.log("zero");
@@ -21,6 +22,8 @@ export function TipoDeError(tipoDeInput, valorDelInput) {
     return ["valido", true]
 
 }
+
+//funcion para revisar el error en los tamaños
 export function formCheckSizes(input) {
     const regexNumber = /^\d+$/;
     if (input.value.length === 0) {
@@ -31,6 +34,8 @@ export function formCheckSizes(input) {
     }
     return false
 }
+
+//funcion para validar los datos y mandar erro de las pinturas
 export function formCheckPictures(input) {
     const regex = {
         titulo: /^[a-zA-Z]+$/,
@@ -50,13 +55,13 @@ export function formCheckPictures(input) {
 }
 
 
-
+//funcion para manejar seleccionar el input para leer la imagen
 export function handleFileSelect(event) {
     const files = event.target.files;
     imageUrls.push(files[0].name)
     handleFiles(files);
 }
-
+//funcion para menjar el drop
 export function handleDrop(event) {
     event.preventDefault();
     dropZone.classList.remove('highlight');
@@ -77,12 +82,11 @@ export function mostrarMensajeDeError(elemento, mensaje, estadoDelError) {
     }
 }
 
-
+//funcion para leer las imagenes
 export function handleFiles(files) {
     for (const file of files) {
         if (imageCount >= 4) {
             showAlert("Solo se permiten 4 imágenes.")
-            //mostrarMensajeDeError(showError, 'Solo se permiten 4 imágenes.', false);
             return;
         }
 
@@ -97,7 +101,7 @@ export function handleFiles(files) {
                 const deleteIcon = document.createElement('span');
                 deleteIcon.textContent = "delete"
                 deleteIcon.className = 'material-symbols-outlined icon-position';
-
+                //evento para remover las imagenes
                 deleteIcon.addEventListener('click', (e) => {
                     imageCount--;
                     imageUrls.pop()

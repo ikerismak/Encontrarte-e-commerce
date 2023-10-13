@@ -1,5 +1,8 @@
 import { formCheckPictures, formCheckSizes, handleDrop, handleFileSelect, imageUrls, showAlert } from "./agregar-producto-validaciones.js";
 
+const contenerdorForm = document.getElementById("formulario-producto");
+const contenerdorMensaje = document.getElementById("mensaje-producto");
+
 const formLabel = document.getElementById("categorias");
 const formPictures = document.getElementById("pinturas");
 const formSizes = document.getElementById("sizes-price");
@@ -25,7 +28,7 @@ let categoria = {};
 
 
 
-
+//evento para recolectar todos los datos y crear el objeto
 btnPublicar.addEventListener("click", e => {
     e.preventDefault()
     let longitudPintura = Object.keys(pinturas).length;
@@ -43,13 +46,18 @@ btnPublicar.addEventListener("click", e => {
     }
     if (mensaje.length === 0) {
         let obras = { pinturas, medidas, categoria }
+        contenerdorForm.classList.add("visible-product")
+        contenerdorMensaje.classList.remove("visible-product")
         console.log(obras);
+        console.log(JSON.parse(obras));
     }
     else {
         showAlert(mensaje.join(","))
     }
 
 });
+//evento para recolectar la titulo,imagenes,certificado
+
 formPictures.addEventListener("submit", e => {
     e.preventDefault();
     e.stopPropagation();
@@ -85,6 +93,8 @@ formPictures.addEventListener("submit", e => {
 
 
 })
+//evento para recolectar los tamaños y crealos
+
 formSizes.addEventListener("submit", e => {
     e.preventDefault();
     e.stopPropagation();
@@ -112,6 +122,8 @@ formSizes.addEventListener("submit", e => {
         }
     }
 })
+//evento para recolectar la titulo,imagenes,certificado
+
 formLabel.addEventListener("submit", e => {
     e.preventDefault();
     e.stopPropagation();
@@ -151,6 +163,7 @@ dropZone.addEventListener('dragleave', () => {
     dropZone.classList.remove('highlight');
 });
 
+//funcion para crear la row de las dimenciones
 function createProductoRow(values) {
 
     const row = document.createElement("div")
@@ -189,6 +202,8 @@ function createProductoRow(values) {
 
 
 }
+
+// funcion para crear las categorias 
 function generalLabel(label) {
     let div = document.createElement("div")
     let span = document.createElement("span")
