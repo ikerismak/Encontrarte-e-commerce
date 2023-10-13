@@ -49,7 +49,6 @@ btnPublicar.addEventListener("click", e => {
         contenerdorForm.classList.add("visible-product")
         contenerdorMensaje.classList.remove("visible-product")
         console.log(obras);
-        console.log(JSON.parse(obras));
     }
     else {
         showAlert(mensaje.join(","))
