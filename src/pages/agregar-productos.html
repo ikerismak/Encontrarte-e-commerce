@@ -39,6 +39,11 @@
       type="module"
       src="../scripts/agregar-producto-script.js"
     ></script>
+    <script
+      defer
+      type="module"
+      src="../scripts/agregar-producto-validaciones.js"
+    ></script>
   </head>
 
   <body>
@@ -81,7 +86,7 @@
 
         <!-- contenedor izquierdo producto -->
         <section class="product-sidebar-izquierdo col-sm-12 col-md-6">
-          <form class="row g-3 needs-validation mb-4" novalidate>
+          <form class="row g-3 needs-validation mb-4" id="pinturas" novalidate>
             <!-- contenedor Titulo  -->
             <div class="col-12">
               <label for="titulo-valido" class="form-label">Titulo* </label>
@@ -90,10 +95,32 @@
                   name="titulo"
                   type="text"
                   class="form-control"
+                  data-type="titulo"
                   id="titulo-valido"
                   aria-describedby="inputGroupPrepend"
                   placeholder="titulo"
                   data-izq="titulo"
+                  required
+                />
+
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="titulo-valido" class="form-label"
+                >Certificado de autenticida*
+              </label>
+              <div class="">
+                <input
+                  name="certificado"
+                  type="text"
+                  class="form-control"
+                  data-type="certificado"
+                  id="certificado-valido"
+                  aria-describedby="inputGroupPrepend"
+                  placeholder="IMPI-01-00"
+                  data-izq="certificado"
                   required
                 />
 
@@ -107,9 +134,11 @@
                 >Descripción</label
               >
               <textarea
-                Ti
+                name="descripcion"
+                data-type="descripcion"
                 class="form-control"
                 id="exampleFormControlTextarea1"
+                placeholder="descripcion opcional"
                 rows="3"
               ></textarea>
             </div>
@@ -128,6 +157,7 @@
                   />
                 </div>
                 <input
+                  data-type="imagenes"
                   name="imagen"
                   type="file"
                   id="fileInput"
@@ -140,14 +170,14 @@
 
             <!-- boton enviar -->
             <div class="col-sm-12 col-md-12">
-              <button class="btn btn-3" type="submit">Enviar</button>
+              <button class="btn btn-3" type="submit">agregar</button>
             </div>
           </form>
         </section>
 
         <!-- contenedor izquierdo producto  -->
         <section class="contacto-form col-sm-12 col-md-6">
-          <form class="row needs-validation" id="pinturas" novalidate>
+          <form class="row needs-validation" id="sizes-price" novalidate>
             <!-- contenedor input largo -->
             <div class="col-6 col-sm-6 col-md-6">
               <label for="largo-valido" class="form-label">Largo*</label>
@@ -248,7 +278,7 @@
             </div>
             <!-- boton enviar -->
             <div class="d-flex justify-content-center my-2">
-              <div class="col-sm-10 col-md-6">
+              <div class="col-10 col-sm-10 col-md-6">
                 <button class="btn btn-3" type="submit">Agregar</button>
               </div>
             </div>
@@ -269,7 +299,7 @@
             </div>
           </div>
           <!-- contenedor select options-->
-          <form class="row needs-validation" id="categoria" novalidate>
+          <form class="row needs-validation" id="categorias" novalidate>
             <div class="box-category">
               <label for="validationCustom04" class="form-label"
                 >Selecciona un Categoría*</label
@@ -291,8 +321,15 @@
                     <option value="impresionistas">impresionistas</option>
                   </select>
                 </div>
-                <div class="col-sm-12 col-md-3 my-2">
-                  <button class="btn btn-3" type="submit">Agregar</button>
+                <div
+                  class="col-12 col-sm-12 col-md-3 d-flex justify-content-center"
+                >
+                  <div
+                    class="col-10 col-sm-10 col-md-12 my-2"
+                    id="categoria-label"
+                  >
+                    <button class="btn btn-3" type="submit">Agregar</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -300,7 +337,7 @@
 
           <div class="row">
             <div class="col-12">
-              <h2 class="head-5">etiquetas</h2>
+              <h2 class="head-5">Etiquetas</h2>
               <div
                 class="d-flex flex-wrap label-container"
                 id="container-label"
@@ -308,6 +345,13 @@
             </div>
           </div>
         </section>
+      </section>
+      <section class="row d-flex justify-content-center">
+        <div class="col-10">
+          <button class="btn btn-3 my-2" id="publicar-obra">
+            Publicar Obra
+          </button>
+        </div>
       </section>
     </main>
     <!-- contenedor footer -->

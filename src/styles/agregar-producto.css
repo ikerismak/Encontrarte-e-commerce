@@ -34,6 +34,7 @@ body {
 }
 /*stylos del formulario*/
 .form-label {
+  font-weight: 500;
   font-size: 20px;
   line-height: 28px;
   margin: 0;
@@ -161,6 +162,10 @@ body {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #categoria-label {
+    margin-top: -2px !important ;
+    margin-bottom: 0px !important;
+  }
 }
 
 /*  Large devices (desktops, 992px and up)
@@ -171,6 +176,9 @@ body {
 /*  X-Large devices (large desktops, 1200px and up)
  */
 @media (min-width: 1200px) {
+  .box-container {
+    padding: 40px 72px;
+  }
 }
 
 /*  XX-Large devices (larger desktops, 1400px and up)

@@ -1,67 +1,155 @@
-const formLabel = document.getElementById("categoria");
+import { formCheckPictures, formCheckSizes, handleDrop, handleFileSelect, imageUrls, showAlert } from "./agregar-producto-validaciones.js";
+
+const formLabel = document.getElementById("categorias");
 const formPictures = document.getElementById("pinturas");
+const formSizes = document.getElementById("sizes-price");
 const containerLabel = document.getElementById("container-label");
 const dropZone = document.getElementById('dropZone');
 const fileInput = document.getElementById('fileInput');
 const centerImage = document.getElementById('centerImage');
-const showError = document.getElementById("alert-message")
 const tableProduct = document.getElementById("table-product")
-const alert = new bootstrap.Modal(document.getElementById('alert-modal'))
+const btnPublicar = document.getElementById("publicar-obra");
+export const showError = document.getElementById("alert-message")
+
+export const alert = new bootstrap.Modal(document.getElementById('alert-modal'))
 
 
-let imageCount = 0;
+
+let counterSizePicture = 0
+let counterLabel = 0
+let obra = {}
+let pinturas = {};
+export let medidas = {};
+let categoria = {};
 
 
-function showAlert(message) {
-    showError.textContent = message
-    alert.toggle()
-}
-function generalLabel(label) {
-    let div = document.createElement("div")
-    let span = document.createElement("span")
-    let i = document.createElement("i");
 
-    div.classList.add("align-middle", "label-box")
-    span.classList.add("etiquetas");
-    span.textContent = label
-    i.classList.add("material-symbols-outlined", "align-middle", "icon-close");
-    i.textContent = "close";
-    i.addEventListener("click", () => {
-        div.remove();
+
+
+btnPublicar.addEventListener("click", e => {
+    e.preventDefault()
+    let longitudPintura = Object.keys(pinturas).length;
+    let longitudCategoria = Object.keys(categoria).length;
+    let longitudMedida = Object.keys(medidas).length;
+    let mensaje = []
+    if (longitudCategoria == 0) {
+        mensaje.push("falta agregar  categorias")
+    }
+    if (longitudPintura == 0) {
+        mensaje.push("falta agregar  titulo,certifados,imagenes")
+    }
+    if (longitudMedida == 0) {
+        mensaje.push("falta agregar  medidas")
+    }
+    if (mensaje.length === 0) {
+        let obras = { pinturas, medidas, categoria }
+        console.log(obras);
+    }
+    else {
+        showAlert(mensaje.join(","))
+    }
+
+});
+formPictures.addEventListener("submit", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    const inputForm = new FormData(e.target);
+    const valuesPictures = Object.fromEntries(inputForm)
+    const valuesPicturesArray = Object.values(valuesPictures)
+    const elemento = e.target.querySelectorAll("[data-type]");
+    const inputImg = document.getElementById('fileInput');
+    let errorMessages = []
+    let state;
+    elemento.forEach(input => {
+        state = formCheckPictures(input)
+        if (state) {
+            errorMessages.push(state);
+        }
+
     })
-    div.appendChild(span)
-    div.appendChild(i)
-    return div
-}
-function TipoDeError(tipoDeInput, valorDelInput) {
-    if (valorDelInput.length == 0) {
-        console.log("zero");
+    if (errorMessages.length > 0) {
+        showAlert(errorMessages.join(","))
+    } else {
+        let imagen = {}
+        imageUrls.forEach((img, index) => {
+            imagen[index] = img
+        })
+        pinturas["titulo"] = valuesPicturesArray[0]
+        pinturas["certificado"] = valuesPicturesArray[1]
+        pinturas["descripcion"] = valuesPicturesArray[2]
+        pinturas["imagenes"] = imagen;
+
+
     }
 
-    if (!regexPattern[tipoDeInput].test(valorDelInput)) {
-        console.log("invalido", valorDelInput);
 
-        return ["invalido", false]
+
+})
+formSizes.addEventListener("submit", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    const inputForm = new FormData(e.target);
+    const valuesPictures = Object.fromEntries(inputForm)
+    const valuesPicturesArray = Object.values(valuesPictures)
+    const elemento = e.target.querySelectorAll("[data-type]");
+    let errorMessages = []
+    let state;
+    elemento.forEach(input => {
+        state = formCheckSizes(input)
+        if (state) {
+            errorMessages.push(state);
+        }
+    })
+    if (counterSizePicture >= 3) {
+        showAlert("Solo se permiten 3 medidas por productos,si deseas agregar mas contacta a un administrador")
+    } else {
+        if (errorMessages.length > 0) {
+            showAlert(errorMessages.join(","))
+        } else {
+            tableProduct.appendChild(createProductoRow(valuesPicturesArray, counterSizePicture))
+            counterSizePicture++;
+            medidas[counterSizePicture] = valuesPictures
+        }
+    }
+})
+formLabel.addEventListener("submit", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    const labelForm = new FormData(e.target);
+    const valueslabel = Object.fromEntries(labelForm)
+    const label = Object.values(valueslabel)
+    if (counterLabel < 2) {
+        if (label.length != 0) {
+            containerLabel.appendChild(generalLabel(label))
+            counterLabel++
+            categoria[counterLabel] = label
+
+
+        } else {
+            showAlert("selecciona una categoria")
+        }
     }
 
-    return ["valido", true]
+    else { showAlert("maximo 2 categorias por obra") }
+})
+// Agregar evento de clic al centro de la imagen
+centerImage.addEventListener('click', () => {
+    fileInput.click();
 
-}
-function formCheckPicture(input) {
-    const regexNumber = /^\d+$/;
-    if (input.value.length === 0) {
-        showAlert("todos lon campos son requeridos verifiquelos de nuevo")
-        return false
-    }
-    if (input.name !== "tecnica" && !regexNumber.test(input.value)) {
-        showAlert("solo se aceptan numeros en " + input.name)
-        return false
-    }
-    return true
-}
+});
 
+// Agregar evento de cambio de archivo al input de archivo
+fileInput.addEventListener('change', handleFileSelect);
 
-
+// Agregar evento de soltar al área de soltar
+dropZone.addEventListener('drop', handleDrop);
+dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('highlight');
+});
+dropZone.addEventListener('dragleave', () => {
+    dropZone.classList.remove('highlight');
+});
 
 function createProductoRow(values) {
 
@@ -86,6 +174,8 @@ function createProductoRow(values) {
     tecnique.textContent = values[4]
     icon.textContent = "close"
     icon.addEventListener("click", () => {
+        delete medidas[counterSizePicture]
+        counterSizePicture--;
         row.remove();
     });
     boxIcon.appendChild(icon)
@@ -99,113 +189,21 @@ function createProductoRow(values) {
 
 
 }
-formPictures.addEventListener("submit", event => {
-    event.preventDefault();
-    event.stopPropagation();
-    const inputForm = new FormData(event.target);
-    const valuesPictures = Object.fromEntries(inputForm)
-    const valuesPicturesArray = Object.values(valuesPictures)
-    const elemento = event.target.querySelectorAll("[data-type]");
-    let allChecked = []
-    elemento.forEach(input => {
-        allChecked.push(formCheckPicture(input))
+function generalLabel(label) {
+    let div = document.createElement("div")
+    let span = document.createElement("span")
+    let i = document.createElement("i");
+
+    div.classList.add("align-middle", "label-box")
+    span.classList.add("etiquetas");
+    span.textContent = label
+    i.classList.add("material-symbols-outlined", "align-middle", "icon-close");
+    i.textContent = "close";
+    i.addEventListener("click", () => {
+        delete categoria[counterLabel]
+        div.remove();
     })
-
-    if (allChecked.every(input => input)) {
-        tableProduct.appendChild(createProductoRow(valuesPicturesArray))
-    }
-})
-formLabel.addEventListener("submit", event => {
-    event.preventDefault();
-    event.stopPropagation();
-    const label = Array.from(formLabel)[0].value
-    if (label.length != 0) {
-        containerLabel.appendChild(generalLabel(label))
-
-    }
-    else { showAlert("selecciona una categoria") }
-})
-// Agregar evento de clic al centro de la imagen
-centerImage.addEventListener('click', () => {
-    fileInput.click();
-
-});
-
-// Agregar evento de cambio de archivo al input de archivo
-fileInput.addEventListener('change', handleFileSelect);
-
-// Agregar evento de soltar al área de soltar
-dropZone.addEventListener('drop', handleDrop);
-dropZone.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    dropZone.classList.add('highlight');
-});
-dropZone.addEventListener('dragleave', () => {
-    dropZone.classList.remove('highlight');
-});
-
-function handleFileSelect(event) {
-    const files = event.target.files;
-    handleFiles(files);
-}
-
-function handleDrop(event) {
-    event.preventDefault();
-    dropZone.classList.remove('highlight');
-    const files = event.dataTransfer.files;
-    handleFiles(files);
-}
-//funcion para agregar las clase  y mostrar el mensaje por medio del dom
-function mostrarMensajeDeError(elemento, mensaje, estadoDelError) {
-    //agregamos al elemento padre la clase para mostrar el mensaje
-    elemento.parentElement.classList.add("was-validated");
-    //returna un true si  la validacion fue exitosa y false si fue invalido
-    if (estadoDelError) {
-        //si la validacion es true  limpiamos el mensaje 
-        elemento.textContent = "";
-    } else {
-        //si la validacion es falsa agregamos un mensaje 
-        elemento.textContent = mensaje
-    }
-}
-
-
-function handleFiles(files) {
-    for (const file of files) {
-        if (imageCount >= 4) {
-            showAlert("Solo se permiten 4 imágenes.")
-            //mostrarMensajeDeError(showError, 'Solo se permiten 4 imágenes.', false);
-            return;
-        }
-
-
-        if (file.type.startsWith('image/')) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-
-                const image = new Image(200, 150);
-                image.src = e.target.result;
-                // Icono para eliminar la imagen
-                const deleteIcon = document.createElement('span');
-                deleteIcon.textContent = "delete"
-                deleteIcon.className = 'material-symbols-outlined icon-position';
-
-                deleteIcon.addEventListener('click', (e) => {
-                    imageCount--;
-                    preview.remove();
-                });
-                const preview = document.createElement('div');
-                preview.classList.add("image-preview-box");
-
-                preview.append(image)
-                preview.append(deleteIcon)
-                dropZone.prepend(preview);
-                imageCount++;
-            };
-            reader.readAsDataURL(file);
-        } else {
-            showAlert("Solo se permiten imágenes, Formato incorrecto")
-
-        }
-    }
+    div.appendChild(span)
+    div.appendChild(i)
+    return div
 }
