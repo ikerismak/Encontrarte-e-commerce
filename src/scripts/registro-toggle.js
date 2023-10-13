@@ -2,6 +2,7 @@ const btnSignUp = document.querySelector("#toggle-signup") //boton de registro
 const btnLogin = document.querySelector("#toggle-login")//boton de login
 const loginForm = document.querySelector(".modal-login")//elemento contenedor del login
 const signUp = document.querySelector(".modal-registro")//elemento contenedor del registro
+loginForm.classList.add("visibilty");
 
 //cuando click al boton de cambio  registro a login se ejecuta la arrow function event
 btnSignUp.addEventListener("click", event => {
@@ -18,41 +19,173 @@ btnLogin.addEventListener("click", event => {
     loginForm.classList.add("visibilty");// agregamos la clase al elemento login para ocultar el login
 })
 
-const modal = document.getElementById('staticBackdrop');
+
 const modalBackdrop = document.querySelector('.modal');
 modalBackdrop.addEventListener('click', function (event) {
     if (event.target === modalBackdrop) {
-        modal.style.display = 'none';
         modalBackdrop.style.display = "none";
     }
 });
 
+
+const modal = document.getElementById("exampleModal");
 // Obtén una referencia al formulario
 const userForm = document.getElementById('formulario');
 
+var contador = 0;
+var bandera = false;
 // Agrega un evento de envío al formulario
 userForm.addEventListener('submit', function (event) {
+
+
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+
+        var forms = document.querySelectorAll('.needs-validation');
+        // Loop over them and prevent submission
+        Array.from(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    contador = 0;
+
+                    Array.from(form.elements).forEach(function (element) {
+                        if (element.checkValidity() === false) {
+                            contador++;
+                        }
+                    });
+                    if (contador === 0) {
+                        bandera = true;
+                    } else {
+
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+
+            })
+
+
+    })()
+    if (bandera) {
+        // Obtiene los valores de los campos del formulario
+        const nombre = document.getElementById('inputName').value;
+        const telefono = document.getElementById('inputnumber').value;
+        const email = document.getElementById('inputemail').value;
+        const pass = document.getElementById('password').value;
+        const passConf = document.getElementById('confirmpassword').value;
+        // Crea un objeto JSON con los valores del formulario
+        if (pass === passConf) {
+            const usuario = {
+                nombre: nombre,
+                telefono: telefono,
+                email: email,
+                pass: pass
+            };
+
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('telefono', telefono);
+            localStorage.setItem('email', email);
+            localStorage.setItem('pass', pass);
+
+            $('.modal-backdrop').remove();
+        } else {
+            alert("Las contraseñas no coinciden");
+        }
+    }
+
     event.preventDefault(); // Evita el envío predeterminado del formulario
-
-    // Obtiene los valores de los campos del formulario
-    const nombre = document.getElementById('inputName').value;
-    const telefono = document.getElementById('inputnumber').value;
-    const email = document.getElementById('inputemail').value;
-    const pass = document.getElementById('password').value;
-
-    // Crea un objeto JSON con los valores del formulario
-    const usuario = {
-        nombre: nombre,
-        telefono: telefono,
-        email: email,
-        pass: pass
-    };
-
-    // Imprime el objeto JSON en la consola
-    console.log(usuario);
-
     // Puedes realizar otras acciones aquí, como enviar el objeto JSON a un servidor
 });
+
+var banderalogin = false;
+const formlogin = document.getElementById('formularioLogin');
+
+const userTest = {
+    email: "prueba@gmail.com",
+    password: "12345",
+};
+
+
+
+formlogin.addEventListener('submit', function (event) {
+
+
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+
+        var forms = document.querySelectorAll('.needs-validation');
+        // Loop over them and prevent submission
+        Array.from(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    contador = 0;
+
+                    Array.from(form.elements).forEach(function (element) {
+                        if (element.checkValidity() === false) {
+                            contador++;
+                        }
+                    });
+                    if (contador === 0) {
+                        banderalogin = true;
+                    } else {
+
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+
+            })
+
+
+    })()
+    if (banderalogin) {
+        // Obtiene los valores de los campos del formulario
+
+        let email = document.getElementById('inputEmailLogin').value;
+        let pass = document.getElementById('inputPassword').value;
+
+        if (email === userTest.email && pass === userTest.password) {
+
+            // Crea un objeto JSON con los valores del formulario
+            localStorage.setItem('user', JSON.stringify(userTest));
+
+            setTimeout(() => {
+                modal.style.display = "none";
+                document.querySelector('.modal-backdrop').remove();
+            }, 300);
+
+
+        } else {
+            alert("Correo o contraseña incorrectos")
+        }
+
+
+    }
+
+    event.preventDefault(); // Evita el envío predeterminado del formulario
+    // Puedes realizar otras acciones aquí, como enviar el objeto JSON a un servidor
+});
+
+
+
+
+/*<div id="botoneraCabecera">
+
+    <div id="loginBoton" class="contenedorBotonCabecera">
+
+
+        <div class="" id="contenedorLoginCabecera">
+
+            <!--<img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">-->
+                <button type="button" class="login-boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
+                </button>
+                <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
+        </div>
+        */
+
 
 
 

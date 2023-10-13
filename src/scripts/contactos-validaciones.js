@@ -97,7 +97,6 @@ function mostrarMensajeDeError(tipoDeInput, tipoDeError, estadoDelError, element
     elemento.parentElement.classList.add("was-validated");
     //returna un true si  la validacion fue exitosa y false si fue invalido
     if (estadoDelError) {
-
         //si la validacion es true  limpiamos el mensaje 
         elemento.setCustomValidity("")
         elemento.parentElement.querySelector(".valid-feedback").textContent = "";
