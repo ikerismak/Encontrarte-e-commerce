@@ -186,7 +186,7 @@ Obra.forEach(element => {
         <img src="../assets/${element.imagen_normal}" class="card-img-top" alt="...">
         <span class="tituloObra">#${element.titulo}</span>
         <!--<div class="card-body"> -->
-          <span class="card-text descripcionObra"> descripción: ${element.descripcion}<br>  técnica ${element.tecnica} <br> precio: ${element.precio}</span>
+          <span class="card-text descripcionObra"> descripción: ${element.descripcion}<br>  técnica ${element.tecnica} <br> dimensiones: ${element.dimension_largo} x ${element.dimension_ancho} <br> precio: ${element.precio}</span>
         <!-- </div> -->
   <!--    </div>  -->
            <!-- cierre de la primera obra -->`;
