@@ -1,0 +1,32 @@
+.drop-zone {
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+}
+.info-artista {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 200px;
+}
+@media (min-width: 576px) {
+	.info-artista {
+		margin-top: 44px;
+		justify-content: space-evenly;
+		height: 250px;
+	}
+	.drop-zone {
+		width: 250px;
+		height: 250px;
+	}
+}
+@media (min-width: 768px) {
+	.info-artista {
+		justify-content: space-evenly;
+		height: 300px;
+	}
+	.drop-zone {
+		width: 300px;
+		height: 300px;
+	}
+}
