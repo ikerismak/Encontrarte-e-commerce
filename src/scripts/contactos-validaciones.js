@@ -70,20 +70,16 @@ const mensajesDeError = {
 //funcion para validar que tipo de error para mostrar mensaje y el status es existe error o no
 function TipoDeError(tipoDeInput, valorDelInput) {
     if (valorDelInput.length == 0) {
-        console.log("zero");
         return ["vacio", false]
     }
     if (valorDelInput.length < limiteInput[tipoDeInput].min) {
-        console.log("min");
         return ["minimo", false]
     }
     if (valorDelInput.length > limiteInput[tipoDeInput].max) {
-        console.log("max");
         return ["maximo", false]
     }
 
     if (!regexPattern[tipoDeInput].test(valorDelInput)) {
-        console.log("invalido", valorDelInput);
 
         return ["invalido", false]
     }

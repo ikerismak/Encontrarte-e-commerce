@@ -209,7 +209,8 @@ body {
   .contacto-sidebar {
     max-width: 38%;
   }
-  .contacto-form {
+  .contacto-form,
+  .message-sent {
     max-width: 58%;
     padding: 20px;
   }
