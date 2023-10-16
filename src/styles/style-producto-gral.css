@@ -26,7 +26,26 @@
   background-color: #c71c5d;
 
 }
+.image-with-text1, .image-with-text2, .image-with-text3, .image-with-text4{
+display: flex;
+justify-content: center;
 
+
+}
+.card{
+  margin: 2%;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.card-text{
+  font-size: 18px;
+}
+.imagenrelacionada{
+  height: 150px;
+  width: 150px;
+ 
+}
 
 
 
@@ -307,6 +326,20 @@
   #descripciontabletaycel{
     margin-top: 15px;
   }
+  .card{
+    margin: 2%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .card-text{
+    font-size: 18px;
+  }
+  .imagenrelacionada{
+    height: 70px;
+    width: 70px;
+   
+  }
 
     
   #listaobra{
@@ -499,6 +532,20 @@
     margin-left: 45px;
   }
     
+  }
+  .card{
+    margin: 2%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .card-text{
+    font-size: 12px;
+  }
+  .imagenrelacionada{
+    height: 70px;
+    width: 70px;
+   
   }
 }
 
