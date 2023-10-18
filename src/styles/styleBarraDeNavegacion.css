@@ -1,0 +1,421 @@
+/* reglas css barra de navegacion
+*/
+/* primer bloque  */
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.bloque1 {
+    display: flex;
+    height: 131px;
+    width: 100%;
+    max-width: 100%;
+    align-items: end;
+    justify-content: space-between;
+    position: relative;
+
+
+
+}
+
+
+.redesSociales {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.contenedorLogoRS {
+    /* border: #D0417E solid 2px; */
+    height: 30px;
+    width: 30px;
+
+}
+#contenedorLogoFacebook{
+    padding-left: 0px;
+    height: 26px;
+    width: 26px;
+    margin-right: 2px;
+
+}
+#facebookLogo {
+    object-fit: fill ;
+    height: 100%;
+    width: 100%;
+}
+
+.logoRS {
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logoNavbar{
+    height: 100%;
+    width: 132px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.logoNavbar img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+#botoneraCabecera div {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.userID {
+    display: flex;
+    text-align: left;
+    position: absolute;
+    right: 13%;
+    bottom: 54px;
+    width: 165px;
+    cursor: pointer;
+}
+
+
+.texto {
+    color: #000;
+    font-family: Roboto Mono;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.textoNormal {
+    color: #000;
+    font-family: Roboto Mono;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+#contenedorImgUserCabecera{
+    width: 40px;
+    height: 30px;
+}
+#imgPerfilUser{
+    /* contenedor para  */
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*.bloque1 div{
+border: 3px solid green;
+}*/
+/*Uso bordes para ver las cajas de mis elementos*/
+.contenedorBotonCabecera{
+    /* Este es un contenedor que contiene tanto como el png como el texto ambos son el botón  */
+    height: 100%;
+    width: fit-content;
+}
+.linkBotonCabecera{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+/* .contenedorImgBotonCabecera{
+    border: 3px solid blue;
+} */
+.contenedorImgBotonCabecera img{
+    /* la altura el ancho de la imagen va a estar dado por su contenedor así no tendré que meter cambios a cada imagen */
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+#contenedorImgCarritoBotonCabecera{
+    /* La imagen del carrito tiene un tamño un poco distinto por lo tanto ajusto su contenedor  */
+    height: 21px;
+    width: 21px;
+    /* border: #D0417E solid 2px; */
+}
+
+
+#botoneraCabecera {
+    /* Contenedor general de la botonera de la cabecera de lado derecho */
+    width:fit-content;
+    height: 30px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+#resaltar {
+    font-family: Roboto Mono;
+    color: #D0417E;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    font-size: 14px;
+
+}
+
+/* 2do Bloque  */
+
+
+.bloque2 {
+    width: 100%;
+    height: 39px;
+    background-color: #D9D9D9;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    /* border: #D0417E 3px solid; */
+
+}
+#contenedorNavList{
+    align-items: center;
+}
+#navList {
+
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    justify-content: center;
+    /* margin-top: 0;
+    margin-bottom: 0; */
+     align-items: center;
+    gap: 20%;
+
+
+
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+
+#navList li {
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    ;
+
+
+
+
+}
+
+#navList li a {
+    text-decoration: none;
+
+}
+
+.textoNormal {
+    font-family: Roboto Mono;
+    color: #000;
+
+}
+#burguerMenu{
+object-fit: fill;
+width: 100%;
+height: 100%;
+}
+
+.menuBurguerContenedor {
+    position: absolute;
+    right: 0px;
+    visibility: hidden;
+    width: 30px;
+    height: 30px;
+    transition: all 1s;
+
+}
+ /*
+#botonCerrar{
+    visibility: hidden;
+    position: absolute;
+
+}
+#botonCerrar.visible{
+    visibility: hidden;
+    }  */
+
+body {
+    /* border: solid 4px #D0417E; */
+    margin: 0;
+    padding: 0;
+}
+
+/* Bloque 3 (Buscador) */
+.bloqueBuscador {
+    height: 39;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* border: 3px solid  #D0417E; */
+    display: flex;
+    flex-direction: row;
+}
+
+.bloqueNegroBuscador {
+    width: 33%;
+    background-color: #000;
+    height: 39px;
+    margin: 0;
+}
+#contenedorBarraBusqueda{
+    display: flex;
+    align-items: center;
+    width: 34%;
+    height: 39px;
+}
+#lupaBarraBusqueda{
+width: 40px;
+height: 100%;
+padding: 4px;
+border: 1px solid black;
+border-right: none;
+}
+
+#barraBusqueda {
+    width: 95%;
+    height: 39px;
+    align-items: center;
+    border: 1px solid black;
+    border-left: none;
+
+}
+
+
+#textBusqueda {
+    width: 100%;
+    height: 37px;
+}
+
+/* querys para el menu de hamburguesa */
+@media screen and (max-width: 770px) {
+
+
+.redesSociales {
+
+    gap: 5px;
+    margin-left: 5px;
+}
+
+    #navList {
+        /* visibility: hidden;  */
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        top: 80px;
+        margin: auto;
+        margin-left: 12px;
+        gap: 12px;
+        align-items: baseline;
+        height: 100%;
+        justify-content: initial;
+        width: 35%;
+
+    }
+
+    .menuBurguerContenedor{
+        visibility: visible;
+    }
+
+    #contenedorNavList {
+        right: -35%;
+        top: 0;
+        position: absolute;
+        width: 35%;
+        height: 100%;
+        background-color: #D9D9D9;
+        visibility:hidden;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 2;
+
+
+    }
+    #contenedorNavList.visible{
+        transition: all 500ms;
+        right: 0;
+    }
+/*
+    #botonCerrar {
+        position: absolute;
+        align-items: center;
+        right: 3px;
+        top: 3px;
+        color: #D0417E;
+        font-size: 25px;
+        background-color: #D9D9D9;
+        border: none;
+        visibility: hidden;
+    } */
+
+    /* #botonCerrar.visible{
+        visibility: visible;
+    } */
+
+    /*
+    #botonCerrar.visible{
+        visibility: hidden;
+        }
+    */
+    #navList li {
+        margin-left: 15px;
+
+    }
+
+
+    #welcomeUser{
+        visibility: hidden;
+        width: 0;
+    }
+    .contenedorBotonCabecera{
+        width: 28px;
+    }
+    .textoBotoneraCabecera{
+        visibility: hidden;
+        width: 0;
+
+    }
+    #botoneraCabecera{
+        gap: 5px;
+        margin-right: 0px;
+    }
+    .userID{
+
+        width: auto;
+        right: 10px;
+
+    }
+
+
+}
+
+
+

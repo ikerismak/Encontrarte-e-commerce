@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina productos</title>
+    <link rel="stylesheet" href="../styles/styleBarraDeNavegacion.css">
+    <link rel="stylesheet" href="../styles/burguerMenuAnimacionStyle.css">
+
+    <link rel="stylesheet" href="../styles/style-lista-productos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+</head>
+
+    <header>
+          <!-- pagina nav Bar de arriba abajo la voy a dividir por bloques(divs) que tendran divs adentro de cosas que se tengan que agrupar-->
+          <div class="bloque1" id="bloque1">
+            <div class="logoRedSocial redesSociales">
+                <div class="contenedorLogoRS">
+                    <!--Cada uno de lo logos tendrán su propio div para ajutar su tamaño al contenedor-->
+                    <a href="https://www.instagram.com/">
+                        <img class="logoInstagram logoRS" src="../assets/ImgnavBar&acercaDeNosotros/Instagram.png" alt="">
+                    </a>
+                </div>
+
+                <div class="contenedorLogoRS" id="contenedorLogoFacebook">
+                    <a href="https://www.facebook.com/">
+                        <img id="facebookLogo" class="logoFacebook logoRS" src="../assets/ImgnavBar&acercaDeNosotros/facebook.png"
+                            alt="">
+                    </a> <!--Al ser el logo de FB mas grande se le dará un tratamiento distinto-->
+                </div>
+                <div class="contenedorLogoRS">
+                    <a href="https://www.whatsapp.com/">    
+                    <img class="logoWhatsApp logoRS" src="../assets/ImgnavBar&acercaDeNosotros/WhatsApp.png" alt="">
+                </a>
+                </div>
+
+            </div><!--Cierre de el div de redes sociales-->
+            <div class="contenedorLogoCabecera logoNavbar">
+                <a href="../../index.html">
+                <img id="logoCabecera" src="../assets/ImgnavBar&acercaDeNosotros/Logo.png" alt="">
+            </a>
+            </div><!--Cierre del div del logo -->
+            <div id="botoneraCabecera">
+
+                <div id="loginBoton" class="contenedorBotonCabecera">
+                    <a  class="linkBotonCabecera" href="../pages/registro.html" >
+                        
+                    <div class="contenedorImgBotonCabecera" id="contenedorLoginCabecera">   
+                        <img id="loginImg" src="../assets/ImgnavBar&acercaDeNosotros/Enter.png" alt="">
+                    </div>
+                    <p class="texto textoBotoneraCabecera" id="textoLogin">Log in</p>
+                </a>
+                </div><!-- Cierre del login-->
+                <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
+                    <a  class="linkBotonCabecera" href="" >
+                    
+                    <div class="contenedorImgBotonCabecera" id="contenedorImgFavoriteBotonCabecera">
+                        <img id="favoriteImg" src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png" alt="">
+                    </div>
+                    <p id="resaltar" class="textoBotoneraCabecera textoNormal resaltar">Favoritos</p><!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
+                    </a> 
+                </div><!-- Cierre del favorite-->
+                <div class="contenedorBotonCabecera" id="contenedorCarritoComprasCabecera">
+                    <a  class="linkBotonCabecera" href="../components/carrito-flotante.html" >
+                    <div class="contenedorImgBotonCabecera" id="contenedorImgCarritoBotonCabecera">
+                        <img id="CarritoImg" src="../assets/ImgnavBar&acercaDeNosotros/carrito.png" alt="">
+                    </div>
+                    <p class="texto textoBotoneraCabecera" id="textoCarrito">Carrito</p>
+                </a> <!--De esta manera hago que tanto el texto como el png sean botones que direccionan a donde mismo-->
+
+                </div><!-- Cierre del botón de compras-->
+            </div><!--Cierre botoneraCabecera-->
+
+            <div class="userID">
+                <div id="contenedorImgUserCabecera">
+                    <img id="imgPerfilUser" src="../assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png" alt="">
+                </div>
+                <p class="textoNormal" id="welcomeUser">Bienvenido (agregar usuario)</p>
+
+            </div> <!-- cierre de la personalización de la bienvenida de usuario-->
+
+
+
+        </div><!--Cierre del bloque1-->
+        <div class="bloque2 navBar">
+
+            <!-- <nav id="navList"> -->
+            <!-- <button id="botonAbrir" type="button"> -->
+                <div class="menuBurguerContenedor">
+                    <span class="barraMenu1"></span>
+                    <span class="barraMenu2"></span>
+                    <span class="barraMenu3"></span>
+            </div>
+            <!-- </button> -->
+            <div id="contenedorNavList">
+                <!-- <button id="botonCerrar" type="button"><i class="bi bi-x-square"></i></button> -->
+                <ul id="navList">
+
+                    <li id="inicio">
+                        <a class="textoNormal" href="../../index.html"  rel="noopener noreferrer">Inicio</a>
+                    </li>
+                    <!--Se agregó el link con target blank para que abra el link en una nueva pestaña, y  ya que esté el navbar terminado cambiar la dirección de la pestaña actual-->
+                    <li id="productos">
+                        <a class="textoNormal" href="../pages/Pagina del producto.html" 
+                            rel="noopener noreferrer">Productos</a>
+                    </li>
+                    <li id="Artistas">
+                        <a class="textoNormal" href="../../index.html" 
+                            rel="noopener noreferrer">Artistas</a>
+                    </li>
+                    <li id="Nosotros">
+                        <a class="textoNormal" href="../pages/indexAcercaDeNosotros.html" 
+                            rel="noopener noreferrer">Nosotros</a>
+                    </li>
+                    <li id="Contactanos">
+                        <a class="textoNormal" href="../pages/indexAcercaDeNosotros.html" 
+                            rel="noopener noreferrer">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div><!--Cierre del bloque 2 -->
+        <div class="bloqueBuscador">
+            <div class="bloqueNegroBuscador"></div>
+            <div id="contenedorBarraBusqueda">
+                <img id="lupaBarraBusqueda" src="../assets/ImgnavBar&acercaDeNosotros/Lupa.png" alt="">
+                <input id="barraBusqueda" type="text">
+            </div>
+            <div class="bloqueNegroBuscador"></div>
+        </div>
+        <!-- <i class="bi bi-list"></i> -->
+        
+
+    </header>
+
+
+
+
+<div class="container-fluid">
+    <!-- Contenido principal -->
+    <!--Aqui inician las columnas con contenido debajode la navbar/////////////////////////////////////////-->
+    <div class="row">
+        <!--\\\\\\\\\\\\\\\\\\\\\\\\\Categorias en Celular y tableta/////////////////////////-->
+        <div id="fondobotontablet">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <h1>
+                    <h1><b><span style="color: rgb(208, 65, 126);">P</span>inturas</b></h1>
+                </h1>
+            </div>
+            <!-- Este es el boton que se muestra en dispositivos moviles/////////////////////////// -->
+            <div id="contboton" class="col-sm-8 col-md-8 col-lg-8">
+                <div class="fondo-oscuro" id="fondo-oscuro"></div>
+                <div class="dropdown">
+                    <button id="boton" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorias
+                    </button>
+                    <ul id="ventanaflotante" class="dropdown-menu dropdown-menu-center">
+                        <li><a id="pintOleo" class="dropdown-item" href="#">Pinturas al Oleo</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Acuarelas</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Acrilicas</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Abstractas</a></li>
+                      <li><a class="dropdown-item" href="#">Pinturas Paisajisticas</a></li>
+                      
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--\\\\\\\\\\\\\\\\\\Aqui terminan categorias celular y tableta///////////////////////////-->
+        <!--Esta es la columna izquierda donde aparecen las categorias de los productos ///////////////////////////////-->
+        <div id="columnaizq" class="col-lg-4">
+            <div id="fondoizq">
+                <div id="contenidoCategorias">
+                    <!-- Lista con las categorias de pinturas///////////////////////////////////////////// -->
+                    <h1 id="titulopinturas"><b><span style="color: rgb(208, 65, 126);">P</span>inturas</b></h1>
+                    <ul id="listaobjetos">
+                        <li ><strong id="pinturasAlOleo">Pinturas al Oleo</strong></li>
+                        <li ><strong id="pinturasAcuarelas">Pinturas Acuarelas</strong></li>
+                        <li ><strong id="pinturasAcrilicas">Pinturas Acrilicas</strong></li>
+                        <li ><strong id="pinturasAbstractas">Pinturas Abstractas</strong></li>
+                        <li ><strong id="pinturasPaisajisticas">Pinturas Paisajisticas</strong></li>
+                    </ul>
+                    
+                </div>
+                 <div id="banerlogo">
+                    <img src="../assets/list-products-images/8.png">
+                    </div>
+            </div>
+        </div>
+        <!--Esta es la columna del lado derecho de la pagina, donde estan las fotos de las pinturas y titulos//////////-->
+        <div id="colder" class="col-lg-8 col-md-12">
+            <!-- Este es el contenedor de las imagenes por categoria //////////////////////////////////-->
+            <h3 id="titulocategoria"><b>-Pinturas Acrilicas-</b></h3>
+            <!-- Aqui inicia el carrusel //////////////////////////////////////////////////// -->
+            <div id="carouselExampleIndicators" class="carousel slide">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- Aqui van 3  tarjetas dentro del carrusel//////////////////////////////// -->
+                        <div class="contenedorcardsc11">
+
+
+                        </div>
+                    </div>
+                    <!-- Aqui van 3 tarjetas en segunda del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc12">
+
+
+                        </div>
+                    </div>
+                    <!-- Aqui van 3 tarjetas en segunda del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc13">
+
+
+                        </div>
+                    </div>
+                    <!-- Aqui van 3 tarjetas en segunda del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc14">
+
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- Aqui termina el carrusel//////////////////////////////////////////////////////// -->
+            </div>
+
+            <!-- Este es el contenedor de Recomendados//////////////////////////////////////  -->
+            <h3><b>Recomendados...</b></h3>
+            <!-- Aqui inicia el carrusel //////////////////////////////////////////////////// -->
+            <div id="carouselExampleIndicators2" class="carousel slide">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- Aqui van 3  tarjetas dentro del carrusel//////////////////////////////// -->
+                        <div class="contenedorcardsc15">
+
+                        </div>
+                    </div>
+                    <!-- Aqui van 3 tarjetas en segunda del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc16">
+
+                        </div>
+                    </div>
+                    <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc17">
+
+                        </div>
+
+                    </div>
+                    <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc18">
+
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- Aqui termina el carrusel//////////////////////////////////////////////////////// -->
+            </div>
+
+
+
+
+            <!-- Este es el contenedor de los usuarios tambien buscaron//////////////////////////////////////  -->
+            <h3><b>Obras relacionadas...</b></h3>
+            <!-- Aqui inicia el carrusel //////////////////////////////////////////////////// -->
+            <div id="carouselExampleIndicators3" class="carousel slide">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- Aqui van 3  tarjetas dentro del carrusel//////////////////////////////// -->
+                        <div class="contenedorcardsc19">
+
+                        </div>
+                    </div>
+                    <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc20">
+
+                        </div>
+                    </div>
+                    <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc21">
+
+                        </div>
+                    </div>
+                    <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
+                    <div class="carousel-item">
+                        <div class="contenedorcardsc22">
+
+                        </div>
+                    </div>
+                    <!-- Aqui van 3 tarjetas en segunda del carrusel//////////////////////////////// -->
+
+                    <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- Aqui termina el carrusel//////////////////////////////////////////////////////// -->
+            </div>
+
+        </div>
+
+        <!-- Footer//////////////////////////////////////////////////////////////////////////////////////////// -->
+        <footer>
+            <p>&copy; #ArtMovesWorld</p>
+            <p>Generation 2023,Mexico. Derechos reservados ™Generation and Co</p>
+        </footer>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../scripts/ScriptListaDeProductos.js"></script>
+        <script src="../scripts/scriptBarraDeNavegacion.js"></script>
+        <script src="../scripts/animacionMenuHamburguesa.js"></script>
+        <script src="../scripts/productos-lista.js"></script>
+
+
+
+        </body>
+
+</html>

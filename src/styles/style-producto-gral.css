@@ -1,0 +1,590 @@
+#columnder {
+  display: flex;
+
+
+}
+
+/*descripcion de la obra en general*/
+#descrobrgrl {
+  max-width: 500px;
+  text-align: justify;
+  margin-top: 50px;
+
+
+}
+
+/*descripcion de la obra*/
+#descripciobr {
+  margin-top: 150px;
+
+
+
+}
+
+#caracobr {
+  margin-top: 100px;
+  background-color: #c71c5d;
+
+}
+.image-with-text1, .image-with-text2, .image-with-text3, .image-with-text4{
+display: flex;
+justify-content: center;
+
+
+}
+.card{
+  margin: 2%;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.card-text{
+  font-size: 18px;
+}
+.imagenrelacionada{
+  height: 150px;
+  width: 150px;
+ 
+}
+
+
+
+/*imagen principal del carrusel del producto*/
+#imprpal {
+  width: 500px;
+  height: 401px;
+
+}
+/*imagen secundaria del carrusel del producto*/
+#imprpal1 {
+  width: 500px;
+  height: 400px;
+
+}
+/*imagen tercera del carrusel del producto*/
+#imprpal2 {
+  width: 500px;
+  height: 400px;
+
+}
+
+.linea-vertical {
+  border-left: 1px solid #000;
+  /* Color de la línea y grosor */
+  height: 700px;
+  /* Altura de la línea */
+  margin: 20px;
+}
+
+/*productos relacionados*/
+#prodrel {
+  margin-left: 20px;
+  display: flex;
+}
+
+.linea-horizontal {
+  border-bottom: 1px solid black;
+  /* Estilo de la línea horizontal */
+  width: 1100px;
+  text-align: center;
+  height: 15px;
+
+}
+
+.carousel-inner {
+  text-align: center;
+}
+/*Productos relacionados /////////////////////////*/
+.image-with-text {
+
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 50px;
+  display: inline-block;
+  margin: 50px;
+  /* Espacio entre las imágenes y el texto */
+  vertical-align: top;
+  /* Alineación superior para que el texto esté alineado con la parte superior de la imagen */
+}
+
+.image-with-text img {
+
+  border-radius: 12px;
+}
+
+#carouselExample {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#carouselExample img {
+  margin: 5%;
+}
+
+.carousel-control-prev {
+  background-color: rgb(0, 0, 0, 0.2);
+  width: 150px;
+  border-radius: 20px;
+
+
+}
+
+.carousel-control-next {
+  background-color: rgb(0, 0, 0, 0.2);
+  width: 150px;
+  border-radius: 20px;
+
+}
+
+#cuadrocompras {
+  padding: 40px;
+  background-color: rgb(241, 240, 240);
+  border: 2px solid rgb(100, 100, 100);
+  border-radius: 15px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#botonescar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: -50px;
+  /* Espacio superior para separar los círculos del carrusel */
+}
+
+#botonescar button {
+  width: 20px;
+  /* Ancho del círculo */
+  height: 20px;
+  /* Altura del círculo */
+  border-radius: 50%;
+  /* Borde circular */
+  background-color: #c71c5d;
+  /* Color de fondo de los círculos inactivos */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  /* Espaciado interno */
+  transition: background-color 0.3s ease;
+  /* Transición suave para el color de fondo */
+  z-index: 999;
+}
+
+#ocultarboton1 {
+  opacity: 0;
+}
+
+#ocultarboton2 {
+  opacity: 0;
+}
+
+.btn-outline-secondary {
+  background-color: rgb(240, 240, 240);
+  color: rgb(20, 20, 20);
+  /* Cambia el color del texto para que sea visible en el fondo */
+  border: 2px solid rgb(100, 100, 100);
+
+  padding: 5px;
+
+}
+
+.btn-outline-secondary1 {
+  background-color: rgb(240, 240, 240);
+  color: rgb(148, 42, 87);
+  /* Cambia el color del texto para que sea visible en el fondo */
+  border: 2px solid rgb(148, 42, 87);
+  font-weight: bold;
+
+
+}
+
+.btn:hover {
+  background-color: rgb(204, 72, 127);
+  /* Color de fondo cuando el mouse pasa sobre el botón */
+}
+
+#btncompra {
+  margin-bottom: 10px;
+}
+
+.circular-button {
+  width: 20px;
+  /* Ancho del botón */
+  height: 20px;
+  /* Altura del botón */
+  border-radius: 50%;
+  /* Hace que el botón sea circular */
+  background-color: #ffffff;
+  /* Color de fondo predeterminado */
+  color: white;
+  /* Color del texto del botón */
+  border: 2px solid rgb(72, 73, 72);
+  /* Elimina el borde */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el botón */
+  outline: 2px;
+  /* Elimina el contorno predeterminado */
+  margin-right: 30px;
+}
+
+.circular-button.selected {
+  background-color: rgb(204, 72, 127);
+
+}
+
+.botonselectr {
+  display: flex;
+  align-items: center;
+
+}
+
+/* Estilo para la ventana modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Estilo para el contenido de la ventana modal */
+.modal-contenido {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+
+}
+
+/* Estilo para el botón de cierre (X) */
+.cerrar {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Estilo para la miniatura de la imagen */
+.imagen-miniatura {
+  max-width: 100px;
+  cursor: pointer;
+}
+
+#btncantidad {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#quantity {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+#subtractButton {
+  font-size: 24px;
+  border-radius: 20px;
+  padding-top: 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#addButton {
+  font-size: 24px;
+  border-radius: 20px;
+  padding-top: 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*pantala que muestra objetos a comprar*/
+#cantpant {
+  font-size: smaller;
+  padding: 5px;
+  background-color: #ffffff;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  /* Estilo de la línea*/
+}
+
+/*tableta/////////////////////////////   */
+@media (max-width: 1024px) {
+  #descrobrgrl{
+    display: none;
+  }
+  #descripciontabletaycel{
+    margin-top: 15px;
+  }
+  .card{
+    margin: 2%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .card-text{
+    font-size: 18px;
+  }
+  .imagenrelacionada{
+    height: 70px;
+    width: 70px;
+   
+  }
+
+    
+  #listaobra{
+    margin-top: 40px;
+  }
+  #descripcion1{
+    margin-top: 50px;
+    padding: 20px;
+
+  }
+
+  #descripcion2 {
+    margin-top: 50px;
+    padding: 20px;
+  }
+ /*Texto de productos relacionados/////////*/
+  #prodrel{
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: x-large;
+  
+  }
+  #tituloobra{
+    margin-top: 40px;
+  }
+
+  .linea-horizontal{
+    display: none;
+  }
+  .image-with-text {
+
+    font-weight: lighter;
+    font-size: medium;
+    display: inline-block;
+    margin: 30px;
+    /* Espacio entre las imágenes y el texto */
+    vertical-align: top;
+    /* Alineación superior para que el texto esté alineado con la parte superior de la imagen */
+  }
+ 
+  .imagenrelacionada{
+    height: 150px;
+    width: 150px;
+  }
+  #imagerel{
+    height: 300px;
+  }
+  .linea-horizontalmovil{
+    border-bottom: 1px solid black;
+    /* Estilo de la línea horizontal */
+    width: 820px;
+    text-align: center;
+    height: 15px;
+  }
+
+  .linea-vertical {
+    display: none;
+    border-left: 1px solid #000;
+    /* Color de la línea y grosor */
+    height: 700px;
+    /* Altura de la línea */
+    margin: 20px;
+  }
+  .left-content {
+    float: left;
+    width: 50%; /* Ajusta el ancho según tus necesidades */
+}
+
+.right-content {
+    float: right;
+    width: 50%; /* Ajusta el ancho según tus necesidades */
+}
+/*controles del carrusel////////////////////////*/
+.carousel-control-prev{
+  width: 75px;
+}
+.carousel-control-next{
+  width: 75px;
+}
+#imprpal{
+  margin: 5%;
+  width: 300px;
+  height: 300px;
+}
+#imprpal1{
+  margin: 5%;
+  width: 300px;
+  height: 300px;
+}
+#imprpal2{
+  margin: 5%;
+  width: 300px;
+  height: 300px;
+}
+#cuadropreciosymedidas{
+  display: none;
+}
+#preciosymedidastablet{
+  margin-top: 150px;
+  margin-left: 50px;
+  
+
+  
+}
+#cantidadobjetos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cantpant{
+  margin: 10px;
+}
+
+/* Alinea los botones horizontalmente */
+#subtractButton1,
+#addButton1 {
+  font-size: 24px;
+  border-radius: 20px;
+  padding-top: 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 10px; /* Espacio entre los botones */
+  
+}
+#btncompra1 {
+  margin-bottom: 10px;
+}
+#dimensiones{
+  margin-top: 25px;
+  font-weight: bold;
+}
+#cantidadobjetos{
+  margin-top: 30px;
+}
+
+/*boton de comprar ahora///////////////*/
+.btn-outline-secondary2 {
+  background-color: rgb(208, 65, 126);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(148, 42, 87);
+  font-weight: bold;
+  font-size: x-large;
+  /* Define los estilos de :hover aquí */
+}
+
+.btn-outline-secondary2:hover {
+  background-color: rgb(141, 40, 82);
+  /* Color de fondo cuando el mouse pasa sobre el botón */
+  color: rgb(255, 255, 255); /* Cambia el color del texto cuando el mouse pasa sobre el botón */
+}
+/*boton de agregar al carrito/////////////////*/
+.btn-outline-secondary3 {
+  background-color: rgb(199, 199, 199);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(148, 42, 87);
+  font-weight: bold;
+  font-size: x-large;
+  /* Define los estilos de :hover aquí */
+}
+
+.btn-outline-secondary3:hover {
+  background-color: rgb(141, 40, 82);
+  /* Color de fondo cuando el mouse pasa sobre el botón */
+  color: rgb(255, 255, 255); /* Cambia el color del texto cuando el mouse pasa sobre el botón */
+}
+  
+
+}
+#precio1{
+  font-size: xx-large;
+  text-align: left;
+  margin-left: 45px;
+}
+
+/* iphone /////////////////////////////////////// */
+@media (max-width: 400px) {
+  .linea-horizontalmovil{
+    border-bottom: 1px solid black;
+    /* Estilo de la línea horizontal */
+    width: 380px;
+    text-align: center;
+    height: 15px;
+  }
+  #preciosymedidastablet{
+    margin-top: 70px;
+    margin-left: 50px;
+  #precio{
+    margin-left: 45px;
+  }
+    
+  }
+  .card{
+    margin: 2%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .card-text{
+    font-size: 12px;
+  }
+  .imagenrelacionada{
+    height: 70px;
+    width: 70px;
+   
+  }
+}
+
+/* pc ////////////////////////////////////////////*/
+@media (min-width: 1025px) {
+  #preciosymedidastablet{
+    display: none;
+    margin-top: 70px;
+    margin-left: 50px;
+  #precio{
+    margin-left: 45px;
+  }
+    
+  }
+  #descripciontabletaycel{
+    display: none;
+  }
+  #prodrel {
+    display: inline-block;
+    vertical-align: middle; /* Alineación vertical al centro */
+    margin-right: 10px; /* Espacio entre el texto y la línea horizontal */
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  .linea-horizontalpc {
+    display: inline-block;
+    width: 1000px; /* Ancho de la línea horizontal */
+    border-top: 1px solid black; /* Estilo de la línea horizontal */
+    margin-bottom: 5px;  
+  }
+  
+ 
+}
+
+footer {
+  text-align: center;
+  background-color: #000;
+  color: white;
+  margin-top: 59px;
+  height: 100px;
+}
