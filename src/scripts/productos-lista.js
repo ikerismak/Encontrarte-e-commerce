@@ -12,7 +12,7 @@ const Obra = [
         certificacion: "0890453453432",
         precio: 1000,
         imagen_normal: "ImgnavBar&acercaDeNosotros/image 19.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Un cuadro muy bonito",
@@ -29,7 +29,7 @@ const Obra = [
         certificacion: "0987654321",
         precio: 1200,
         imagen_normal: "ImgnavBar&acercaDeNosotros/image 20 (1).png",
-        imagen_dos:"../assets/list-products-images/image 14.png",
+        imagen_dos:"../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una obra maestra de la naturaleza",
@@ -46,7 +46,7 @@ const Obra = [
         certificacion: "1234567890",
         precio: 800,
         imagen_normal: "ImgnavBar&acercaDeNosotros/Imagenvioleta.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una pintura elegante y refinada",
@@ -62,8 +62,8 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "9876543210",
         precio: 600,
-        imagen_normal: "list-products-images/8.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_normal: "ImgnavBar&acercaDeNosotros/Imagenvioleta.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una vista impresionante de las montañas",
@@ -79,8 +79,8 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "5678901234",
         precio: 950,
-        imagen_normal: "list-products-images/image 10.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_normal: "list-products-images/mirada_del_alma.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Colores vibrantes de la primavera en todo su esplendor",
@@ -96,8 +96,8 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "2345678901",
         precio: 750,
-        imagen_normal: "list-products-images/image 11.png",
-        imagen_dos:"../assets/list-products-images/image 14.png",
+        imagen_normal: "list-products-images/mar_y_plantas.png",
+        imagen_dos:"../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una pieza abstracta en tonos rojos y vibrantes",
@@ -113,8 +113,8 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "6789012345",
         precio: 1100,
-        imagen_normal: "list-products-images/image 12.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_normal: "list-products-images/manchas_opticas.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una impresionante representación de una sonrisa radiante",
@@ -130,8 +130,8 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "0123456789",
         precio: 900,
-        imagen_normal: "list-products-images/image 12.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_normal: "list-products-images/manchas_opticas.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una representación detallada y vívida de frutas frescas",
@@ -147,8 +147,8 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "3456789012",
         precio: 1300,
-        imagen_normal: "list-products-images/image 13.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_normal: "list-products-images/escrito_de_un_loco.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una impresionante vista de la puesta de sol sobre el océano",
@@ -164,13 +164,60 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "4567890123",
         precio: 850,
-        imagen_normal: "list-products-images/image 14.png",
-        imagen_dos: "../assets/list-products-images/image 14.png",
+        imagen_normal: "list-products-images/mirada_al_pasado.png",
+        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
         descripcion: "Una representación dinámica y expresiva de figuras en movimiento",
       },
 ];
+
+const listaElementos = document.querySelectorAll('#listaobjetos li strong');
+
+listaElementos.forEach(elemento => {
+  elemento.addEventListener('click', () => {
+    const categoria = elemento.textContent.trim();
+    redirigirAPagina(categoria);
+  });
+});
+
+function redirigirAPagina(categoria) {
+  // Reemplaza espacios en blanco y caracteres especiales en el nombre de la categoría
+  const categoriaSinEspacios = categoria.replace(/\s/g, '_').toLowerCase();
+
+  // Redirige a la página con el nombre de la categoría como parte de la URL
+  window.location.href = `${categoriaSinEspacios}.html`;
+}
+
+////////////////mandar a pagina principal///////////////////////
+const pinturasAlOleoElement = document.getElementById('pinturasAlOleo');
+
+pinturasAlOleoElement.addEventListener('click', () => {
+  // Redirige a la página HTML deseada al hacer clic en "Pinturas al Oleo"
+  window.location.href = 'pagina-lista-productos.html';
+});
+// Selecciona todos los elementos de la lista en el menú desplegable
+const listaDesplegableElements = document.querySelectorAll('#ventanaflotante .dropdown-item');
+
+// Agrega el evento de clic a cada elemento de la lista
+listaDesplegableElements.forEach(elemento => {
+  elemento.addEventListener('click', () => {
+    const categoria = elemento.textContent.trim();
+    redirigirAPagina(categoria);
+  });
+});
+
+const pintOleoElement = document.getElementById('pintOleo');
+
+pintOleoElement.addEventListener('click', () => {
+  // Aquí puedes especificar la URL a la que deseas redirigir al hacer clic en "Pinturas al Oleo"
+  window.location.href = 'pagina-lista-productos.html';
+});
+
+
+
+
+
 
 
 //categoria///////////////////////////////
@@ -184,12 +231,24 @@ function agregarObjetosAContenedores(arr, contenedores) {
       const card = document.createElement('div');
       card.className = 'card';
       card.style.width = '15rem';
-      card.innerHTML = `
+      card.dataset.id = element.user_id;
+      card.innerHTML =
+       `
+          
           <img class="card-img" src="../assets/${element.imagen_normal}" alt="...">
           <div class="card-body">
               <h5 class="card-title">${element.titulo}</h5>
           </div>
       `;
+      // Agrega un manejador de eventos de clic a la tarjeta
+    card.addEventListener('click', () => {
+      // Obtiene el identificador único cuando se hace clic en la tarjeta
+      const id = card.dataset.id;
+
+      // Redirige a la página independiente y pasa el identificador como parámetro en la URL
+      window.location.href = `Pagina del producto.html?id=${id}`;
+  });
+      
 
       // Agrega el elemento al contenedor actual
       contenedores[contenedorActual].appendChild(card);
@@ -237,6 +296,8 @@ const contenedores3 = [carruselContenedor9, carruselContenedor10, carruselConten
 
 // Llama a la función con tu arreglo de objetos y los contenedores del segundo conjunto
 agregarObjetosAContenedores(Obra, contenedores3);
+
+
 
 
 

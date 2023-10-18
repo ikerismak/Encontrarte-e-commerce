@@ -96,7 +96,7 @@ footer {
     width: 100%;
 }
 
-#contenidocategorias {
+#contenidoCategorias {
     position: sticky;
     top: 0;
     /* Pegar en la parte superior del contenedor */
@@ -114,18 +114,33 @@ footer {
     width: 85%;
     line-height: 30px;
     font-size: larger;
-
-
 }
+#pinturasAcuarelas,
+#pinturasAcrilicas,
+#pinturasAbstractas,
+#pinturasPaisajisticas,
+#pinturasAlOleo
+{
+    cursor: pointer;
+  
+}
+.dropdown-item
 
+/* Cambia el color del texto de los enlaces no visitados */
 
-
+  /* Evita que el color del texto de los enlaces visitados se modifique */
+  a:visited {
+    color: #000; /* Mismo color que los enlaces no visitados */
+    text-decoration: none;
+    
+  }
 
 .card {
 
     margin: 3%;
     transition: transform 0.3s;
     /* Agrega una transición suave para una animación gradual */
+    cursor: pointer;
 
 
 }
@@ -300,7 +315,7 @@ v #ventanaflotante li {
     #ventanaflotante {
 
         width: 400px;
-        height: 560px;
+        height: 400px;
         margin-left: 200px;
 
     }
@@ -387,6 +402,7 @@ v #ventanaflotante li {
         size: 10rem;
         height: 3rem;
         background-color: rgb(217, 217, 217, 0.7);
+        
 
 
     }
@@ -400,7 +416,7 @@ v #ventanaflotante li {
     #ventanaflotante {
 
         width: 250px;
-        height: 350px;
+        height: 250px;
         margin-left: 200px;
 
     }
