@@ -63,18 +63,6 @@ function seleccionarTamanio(tamanio) {
     }
 }
 
-// Agrega eventos onclick a los botones de tamaño
-myButton.onclick = function() {
-    seleccionarTamanio("35x35");
-};
-
-myButton1.onclick = function() {
-    seleccionarTamanio("75x75");
-};
-
-myButton2.onclick = function() {
-    seleccionarTamanio("85x85");
-};
 
 
 
@@ -102,48 +90,4 @@ myButton2.onclick = function() {
             quantityElement.textContent = quantity;
         }
 
-        // Manejadores de eventos para los botones de suma y resta
-        subtractButton.addEventListener('click', () => {
-            if (quantity > 0) {
-                updateQuantity(quantity - 1);
-            }
-        });
-
-        addButton.addEventListener('click', () => {
-            updateQuantity(quantity + 1);
-        });
-
-        // Manejador de eventos para el botón "Comprar ahora"
-        buyButton.addEventListener('click', () => {
-          if (quantity > 0 && selectedSize !== null) {
-              // Verifica si el producto ya existe en la lista
-              const existingProduct = productList.find(product => product.tamanio === selectedSize);
-              
-              if (existingProduct) {
-                  // Si el producto ya existe, agrega la cantidad seleccionada
-                  existingProduct.cantidad += quantity;
-              } else {
-                  // Si el producto no existe, crea uno nuevo y agrégalo a la lista
-                  const product = {
-                      nombre: "Ecos de la eternidad", // Nombre de la obra de arte
-                      cantidad: quantity,
-                      autor: "Isabela Montoya",
-                      tamanio: selectedSize,
-                      precio:"$850" // Agrega el tamaño seleccionado al objeto del producto
-                  };
-                  productList.push(product);
-              }
-      
-              // Limpia la cantidad y el tamaño seleccionado
-              updateQuantity(0);
-              selectedSize = null;
-      
-              // Puedes hacer algo con la lista de productos, como mostrarla en la página o enviarla a un servidor
-              console.log(productList);
-          }
-      });
-    
-
-
-
-
+        

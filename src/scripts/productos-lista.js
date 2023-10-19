@@ -228,27 +228,29 @@ function agregarObjetosAContenedores(arr, contenedores) {
 
   arr.forEach((element, index) => {
       // Crea un nuevo elemento HTML (por ejemplo, un div)
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.style.width = '15rem';
-      card.dataset.id = element.user_id;
-      card.innerHTML =
-       `
-          
-          <img class="card-img" src="../assets/${element.imagen_normal}" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">${element.titulo}</h5>
-          </div>
-      `;
-      // Agrega un manejador de eventos de clic a la tarjeta
-    card.addEventListener('click', () => {
-      // Obtiene el identificador único cuando se hace clic en la tarjeta
-      const id = card.dataset.id;
+      // Crea un nuevo elemento HTML (por ejemplo, un div)
+const card = document.createElement('div');
+card.className = 'card';
+card.style.width = '15rem';
+card.dataset.user_id = String(element.user_id); // Cambia 'id' a 'user_id' para que coincida con la URL
+card.innerHTML = `
+    <img class="card-img" src="../assets/${element.imagen_normal}" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">${element.titulo}</h5>
+    </div>
+`;
 
-      // Redirige a la página independiente y pasa el identificador como parámetro en la URL
-      window.location.href = `Pagina del producto.html?id=${id}`;
-  });
-      
+// Agrega un manejador de eventos de clic a la tarjeta
+card.addEventListener('click', () => {
+    // Obtiene el identificador único cuando se hace clic en la tarjeta
+    const user_id = card.dataset.user_id; // Cambia 'id' a 'user_id'
+
+    // Redirige a la página independiente y pasa el identificador como parámetro en la URL
+    window.location.href = `Pagina del producto.html?user_id=${user_id}`; // Cambia 'id' a 'user_id'
+});
+
+// ...
+
 
       // Agrega el elemento al contenedor actual
       contenedores[contenedorActual].appendChild(card);
