@@ -92,6 +92,15 @@ p {
     position: absolute;
 }
 
+a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 /*.modal-visible {
     visibility: visible;
     display: contents;
