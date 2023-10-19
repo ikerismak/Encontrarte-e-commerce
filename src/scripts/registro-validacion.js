@@ -2,7 +2,8 @@
     'use strict'
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
+    var forms = document.querySelectorAll('.needs-validation');
+    const modal = document.querySelector('.exampleModal');
 
     // Loop over them and prevent submission
     Array.from(forms)
@@ -17,4 +18,6 @@
                 form.classList.add('was-validated')
             }, false)
         })
+
+
 })()

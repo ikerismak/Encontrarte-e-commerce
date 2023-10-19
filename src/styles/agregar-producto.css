@@ -16,7 +16,12 @@ html {
   height: 100vh;
   width: 100%;
 }
+.visible-product {
+  display: none !important;
+}
 body {
+  min-height: 100vh;
+  margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -25,16 +30,22 @@ body {
   background-color: var(--textcolor);
   max-width: 1440px;
 }
+/*estilo contenido*/
+/*ModalLabelProducto*/
+#ModalLabelProducto {
+  color: var(--primarycolor);
+}
 .box-container {
+  min-height: 60vh;
   background-color: var(--backgroundcolor);
   width: 100%;
-  padding: 0 16px;
+  padding: 40px 16px;
   max-width: 1440px;
   box-sizing: border-box;
-  margin: 40px 0;
 }
 /*stylos del formulario*/
 .form-label {
+  font-weight: 500;
   font-size: 20px;
   line-height: 28px;
   margin: 0;
@@ -94,7 +105,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   border: 2px dashed var(--thirdcollor);
-  padding: 20px;
+  padding: 5px;
   text-align: center;
   cursor: pointer;
 }
@@ -119,21 +130,28 @@ body {
 }
 .image-preview-box .icon-position {
   position: absolute;
-  top: 63px;
-  left: 88px;
+  top: 10px;
+  left: 10px;
   font-weight: 600;
   color: var(--primarycolor);
 }
 .image-preview-box img {
-  padding: 10px;
-
+  padding: 5px;
+  width: 150px;
+  height: 115px;
   max-width: 100%;
   max-height: 100%;
   cursor: pointer;
 }
 /*pinturas sidebar css*/
+#pinturass {
+  border-radius: 10px;
+  border: 2px solid var(--primarycolor);
+}
 /*label*/
 .label-container {
+  min-height: 40px;
+  gap: 5px;
   background-color: var(--textcolor);
   border: 1px solid var(--primarycolor);
   border-radius: 10px;
@@ -148,10 +166,17 @@ body {
   font-size: 16px;
 }
 @media (min-width: 576px) {
+  .drop-zone {
+    display: flex;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #categoria-label {
+    margin-top: -2px !important ;
+    margin-bottom: 0px !important;
+  }
 }
 
 /*  Large devices (desktops, 992px and up)
@@ -162,6 +187,9 @@ body {
 /*  X-Large devices (large desktops, 1200px and up)
  */
 @media (min-width: 1200px) {
+  .box-container {
+    padding: 40px 72px;
+  }
 }
 
 /*  XX-Large devices (larger desktops, 1400px and up)

@@ -22,6 +22,8 @@ p {
     border: none;
 }
 
+
+
 .visibilty {
     display: none;
 }
@@ -89,6 +91,15 @@ p {
 #botonCerrar {
     position: absolute;
 }
+
+a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 /*.modal-visible {
     visibility: visible;

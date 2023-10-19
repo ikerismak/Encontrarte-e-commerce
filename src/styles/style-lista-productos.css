@@ -1,270 +1,504 @@
 
 
-body{
-    min-height: 100vh; /* Establece una altura mínima igual al 100% de la altura visible del viewport */
-  background-color: #f0f0f0; /* Solo para que sea visible el espacio adicional */
+body {
+    min-height: 100vh;
+    /* Establece una altura mínima igual al 100% de la altura visible del viewport */
+    background-color: #f0f0f0;
+    /* Solo para que sea visible el espacio adicional */
 
 }
 
-
-#banerlogo{
+#banerlogo {
     background-color: rgb(208, 65, 126);
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
     padding: 2%;
     margin-top: 272%;
-    
-  
+
+
+
+}
+#carouselExampleIndicators3 .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    border-radius: 15px;
+}
+#carouselExampleIndicators3 .carousel-control-prev{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    border-radius: 15px;
+
+}
+#carouselExampleIndicators2 .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    border-radius: 15px;
+}
+#carouselExampleIndicators2 .carousel-control-prev{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    border-radius: 15px;
+
+}
+#carouselExampleIndicators .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    border-radius: 15px;
     
 }
-#titulopinturas{
+#carouselExampleIndicators .carousel-control-prev{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    border-radius: 15px;
+
+}
+
+#titulopinturas {
     text-align: center;
     margin-bottom: 8%;
-    
+
 }
-#fondoizq{
+
+#fondoizq {
     background-color: rgb(163, 163, 163);
     position: static;
     width: 95%;
     height: 1800px;
     padding: 0;
     position: relative;
-    
+
 }
-#columnaizq{
+
+#columnaizq {
     padding: 0;
-    
+
 }
-#titulocategoria{
+
+#titulocategoria {
     margin: 5%;
     font-size: xx-large;
 }
 
 
-footer{
+footer {
     color: white;
     text-align: center;
     background: black;
     height: 70px;
-    border-top: 2px solid rgba(2, 2, 2, 0.24);  
+    border-top: 2px solid rgba(2, 2, 2, 0.24);
     /*  poner footer abajo */
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
 }
-#contenidocategorias{
+
+#contenidoCategorias {
     position: sticky;
-    top: 0; /* Pegar en la parte superior del contenedor */
+    top: 0;
+    /* Pegar en la parte superior del contenedor */
     border-top: 50px solid transparent;
 
 }
 
 
-#listaobjetos li{
+#listaobjetos li {
     border-bottom: 1.5px solid #000;
-    padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
-    margin-bottom: 5px; /* Espacio opcional entre elementos */
+    padding-bottom: 5px;
+    /* Espacio opcional entre el texto y la línea */
+    margin-bottom: 5px;
+    /* Espacio opcional entre elementos */
     width: 85%;
     line-height: 30px;
     font-size: larger;
-    
-    
 }
-.imagentarjeta{
-    height: 320px;
+#pinturasAcuarelas,
+#pinturasAcrilicas,
+#pinturasAbstractas,
+#pinturasPaisajisticas,
+#pinturasAlOleo
+{
+    cursor: pointer;
+  
 }
+.dropdown-item
 
+/* Cambia el color del texto de los enlaces no visitados */
 
-#imagenes1{
-    display: flex;
+  /* Evita que el color del texto de los enlaces visitados se modifique */
+  a:visited {
+    color: #000; /* Mismo color que los enlaces no visitados */
+    text-decoration: none;
     
-}
-
+  }
 
 .card {
-            
-margin: 5%;
-transition: transform 0.3s; /* Agrega una transición suave para una animación gradual */
 
-        
+    margin: 3%;
+    transition: transform 0.3s;
+    /* Agrega una transición suave para una animación gradual */
+    cursor: pointer;
+
+
 }
-        
-    
-.card-body{
+
+
+.card-body {
     size: 10rem;
     height: 5rem;
-    background-color: rgb(217, 217,217, 0.7);
-    
-    
+    background-color: rgb(217, 217, 217, 0.7);
+
+
 }
-    
+
 .card:hover {
-    transform: scale(1.1); /* Escala la tarjeta al 110% de su tamaño original en el hover */
+    transform: scale(1.1);
+    /* Escala la tarjeta al 110% de su tamaño original en el hover */
 }
-    
-.card-text{
+
+.card-title {
     font-size: 18px;
     text-align: center;
     font-weight: bold;
     color: #000;
-            
+
 }
 
-#contboton{
-    
+#contboton {
+
     margin-top: 2%;
     margin-bottom: 5%;
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
     margin-left: 15%;
 }
-#boton{
-    font-size: 20px; /* Tamaño de fuente más pequeño */
-    padding: 15px 40px; /* Espaciado más pequeño */
+
+#boton {
+    font-size: 20px;
+    /* Tamaño de fuente más pequeño */
+    padding: 15px 40px;
+    /* Espaciado más pequeño */
     background-color: rgb(208, 65, 126);
-    margin: 0 auto; /* Centra horizontalmente solo el botón */
+    margin: 0 auto;
+    /* Centra horizontalmente solo el botón */
+    z-index: 1;
+    /* Otros estilos para el botón */
 }
-#fondobotontablet{
-    background-color: rgb(217, 217,217, 0.7);
+
+#fondobotontablet {
+    background-color: rgb(217, 217, 217, 0.7);
 }
 
 
-.contenedorcards{
+.contenedorcardsc11 {
+    display: flex;
+}
+
+.contenedorcardsc12 {
+    display: flex;
+}
+
+.contenedorcardsc13 {
+    display: flex;
+}
+
+.contenedorcardsc14 {
+    display: flex;
+}
+
+.contenedorcardsc15 {
+    display: flex;
+}
+
+.contenedorcardsc16 {
+    display: flex;
+}
+
+.contenedorcardsc17 {
+    display: flex;
+}
+
+.contenedorcardsc18 {
+    display: flex;
+}
+
+.contenedorcardsc19 {
+    display: flex;
+}
+
+.contenedorcardsc20 {
+    display: flex;
+}
+
+.contenedorcardsc21 {
+    display: flex;
+}
+
+.contenedorcardsc22 {
     display: flex;
 }
 
 
-v
-#ventanaflotante li{
+
+v #ventanaflotante li {
     border-bottom: 1.5px solid #000;
-    padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
-    margin-bottom: 5px; /* Espacio opcional entre elementos */
+    padding-bottom: 5px;
+    /* Espacio opcional entre el texto y la línea */
+    margin-bottom: 5px;
+    /* Espacio opcional entre elementos */
     width: 85%;
     line-height: 30px;
     font-size: larger;
-    
-    
+
+
 }
+
 .fondo-oscuro {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
-    z-index: 100; /* Asegura que el fondo oscuro esté en la parte superior */
-    display: none; /* Inicialmente oculto */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color oscuro con opacidad */
+    z-index: 100;
+    /* Asegura que el fondo oscuro esté en la parte superior */
+    display: none;
+    /* Inicialmente oculto */
 }
+
 /*tableta/////////////////////////////   */
 @media (max-width: 1024px) {
     #columnaizq {
-        display: none; /* Oculta la columna */
+        display: none;
+        /* Oculta la columna */
     }
-    #ventanaflotante{
-   
+    #carouselExampleIndicators3 .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 70px;
+        border-radius: 15px;
+    }
+    #carouselExampleIndicators3 .carousel-control-prev{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 70px;
+        border-radius: 15px;
+
+    }
+    #carouselExampleIndicators2 .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 70px;
+        border-radius: 15px;
+    }
+    #carouselExampleIndicators2 .carousel-control-prev{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 70px;
+        border-radius: 15px;
+
+    }
+    #carouselExampleIndicators .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 70px;
+        border-radius: 15px;
+        
+    }
+    #carouselExampleIndicators .carousel-control-prev{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 70px;
+        border-radius: 15px;
+        margin-bottom: 100px;
+    }
+
+    #ventanaflotante {
+
         width: 400px;
-        height: 560px;
+        height: 400px;
         margin-left: 200px;
-    
+
     }
-    #ventanaflotante li{
+
+    #ventanaflotante li {
         border-bottom: 1.5px solid #000;
-        padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
-        margin-bottom: 40px; /* Espacio opcional entre elementos */
+        padding-bottom: 5px;
+        /* Espacio opcional entre el texto y la línea */
+        margin-bottom: 40px;
+        /* Espacio opcional entre elementos */
         width: 100%;
         line-height: 30px;
-        font-size:xx-large;
+        font-size: xx-large;
         text-align: center;
-       
-        
-        
-        
+
+
+
+
     }
-    
+
     #colder {
         width: 100%;
-        height: 1800px;
-        
+        height: 1600px;
+
     }
-    .card-text{
+   
+    .card-text {
         font-size: 15px;
         text-align: center;
         font-weight: bold;
         color: #000;
     }
+
+
+    .card-img {
+    height: 300px;
+    width: 800px;
+   
 }
+}
+
 /* iphone /////////////////////////////////////// */
 @media (max-width: 400px) {
-        #columnaizq {
-            display: none; /* Oculta la columna */
-        }
-        .imagentarjeta{
-            height: 150px;
-        }
-        #ventanaflotante{
-   
-            width: 250px;
-            height: 350px;
-            margin-left: 200px;
-           
-        }
-        #ventanaflotante li{
-            border-bottom: 1.5px solid #000;
-            padding-bottom: 5px; /* Espacio opcional entre el texto y la línea */
-            margin-bottom: 5px; /* Espacio opcional entre elementos */
-            width: 100%;
-            line-height: 30px;
-            font-size: larger;
-            text-align: center;
-            
-            
-        }
-        .card {
-            transition: none;
-            margin: 3%;       
-            }
-        .card:hover {
-                transform: none; /* Restaura el valor original de transformación */
-            }
+    #columnaizq {
+        display: none;
+        /* Oculta la columna */
+    }
+    #carouselExampleIndicators3 .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 30px;
+        border-radius: 15px;
+    }
+    #carouselExampleIndicators3 .carousel-control-prev{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 30px;
+        border-radius: 15px;
+
+    }
+    #carouselExampleIndicators2 .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 30px;
+        border-radius: 15px;
+    }
+    #carouselExampleIndicators2 .carousel-control-prev{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 30px;
+        border-radius: 15px;
+
+    }
+    #carouselExampleIndicators .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 30px;
+        border-radius: 15px;
         
-        #contboton{
-    
-            margin-top: 2%;
-            margin-bottom: 5%;
-            align-items: center; /* Centra verticalmente solo el botón */
-            justify-content: center; /* Centra horizontalmente el contenido */
-            margin-left: 3%;
-        }
+    }
+    #carouselExampleIndicators .carousel-control-prev{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 30px;
+        border-radius: 15px;
+
+    }
+
+    .card-body {
+        size: 10rem;
+        height: 3rem;
+        background-color: rgb(217, 217, 217, 0.7);
         
-        #colder {
-            width: 100%;
-            height: 1100px;
-        }
-        #boton{
-            font-size: 20px; /* Tamaño de fuente más pequeño */
-            padding: 10px 30px; /* Espaciado más pequeño */
-            background-color: rgb(208, 65, 126);
-            margin: 0 auto; /* Centra horizontalmente solo el botón */
-        }
-        .card-text{
-            font-size: 10px;
-            text-align: center;
-            font-weight: bold;
-            color: #000;
-            
-        }
+
+
+    }
+
+    .card-img {
+        height: 140px;
+        width: 800px;
+       
+    }
+
+    #ventanaflotante {
+
+        width: 250px;
+        height: 250px;
+        margin-left: 200px;
+
+    }
+
+    #ventanaflotante li {
+        border-bottom: 1.5px solid #000;
+        padding-bottom: 5px;
+        /* Espacio opcional entre el texto y la línea */
+        margin-bottom: 5px;
+        /* Espacio opcional entre elementos */
+        width: 100%;
+        line-height: 30px;
+        font-size: larger;
+        text-align: center;
+
+
+    }
+
+    .card {
+        transition: none;
+        margin: 3%;
+    }
+
+    .card:hover {
+        transform: none;
+        /* Restaura el valor original de transformación */
+    }
+
+    #contboton {
+
+        margin-top: 2%;
+        margin-bottom: 5%;
+        align-items: center;
+        /* Centra verticalmente solo el botón */
+        justify-content: center;
+        /* Centra horizontalmente el contenido */
+        margin-left: 3%;
+    }
+
+    #colder {
+        width: 100%;
+        height: 900px;
+    }
+
+    /*Este es el boton que guarda las categorias*/
+    #boton {
+        font-size: 20px;
+        /* Tamaño de fuente más pequeño */
+        padding: 10px 30px;
+        /* Espaciado más pequeño */
+        background-color: rgb(208, 65, 126);
+        margin: 0 auto;
+        /* Centra horizontalmente solo el botón */
+        z-index: 1;
+    }
+
+    .card-title {
+        font-size: 8px;
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+        padding: 2%;
+
+    }
 }
+
 /* pc ////////////////////////////////////////////*/
 @media (min-width: 1025px) {
     #boton {
         display: none;
     }
-    #fondobotontablet{
-        background-color: rgb(217, 217,217, 0.7);
+
+    #fondobotontablet {
+        background-color: rgb(217, 217, 217, 0.7);
         display: none;
     }
-    
+
+    .card-img {
+        height: 280px;
+        width: 100px;
     }
-   
+}
+
+
+
