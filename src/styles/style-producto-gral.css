@@ -47,7 +47,13 @@ justify-content: center;
  
 }
 
-
+#comprarAhora{
+width: 140px;
+}
+#agregarAlCarrito{
+  width: 140px;
+  height: 80px;
+}
 
 /*imagen principal del carrusel del producto*/
 #imprpal {
@@ -139,12 +145,15 @@ justify-content: center;
 }
 
 #cuadrocompras {
-  padding: 40px;
+  padding: 50px;
   background-color: rgb(241, 240, 240);
   border: 2px solid rgb(100, 100, 100);
   border-radius: 15px;
   margin-left: 50px;
   margin-top: 50px;
+}
+#listaTecnicas{
+  margin-top: 100px;
 }
 
 #botonescar {
@@ -350,6 +359,9 @@ justify-content: center;
     padding: 20px;
 
   }
+  #preciosymedidastablet{
+    margin-top: 500px;
+  }
 
   #descripcion2 {
     margin-top: 50px;
@@ -528,10 +540,7 @@ justify-content: center;
   #preciosymedidastablet{
     margin-top: 70px;
     margin-left: 50px;
-  #precio{
-    margin-left: 45px;
-  }
-    
+
   }
   .card{
     margin: 2%;
@@ -557,6 +566,7 @@ justify-content: center;
     margin-left: 50px;
   #precio{
     margin-left: 45px;
+    font-weight: bold;
   }
     
   }
