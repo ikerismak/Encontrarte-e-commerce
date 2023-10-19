@@ -11,8 +11,8 @@
     cursor: pointer;
     background: none;
     transition: all 500ms linear;
-    right: 5px;
-    top: 134px;
+    
+    
     
 }
 .menuBurguerContenedor.active{

@@ -190,6 +190,12 @@ opacity: 1;
         max-height:  382px;
     }
 }
+@media screen and (max-width:1921px) {
+
+    .card-img, .card-img-top{
+        max-height:354px;
+    }
+}
 @media screen and (max-width:1587px) {
 
     .card-img, .card-img-top{
