@@ -11,7 +11,7 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "0890453453432",
         precio: 1000,
-        imagen_normal: "ImgnavBar&acercaDeNosotros/image 19.png",
+        imagen_normal: "ImgnavBar&acercaDeNosotros/obrarosa.png",
         imagen_dos: "",
         imagen_tres: "/assets/artist.webp",
         imagen_cuatro: "/assets",
@@ -171,6 +171,51 @@ const Obra = [
         descripcion: "Una representación dinámica y expresiva de figuras en movimiento",
       },
 ];
+
+const artistasValoresConsulta= [
+  {
+    id_artista:1,
+    nombre_completo:'John Doe' ,
+    tecnicas:'Óleo',
+    categorias:'Retrato',
+    descripcion:'artista del óleo, me enamoré del arte desde niño. Mis primeros trazos fueron un portal a un mundo de colores y emociones. Cada pincelada narra mi historia de amor por el arte. Descúbrelo en línea."'
+  },
+  {
+    id_artista:2,
+    nombre_completo:'Alice Johnson' ,
+    tecnicas:'Digital',
+    categorias:'Arte abstracto',
+    descripcion:'Soy un artista digital que desde pequeña gustaba del dibujo y la pintura, cuando conocí que mis diseños podían vivir en el mundo digital por la eternidad decídi incursionar con obras y diseños únicos con un estilo abstracto que me encanta'
+  },
+  {
+    id_artista:3,
+    nombre_completo:'Michael Smith' ,
+    tecnicas:'Acrílico',
+    categorias:'Realismo',
+    descripcion:'¡Hola, soy Michael Smith! Me apasiona el realismo y el acrílico. Descubre la magia en los detalles conmigo.'
+  },
+  {
+    id_artista:4,
+    nombre_completo:'Emily Brown',
+    tecnicas:'Pasteles',
+    categorias:'Hiperrealismo',
+    descripcion: 'soy un artista que le encanta el matiz y la emoción que me dan los dibujos con hiperrealismo en tonos pasteles, conoce mi arte a continuación'
+
+  },
+  {
+    id_artista:5,
+    nombre_completo:'Daniel Wilson',
+    tecnicas:'Tinta china',
+    categorias:'Arte abstracto',
+    descripcion: 'Me encanta la tinta china y el arte abstracto pues me permite plasmar conceptos más complejos en mi arte'
+
+  },
+  
+];
+
+
+
+
 const row = document.querySelector(".row")
 
 Obra.forEach(element => {
