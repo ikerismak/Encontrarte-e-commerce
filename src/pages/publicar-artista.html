@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Publicar obra</title>
+		<title>BarraDeNavegación</title>
 		<!-- link al css de barra de navegacion -->
 
 		<link rel="stylesheet" href="../styles/burguerMenuAnimacionStyle.css" />
@@ -35,9 +35,9 @@
 		<link rel="stylesheet" href="../styles/contactos-normalize.css" />
 		<link rel="stylesheet" href="../styles/agregar-producto.css" />
 		<link rel="stylesheet" href="../styles/publicar-artista.css" />
+		<link rel="stylesheet" href="../styles/publicar-artista.css" />
 		<script defer type="module" src="../scripts/agregar-producto-script.js"></script>
 		<script defer type="module" src="../scripts/agregar-producto-validaciones.js"></script>
-		<script defer type="module" src="../scripts/agregar-productos-artista-script.js"></script>
 	</head>
 
 	<body>
@@ -178,7 +178,7 @@
 							>
 						</li>
 						<li id="Artistas">
-							<a class="textoNormal" href="./Artista.html" rel="noopener noreferrer"
+							<a class="textoNormal" href="../pages/Artista.html" rel="noopener noreferrer"
 								>Artistas</a
 							>
 						</li>
@@ -245,74 +245,20 @@
 		<!-- contenedor main -->
 		<main class="box-container">
 			<section class="row justify-content-center" id="formulario-producto">
-				<div class="row align-items-center">
-					<div class="col-9"><h1 class="head-1 text-center">Agregar Obra</h1></div>
-					<div class="col-2">
-						<span id="toggle-form-btn-1" class="btn btn-3 toggle-form-btn">Perfil</span>
-					</div>
-				</div>
+				<h1 class="head-1 text-center">Publicar Pagina</h1>
 
-				<form class="row" id="pinturas" novalidate>
-					<section class="col-sm-12 col-md-6">
-						<!-- contenedor Titulo  -->
-						<div class="col-12">
-							<label for="titulo-valido" class="form-label">Titulo* </label>
-							<div class="">
-								<input
-									name="titulo"
-									type="text"
-									class="form-control"
-									data-type="titulo"
-									id="titulo-valido"
-									aria-describedby="inputGroupPrepend"
-									placeholder="titulo"
-									data-izq="titulo"
-									value="noche estrellada"
-									required
-								/>
+				<!-- contenedor izquierdo producto -->
 
-								<div class="valid-feedback"></div>
-								<div class="invalid-feedback"></div>
-							</div>
-						</div>
-						<div class="col-12">
-							<label for="certificado-valido" class="form-label"
-								>Certificado de autenticida*
-							</label>
-							<div class="">
-								<input
-									name="certificado"
-									value="1654adfea4f"
-									type="text"
-									class="form-control"
-									data-type="certificado"
-									id="certificado-valido"
-									aria-describedby="inputGroupPrepend"
-									placeholder="IMPI-01-00"
-									data-izq="certificado"
-									required
-								/>
+				<form
+					class="row g-3 needs-validation mb-4 col-sm-12 col-md-12 justify-content-center"
+					id="pinturas"
+					novalidate
+				>
+					<!-- contenedor Imagen -->
 
-								<div class="valid-feedback"></div>
-								<div class="invalid-feedback"></div>
-							</div>
-						</div>
-						<!-- contenedor Descripcion -->
-						<div class="col-12">
-							<label for="descripcion-valida" class="form-label">Descripción</label>
-							<textarea
-								name="descripcion"
-								data-type="descripcion"
-								class="form-control"
-								id="descripcion-valida"
-								placeholder="descripcion opcional"
-								rows="3"
-							></textarea>
-						</div>
-
-						<!-- contenedor Imagen -->
-						<div class="col-12">
-							<label for="fileInput" class="form-label">Imagenes *</label>
+					<div class="col-12 col-sm-4 col-md-4 text-center">
+						<div class="row justify-content-center">
+							<label for="fileInput" class="form-label mb-3">Foto Perfil *</label>
 							<div id="dropZone" class="drop-zone">
 								<div class="center-image">
 									<img
@@ -330,176 +276,6 @@
 									style="display: none"
 								/>
 							</div>
-							<div id="show-error"></div>
-						</div>
-					</section>
-					<section class="col-sm-12 col-md-6">
-						<div class="row">
-							<div class="col-6 col-sm-6 col-md-6">
-								<label for="largo-valido" class="form-label">Largo*</label>
-								<div class="">
-									<input
-										name="largo"
-										type="text"
-										class="form-control"
-										id="largo-valido"
-										value="200"
-										placeholder="centimetros"
-										data-type="largo"
-										required
-									/>
-									<div class="valid-feedback"></div>
-									<div class="invalid-feedback"></div>
-								</div>
-							</div>
-							<!-- contenedor input ancho -->
-							<div class="col-6 col-sm-6 col-md-6">
-								<label for="ancho-valido" class="form-label">Ancho*</label>
-								<div class="">
-									<input
-										name="ancho"
-										value="100"
-										type="text"
-										class="form-control"
-										id="ancho-valido"
-										placeholder="centimetros"
-										data-type="ancho"
-										required
-									/>
-									<div class="valid-feedback"></div>
-									<div class="invalid-feedback"></div>
-								</div>
-							</div>
-							<!-- contenedor input Precio -->
-							<div class="col-12">
-								<label for="precio-valido" class="form-label">Precio* </label>
-								<div class="">
-									<input
-										name="precio"
-										type="text"
-										class="form-control"
-										id="precio-valido"
-										value="1000"
-										aria-describedby="inputGroupPrepend"
-										placeholder="$999"
-										data-type="precio"
-										required
-									/>
-
-									<div class="valid-feedback"></div>
-									<div class="invalid-feedback"></div>
-								</div>
-							</div>
-							<!-- contenedor input piezas -->
-							<div class="col-6"></div>
-							<!-- Tecnicas -->
-							<div class="col-12">
-								<label for="select-option" class="form-label">Selecciona un Tecnica*</label>
-								<select
-									name="tecnica"
-									class="form-select"
-									id="select-option"
-									data-type="option"
-									required
-								>
-									<option selected disabled value="">tecnica</option>
-									<option value="acuarelas">Acuarelas</option>
-									<option value="oleo">Óleo</option>
-									<option value="acrílico">Acrílico</option>
-									<option value="carboncillo">Carboncillo</option>
-									<option value="tinta:">Tinta</option>
-									<option value="altoRelieve">Alto Relieve</option>
-									<option value="bajoRelieve">Bajo Relieve</option>
-								</select>
-							</div>
-
-							<!-- contenedor select options-->
-							<div class="box-category">
-								<label for="select-option-categoria" class="form-label"
-									>Selecciona un Categoría*</label
-								>
-								<div class="row">
-									<div class="col-sm-12 col-md-9">
-										<select
-											name="categoria"
-											class="form-select"
-											id="select-option-categoria"
-											data-type="categoria"
-											required
-										>
-											<option selected disabled value="">Categorias</option>
-											<option value="acuarelas">acuarelas</option>
-											<option value="acrilicas">acrilicas</option>
-											<option value="abstractas">abstractas</option>
-											<option value="retratos">retratos</option>
-											<option value="impresionistas">impresionistas</option>
-										</select>
-									</div>
-									<div class="col-12 col-sm-12 col-md-3 d-flex justify-content-center">
-										<div class="col-10 col-sm-10 col-md-12 my-2" id="categoria-label">
-											<span class="btn btn-3">Agregar</span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-12">
-									<h2 class="head-5">Etiquetas</h2>
-									<div class="d-flex flex-wrap label-container" id="container-label"></div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section class="row d-flex justify-content-center">
-						<div class="col-10">
-							<button class="btn btn-3 my-2">Publicar Obra</button>
-						</div>
-					</section>
-				</form>
-				<!-- contenedor izquierdo producto -->
-
-				<!-- contenedor izquierdo producto  -->
-				<section class="contacto-form col-sm-12 col-md-6"></section>
-				<!-- boton enviar -->
-			</section>
-			<section class="row justify-content-center visible-product" id="formulario-artista">
-				<div class="row align-items-center">
-					<div class="col-9"><h1 class="head-1 text-center">Publicar perfil</h1></div>
-					<div class="col-2">
-						<span id="toggle-form-btn-2" class="btn btn-3 toggle-form-btn">Obra</span>
-					</div>
-				</div>
-
-				<!-- contenedor izquierdo producto -->
-
-				<form
-					class="row g-3 needs-validation mb-4 col-sm-12 col-md-12 justify-content-center"
-					id="formulario-artista"
-					novalidate
-				>
-					<!-- contenedor Imagen -->
-
-					<div class="col-12 col-sm-4 col-md-4 text-center">
-						<div class="row justify-content-center">
-							<label for="fileInput" class="form-label mb-3">Foto de Perfil *</label>
-							<div id="dropZone-artista" class="drop-zone drop-zone-artista">
-								<div class="center-image">
-									<img
-										id="centerImageArtista"
-										src="../assets/agregar-producto/add_photo.svg"
-										alt="Agregar Imagen"
-									/>
-								</div>
-								<input
-									data-artista="foto"
-									name="foto"
-									type="file"
-									id="fileInputArtista"
-									accept="image/*"
-									style="display: none"
-								/>
-							</div>
 						</div>
 					</div>
 
@@ -509,30 +285,34 @@
 						<!-- contenedor Titulo  -->
 
 						<div class="col-12">
-							<label for="nombre-artista" class="form-label">Nombre* </label>
+							<label for="nombre-valido" class="form-label">Nombre* </label>
 							<div class="">
 								<input
 									name="nombre"
 									type="text"
 									class="form-control"
-									data-artista="nombre"
-									id="nombre-artista"
+									data-type="nombre"
+									id="nombre-valido"
 									aria-describedby="inputGroupPrepend"
 									placeholder="nombre"
+									data-izq="nombre"
 									required
 								/>
+
+								<div class="valid-feedback"></div>
+								<div class="invalid-feedback"></div>
 							</div>
 						</div>
 
-						<!-- contenedor sobremi -->
+						<!-- contenedor Descripcion -->
 
 						<div class="col-12">
-							<label for="sobremi-artista" class="form-label">Sobre mi*</label>
+							<label for="sobremi-valida" class="form-label">Sobre mi*</label>
 							<textarea
 								name="sobremi"
-								data-artista="sobremi"
+								data-type="descripcion"
 								class="form-control"
-								id="sobremi-artista"
+								id="sobremi-valida"
 								placeholder="cuentanos un poco de ti"
 								rows="3"
 							></textarea>
@@ -548,6 +328,7 @@
 					</div>
 				</form>
 			</section>
+
 			<section class="row d-flex justify-content-center visible-product" id="mensaje-producto">
 				<div class="col-12 text-center">
 					<img
@@ -557,11 +338,10 @@
 						height="75"
 					/>
 
-					<h2 title="head-1">Datos Enviados</h2>
+					<h2 title="head-1">formulario enviado</h2>
 				</div>
 			</section>
 		</main>
-
 		<!-- contenedor footer -->
 		<footer class="footer">
 			<p class="head-4">#ArtMovesWorld</p>

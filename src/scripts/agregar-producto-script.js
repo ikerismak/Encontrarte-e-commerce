@@ -1,74 +1,86 @@
-import { formCheckPictures, formCheckSizes, handleDrop, handleFileSelect, imageUrls, showAlert } from "./agregar-producto-validaciones.js";
+import { formCheckvalues, handleDrop, handleFileSelect, imageUrls, showAlert } from "./agregar-producto-validaciones.js";
 
-const contenerdorForm = document.getElementById("formulario-producto");
 const contenerdorMensaje = document.getElementById("mensaje-producto");
 
-const formLabel = document.getElementById("categorias");
-const formPictures = document.getElementById("pinturas");
-const formSizes = document.getElementById("sizes-price");
+/* const formSizes = document.getElementById("sizes-price");
+const formLabel = document.getElementById("categorias");*/
+const formObra = document.getElementById("formulario-producto");
+const formArtista = document.getElementById("formulario-artista");
 const containerLabel = document.getElementById("container-label");
+const formPictures = document.getElementById("pinturas");
+const btnToggleObra = document.querySelector("#toggle-form-btn-1");
+
 const dropZone = document.getElementById('dropZone');
 const fileInput = document.getElementById('fileInput');
 const centerImage = document.getElementById('centerImage');
-const tableProduct = document.getElementById("table-product")
-const btnPublicar = document.getElementById("publicar-obra");
+/* const tableProduct = document.getElementById("table-product")*/
+const btnAgregarLabel = document.getElementById("categoria-label");
 export const showError = document.getElementById("alert-message")
 
 export const alert = new bootstrap.Modal(document.getElementById('alert-modal'))
 
 
-
+let count = 0
 let counterSizePicture = 0
 let counterLabel = 0
+let dataPost = {}
 let obra = {}
 let pinturas = {};
 export let medidas = {};
-let categoria = {};
+//let categoria = {};
+
+let categoria = [];
 
 
+btnToggleObra.addEventListener("click", (e) => {
 
+    if (count >= 1) {
+        showAlert("Termina el formulario o recarga la pagina")
+    } else {
+        formObra.classList.add("visible-product")
+        formArtista.classList.remove("visible-product")
+    }
+
+
+})
 
 //evento para recolectar todos los datos y crear el objeto
-btnPublicar.addEventListener("click", e => {
+btnAgregarLabel.addEventListener("click", e => {
     e.preventDefault()
-    let longitudPintura = Object.keys(pinturas).length;
-    let longitudCategoria = Object.keys(categoria).length;
-    let longitudMedida = Object.keys(medidas).length;
-    let mensaje = []
-    if (longitudCategoria == 0) {
-        mensaje.push("falta agregar  categorias")
-    }
-    if (longitudPintura == 0) {
-        mensaje.push("falta agregar  titulo,certifados,imagenes")
-    }
-    if (longitudMedida == 0) {
-        mensaje.push("falta agregar  medidas")
-    }
-    if (mensaje.length === 0) {
-        let obras = { pinturas, medidas, categoria }
-        contenerdorForm.classList.add("visible-product")
-        contenerdorMensaje.classList.remove("visible-product")
-        console.log(obras);
+    const label = document.getElementById("select-option-categoria").value
+
+    if (counterLabel < 2) {
+        if (label.length != 0) {
+            containerLabel.appendChild(generalLabel(label))
+            counterLabel++
+            //categoria[counterLabel] = label
+            categoria.push(label);
+
+
+        } else {
+            showAlert("selecciona una categoria")
+        }
     }
     else {
-        showAlert(mensaje.join(","))
+        showAlert("maximo 2 categorias")
     }
+
 
 });
 //evento para recolectar la titulo,imagenes,certificado
+
+//localStorage.clear();
 
 formPictures.addEventListener("submit", e => {
     e.preventDefault();
     e.stopPropagation();
     const inputForm = new FormData(e.target);
-    const valuesPictures = Object.fromEntries(inputForm)
-    const valuesPicturesArray = Object.values(valuesPictures)
+    const valuesForm = Object.fromEntries(inputForm)
     const elemento = e.target.querySelectorAll("[data-type]");
-    const inputImg = document.getElementById('fileInput');
     let errorMessages = []
     let state;
     elemento.forEach(input => {
-        state = formCheckPictures(input)
+        state = formCheckvalues(input)
         if (state) {
             errorMessages.push(state);
         }
@@ -76,25 +88,53 @@ formPictures.addEventListener("submit", e => {
     })
     if (errorMessages.length > 0) {
         showAlert(errorMessages.join(","))
+        count++;
     } else {
-        let imagen = {}
+        let imagen = []
         imageUrls.forEach((img, index) => {
-            imagen[index] = img
+            imagen.push(img)
         })
-        pinturas["titulo"] = valuesPicturesArray[0]
-        pinturas["certificado"] = valuesPicturesArray[1]
-        pinturas["descripcion"] = valuesPicturesArray[2]
-        pinturas["imagenes"] = imagen;
+
+
+
+        dataPost = { ...valuesForm, imagen, categoria }
+        //const objetoProducto = JSON.stringify(dataPost);
+        //localStorage.setItem('obras', [objetoProducto]);
+
+        //console.log(dataPost);
+
+
+        // Verificar si existe obras en  el localStorage
+        if (localStorage.getItem('obras')) {
+            // Si existe, recuperar el array y convertirlo a un objeto JavaScript
+            const arrayObras = JSON.parse(localStorage.getItem('obras'));
+
+            // Agregar un nuevo elemento al array existente
+            arrayObras.push(dataPost);
+
+            // Convertir el array actualizado a cadena JSON y guardarlo en localStorage
+            localStorage.setItem('obras', JSON.stringify(arrayObras));
+        } else {
+            // Si el array no existe, crear un nuevo array con un elemento inicial
+            const arrayObras = [dataPost];
+
+            // Convertir el array a cadena JSON y guardarlo en localStorage
+            localStorage.setItem('obras', JSON.stringify(arrayObras));
+        }
+        e.target.parentElement.classList.add("visible-product");
+        contenerdorMensaje.classList.remove("visible-product")
 
 
     }
+
+    //console.log(valuesPictures);
 
 
 
 })
 //evento para recolectar los tamaños y crealos
 
-formSizes.addEventListener("submit", e => {
+/* formSizes.addEventListener("submit", e => {
     e.preventDefault();
     e.stopPropagation();
     const inputForm = new FormData(e.target);
@@ -142,7 +182,7 @@ formLabel.addEventListener("submit", e => {
     }
 
     else { showAlert("maximo 2 categorias por obra") }
-})
+}) */
 // Agregar evento de clic al centro de la imagen
 centerImage.addEventListener('click', () => {
     fileInput.click();
@@ -214,7 +254,9 @@ function generalLabel(label) {
     i.classList.add("material-symbols-outlined", "align-middle", "icon-close");
     i.textContent = "close";
     i.addEventListener("click", () => {
-        delete categoria[counterLabel]
+        //delete categoria[counterLabel]
+        counterLabel--;
+        categoria.pop();
         div.remove();
     })
     div.appendChild(span)
