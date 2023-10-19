@@ -214,9 +214,6 @@ function agregarObjetosAContenedores(arr, contenedores) {
   // array con los contenedores
   const contenedores = [carruselContenedor1, carruselContenedor2, carruselContenedor3, carruselContenedor4];
   
-  // Llama a la función con tu arreglo de objetos y los contenedores
-  agregarObjetosAContenedores(Obra, contenedores);
-
-
+  
 
 
