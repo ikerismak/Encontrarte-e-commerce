@@ -5,7 +5,7 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
 
     //input[id^="validationCustom
     const inputs = document.querySelectorAll('[data-type]') //inputs y textarea
-    const form = document.querySelector('.needs-validation')//formulario
+    const form = document.querySelector("#formulario-contacto")//formulario
     const option = document.querySelector("#select-option");//select
     const check = document.querySelector("#checkboxvalido");//checkbox
     const mensajeCompletado = document.querySelector("#mensaje-exitoso");//mensaje para mostrar al finalizar el envio
@@ -56,6 +56,8 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
             const valuesForm = Object.fromEntries(new FormData(event.target))
             form.parentElement.classList.add("oculto")
             mensajeCompletado.classList.remove("oculto")
+
+            localStorage.setItem('usuario', JSON.stringify(valuesForm));
 
         }
         form.classList.add('was-validated')
