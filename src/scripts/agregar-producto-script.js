@@ -1,4 +1,6 @@
+
 import { formCheckvalues, handleDrop, handleFileSelect, imageUrls, showAlert } from "./agregar-producto-validaciones.js";
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 const contenerdorMensaje = document.getElementById("mensaje-producto");
 
@@ -30,7 +32,6 @@ export let medidas = {};
 //let categoria = {};
 
 let categoria = [];
-
 
 btnToggleObra.addEventListener("click", (e) => {
 
@@ -95,13 +96,26 @@ formPictures.addEventListener("submit", e => {
             imagen.push(img)
         })
 
-
-
-        dataPost = { ...valuesForm, imagen, categoria }
+        /*         
+                user_id: 10,
+                artista: "Marta",
+                unidades_disponibles: 2,
+                dimension_largo: "280",
+                dimension_ancho: "380",
+                titulo: "Figuras en movimiento",
+                tecnica: "Pintura al óleo",
+                categoria: "Pinturas",
+                certificacion: "4567890123",
+                precio: 850,
+                imagen_normal: "list-products-images/mirada_al_pasado.png",
+                imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
+                imagen_tres: "/assets/artist.webp",
+                i */
+        let id = uuidv4();
+        dataPost = { ...valuesForm, imagen, categoria, user_id: id }
         //const objetoProducto = JSON.stringify(dataPost);
         //localStorage.setItem('obras', [objetoProducto]);
 
-        //console.log(dataPost);
 
 
         // Verificar si existe obras en  el localStorage
