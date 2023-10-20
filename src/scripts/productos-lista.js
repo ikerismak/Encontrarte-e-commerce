@@ -11,10 +11,10 @@ const Obra = [
         categoria: "Pinturas",
         certificacion: "0890453453432",
         precio: 1000,
-        imagen_normal: "ImgnavBar&acercaDeNosotros/image 19.png",
-        imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
-        imagen_tres: "/assets/artist.webp",
-        imagen_cuatro: "/assets",
+        imagen_normal: "../assets/list-products-images/mar_y_plantas.png",
+        imagen_dos: "../assets/list-products-images/explosion_colorida.png",
+        imagen_tres: "../assets/list-products-images/mirada_al_pasado.png",
+        imagen_cuatro: "../assets/list-products-images/escrito_de_un_loco.png",
         descripcion: "Un cuadro muy bonito",
       },
       {
@@ -217,9 +217,6 @@ pintOleoElement.addEventListener('click', () => {
 
 
 
-
-
-
 //categoria///////////////////////////////
 // Define una función para agregar objetos a contenedores
 function agregarObjetosAContenedores(arr, contenedores) {
@@ -298,6 +295,48 @@ const contenedores3 = [carruselContenedor9, carruselContenedor10, carruselConten
 
 // Llama a la función con tu arreglo de objetos y los contenedores del segundo conjunto
 agregarObjetosAContenedores(Obra, contenedores3);
+
+// Obtén el contenido actual del cuarto contenedor desde el localStorage
+const cuartoContenedorJSON = localStorage.getItem('cuartoContenedor');
+let cuartoContenedor = [];
+
+if (cuartoContenedorJSON) {
+  cuartoContenedor = JSON.parse(cuartoContenedorJSON);
+}
+
+// Obtén el producto del localStorage (por ejemplo, el primer elemento del array)
+// Obtén el producto del localStorage
+const productosJSON = localStorage.getItem('obras');
+const productos = JSON.parse(productosJSON);
+
+if (productos && productos.length > 0) {
+  // Obtén el contenedor HTML
+  const contenedor = document.querySelector('.contenedorcardsc14');
+
+  // Recorre todos los productos y agrégalos al contenedor
+  productos.forEach((producto) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.width = '15rem';
+    card.innerHTML = `
+      <img class="card-img" src="../assets/list-products-images/${producto.imagen}" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${producto.titulo}</h5>
+        <p class="card-text">${producto.descripcion}</p>
+      </div>
+    `;
+
+    // Agrega el elemento al contenedor
+    contenedor.appendChild(card);
+  });
+} else {
+  // Maneja el caso en el que el array de productos esté vacío o no exista
+  console.log('No hay productos en el localStorage');
+}
+
+
+
+
 
 
 
