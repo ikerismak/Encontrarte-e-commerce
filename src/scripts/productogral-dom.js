@@ -175,41 +175,41 @@ const Obra = [
 
 
 
-
+/////////////imagenes del contendor principal/////////////////////////////////////////////////////////
 // Define una función para agregar objetos a contenedores
 function agregarObjetosAContenedores(arr, contenedores) {
   let contenedorActual = 0; // Inicializa el contenedor actual
   let objetosPorContenedor = 3; // Número máximo de objetos por contenedor
 
   arr.forEach((element, index) => {
-      // Crea un nuevo elemento HTML (por ejemplo, un div)
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.style.width = '15rem';
-      card.dataset.user_id = String(element.user_id); // Cambia 'id' a 'user_id' para que coincida con la URL
-      card.innerHTML = `
+    // Crea un nuevo elemento HTML (por ejemplo, un div)
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.width = '15rem';
+    card.dataset.user_id = String(element.user_id); // Cambia 'id' a 'user_id' para que coincida con la URL
+    card.innerHTML = `
                       <img class="imagenrelacionada" src="../assets/${element.imagen_normal}" width="200px" height="200px" alt="...">
                       <p class="card-text">"${element.titulo}"</p>
                   </div>
       `;
 
-      // Agrega el elemento al contenedor actual
-      contenedores[contenedorActual].appendChild(card);
-      
-      // Agrega un manejador de eventos de clic a la tarjeta
-card.addEventListener('click', () => {
-  // Obtiene el identificador único cuando se hace clic en la tarjeta
-  const user_id = card.dataset.user_id; // Cambia 'id' a 'user_id'
+    // Agrega el elemento al contenedor actual
+    contenedores[contenedorActual].appendChild(card);
 
-  // Redirige a la página independiente y pasa el identificador como parámetro en la URL
-  window.location.href = `Pagina del producto.html?user_id=${user_id}`; // Cambia 'id' a 'user_id'
-});
+    // Agrega un manejador de eventos de clic a la tarjeta
+    card.addEventListener('click', () => {
+      // Obtiene el identificador único cuando se hace clic en la tarjeta
+      const user_id = card.dataset.user_id; // Cambia 'id' a 'user_id'
 
-      // Verifica si el contenedor actual ha alcanzado su capacidad
-      if (contenedorActual < contenedores.length - 1 && (index + 1) % objetosPorContenedor === 0) {
-          // Cambia al siguiente contenedor
-          contenedorActual++;
-      }
+      // Redirige a la página independiente y pasa el identificador como parámetro en la URL
+      window.location.href = `Pagina del producto.html?user_id=${user_id}`; // Cambia 'id' a 'user_id'
+    });
+
+    // Verifica si el contenedor actual ha alcanzado su capacidad
+    if (contenedorActual < contenedores.length - 1 && (index + 1) % objetosPorContenedor === 0) {
+      // Cambia al siguiente contenedor
+      contenedorActual++;
+    }
   });
 }
 
@@ -225,12 +225,15 @@ const contenedores = [carruselContenedor1, carruselContenedor2, carruselContened
 // Llama a la función con tu arreglo de objetos y los contenedores
 agregarObjetosAContenedores(Obra, contenedores);
 
+
+///////////////////////////////////////////////////valores de user id////////////////////
+
 // Obtén el valor del parámetro 'user_id' de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const user_id = urlParams.get('user_id');
 
 
-// Encuentra el producto correspondiente según 'user_id'
+// Encuentra el producto correspondiente según 'user_id'/////////////////////////////////////////////////
 const productoSeleccionado = Obra.find(producto => producto.user_id === parseInt(user_id));
 
 if (productoSeleccionado) {
@@ -279,66 +282,94 @@ if (productoSeleccionado) {
 }
 carrito = []
 
+let contadorCarrito = 0;
+
 // Definir una función para cargar el carrito desde el localStorage
 function cargarCarrito() {
-  const carritoGuardado = localStorage.getItem('carrito');
-  if (carritoGuardado) {
-    // Si hay datos en el localStorage, analízalos y actualiza el arreglo carrito
-    carrito.push(...JSON.parse(carritoGuardado));
-  }
+const carritoGuardado = localStorage.getItem('carrito');
+if (carritoGuardado) {
+// Si hay datos en el localStorage, analízalos y actualiza el arreglo carrito
+carrito.push(...JSON.parse(carritoGuardado));
+}
 }
 // Llama a la función para cargar el carrito cuando la página se carga
 cargarCarrito();
 
+
 // Función para cargar el carrito desde el localStorage
 function cargarCarrito() {
-  const carritoEnLocalStorage = localStorage.getItem('carrito');
-  if (carritoEnLocalStorage) {
-    carrito = JSON.parse(carritoEnLocalStorage);
-  }
+const carritoEnLocalStorage = localStorage.getItem('carrito');
+if (carritoEnLocalStorage) {
+carrito = JSON.parse(carritoEnLocalStorage);
+}
 }
 // Función para agregar un producto al carrito
 function agregarAlCarrito(productoSeleccionado) {
-  const productoEnCarrito = {
-    titulo: productoSeleccionado.titulo,
-    artista: productoSeleccionado.artista,
-    descripcion: productoSeleccionado.descripcion,
-    precio: productoSeleccionado.precio,
-    imagen: productoSeleccionado.imagen_normal,
-    largo: productoSeleccionado.dimension_largo,
-    ancho: productoSeleccionado.dimension_ancho
-  };
+const productoEnCarrito = {
+titulo: productoSeleccionado.titulo,
+artista: productoSeleccionado.artista,
+descripcion: productoSeleccionado.descripcion,
+precio: productoSeleccionado.precio,
+imagen: productoSeleccionado.imagen_normal,
+largo: productoSeleccionado.dimension_largo,
+ancho: productoSeleccionado.dimension_ancho
+};
 
-  carrito.push(productoEnCarrito);
 
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+carrito.push(productoEnCarrito);
 
-  alert(`"${productoSeleccionado.titulo}" se ha agregado al carrito`);
 
-  // Luego, puedes realizar otras acciones, como actualizar la cantidad de productos en el carrito en la interfaz de usuario, si es necesario.
+localStorage.setItem('carrito', JSON.stringify(carrito));
+
+
+alert(`"${productoSeleccionado.titulo}" se ha agregado al carrito`);
+
+
+// Luego, puedes realizar otras acciones, como actualizar la cantidad de productos en el carrito en la interfaz de usuario, si es necesario.
 }
+
 
 // Obtén el botón "Agregar al Carrito" por su ID
 const botonCarrito = document.getElementById('agregarAlCarrito');
 
+
 // Agregar un manejador de eventos al botón
-botonCarrito.addEventListener('click', function() {
-  agregarAlCarrito(productoSeleccionado);
+botonCarrito.addEventListener('click', function () {
+console.log("carrito");
+if (contadorCarrito == 0) {
+agregarAlCarrito(productoSeleccionado);
+contadorCarrito++;
+}
+else {
+alert("solo se puede agregar un producto agregar al carrito");
+}
+
+
 });
+
 
 const botonCarrito2 = document.getElementById('agregarAlCarrito2');
 
+
 // Agregar un manejador de eventos al segundo botón
-botonCarrito2.addEventListener('click', function() {
-  agregarAlCarrito(productoSeleccionado);
+botonCarrito2.addEventListener('click', function () {
+if (contadorCarrito == 0) {
+agregarAlCarrito(productoSeleccionado);
+}
+else {
+alert("solo se puede agregar un producto agregar al carrito");
+}
 });
+
+
+
 
 
 
 if (localStorage.getItem('obras')) {
-  // Si existe, recuperar el array y convertirlo a un objeto JavaScript
-  const arrayObras = JSON.parse(localStorage.getItem('obras'));
-  console.log('obras',arrayObras);
+// Si existe, recuperar el array y convertirlo a un objeto JavaScript
+const arrayObras = JSON.parse(localStorage.getItem('obras'));
+console.log('obras', arrayObras);
 }
 
 
