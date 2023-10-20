@@ -296,6 +296,11 @@ const contenedores3 = [carruselContenedor9, carruselContenedor10, carruselConten
 // Llama a la función con tu arreglo de objetos y los contenedores del segundo conjunto
 agregarObjetosAContenedores(Obra, contenedores3);
 
+
+
+
+///////////////////////////////////////////se agregan tarjetas desde el local storage//////////////////////////
+
 // Obtén el contenido actual del cuarto contenedor desde el localStorage
 const cuartoContenedorJSON = localStorage.getItem('cuartoContenedor');
 let cuartoContenedor = [];
@@ -318,14 +323,23 @@ if (productos && productos.length > 0) {
     const card = document.createElement('div');
     card.className = 'card';
     card.style.width = '15rem';
+    card.dataset.user_id = String(producto.user_id);
     card.innerHTML = `
+    
       <img class="card-img" src="../assets/list-products-images/${producto.imagen}" alt="...">
       <div class="card-body">
         <h5 class="card-title">${producto.titulo}</h5>
-        <p class="card-text">${producto.descripcion}</p>
       </div>
     `;
+    // Agrega un manejador de eventos de clic a la tarjeta
+card.addEventListener('click', () => {
+  // Obtiene el identificador único cuando se hace clic en la tarjeta
+  const user_id = card.dataset.user_id; // Cambia 'id' a 'user_id'
 
+  // Redirige a la página independiente y pasa el identificador como parámetro en la URL
+  window.location.href = `Pagina del producto.html?user_id=${user_id}`; // Cambia 'id' a 'user_id'
+});
+    
     // Agrega el elemento al contenedor
     contenedor.appendChild(card);
   });
@@ -333,6 +347,9 @@ if (productos && productos.length > 0) {
   // Maneja el caso en el que el array de productos esté vacío o no exista
   console.log('No hay productos en el localStorage');
 }
+
+
+
 
 
 
