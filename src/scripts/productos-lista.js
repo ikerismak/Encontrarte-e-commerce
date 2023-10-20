@@ -225,7 +225,6 @@ function agregarObjetosAContenedores(arr, contenedores) {
 
   arr.forEach((element, index) => {
       // Crea un nuevo elemento HTML (por ejemplo, un div)
-      // Crea un nuevo elemento HTML (por ejemplo, un div)
 const card = document.createElement('div');
 card.className = 'card';
 card.style.width = '15rem';

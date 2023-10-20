@@ -61,7 +61,7 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "9876543210",
     precio: 600,
-    imagen_normal: "ImgnavBar&acercaDeNosotros/Imagenvioleta.png",
+    imagen_normal: "../assets/list-products-images/eyes_pictures.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
     imagen_tres: "/assets/artist.webp",
     imagen_cuatro: "/assets",
@@ -78,7 +78,7 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "5678901234",
     precio: 950,
-    imagen_normal: "list-products-images/mirada_del_alma.png",
+    imagen_normal: "../assets/list-products-images/mancha_plastica.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
     imagen_tres: "/assets/artist.webp",
     imagen_cuatro: "/assets",
@@ -95,9 +95,9 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "2345678901",
     precio: 750,
-    imagen_normal: "list-products-images/mar_y_plantas.png",
+    imagen_normal: "../assets/list-products-images/impacto_colorido.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
-    imagen_tres: "/assets/artist.webp",
+    imagen_tres: "../assets/list-products-images/conexion.jpg",
     imagen_cuatro: "/assets",
     descripcion: "Una pieza abstracta en tonos rojos y vibrantes que despierta emociones y desafía la percepción. Los intrincados detalles y las texturas hacen que esta pintura sea única."
   },
@@ -112,9 +112,9 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "6789012345",
     precio: 1100,
-    imagen_normal: "list-products-images/manchas_opticas.png",
+    imagen_normal: "../assets/list-products-images/mural_oso.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
-    imagen_tres: "/assets/artist.webp",
+    imagen_tres: "../assets/list-products-images/conexion.jpg",
     imagen_cuatro: "/assets",
     descripcion: "Una impresionante representación de una mujer sonriente. La técnica de óleo sobre lienzo añade profundidad y realismo a esta obra, y la sonrisa de la modelo ilumina la pintura."
   },
@@ -129,9 +129,9 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "0123456789",
     precio: 900,
-    imagen_normal: "list-products-images/manchas_opticas.png",
+    imagen_normal: "../assets/list-products-images/fruteros_abstracto.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
-    imagen_tres: "/assets/artist.webp",
+    imagen_tres: "../assets/list-products-images/conexion.jpg",
     imagen_cuatro: "/assets",
     descripcion: "Una representación detallada y vívida de frutas frescas dispuestas en un bodegón. Los colores y las sombras en esta acuarela son sorprendentemente realistas."
   },
@@ -277,9 +277,59 @@ if (productoSeleccionado) {
   listaobra.appendChild(tecnicaLi1);
   listaobra.appendChild(categoriaLi1);
 } else {
-  // Si el producto no se encuentra, puedes mostrar un mensaje de error o redirigir a una página de error.
-  console.error('Producto no encontrado');
+  const productosJSON = localStorage.getItem('obras');
+  
+  
+  if (productosJSON) {
+
+    obras = JSON.parse(productosJSON);
+    console.log(obras)
+   
+    // Ahora, puedes acceder a las propiedades de 'obras' ya que es un objeto
+    // Actualiza el título en la página con el título del producto seleccionado
+    document.getElementById('tituloobra').textContent = 'obra de prueba';
+    document.getElementById('descripciobr').textContent = 'esto es una prueba';
+    document.getElementById('descripcionobra').textContent = "descripcion de la obra";
+    document.getElementById('precio').querySelector('span').textContent = '$500';
+    // Obtén las imágenes del carrusel por su ID y establece la fuente (src) de cada una
+    document.getElementById('imprpal').src = "../assets/list-products-images/explosion_colorida.png"
+
+    // Agregar a la lista de técnicas
+    const listaTecnicas = document.getElementById('listaTecnicas');
+
+    // Crear elementos li para "técnica" y "categoría"
+    const tecnicaLi = document.createElement('li');
+    const categoriaLi = document.createElement('li');
+
+    // Establecer el contenido de los elementos li
+    tecnicaLi.textContent = "Técnica: " + obras.tecnica;
+ 
+
+    // Agregar los elementos li a la lista ul
+    listaTecnicas.appendChild(tecnicaLi);
+  
+
+    // Agregar a la lista de obra
+    const listaobra = document.getElementById('listaobra');
+
+    // Crear elementos li para "técnica" y "categoría"
+    const tecnicaLi1 = document.createElement('li');
+    const categoriaLi1 = document.createElement('li');
+
+    // Establecer el contenido de los elementos li
+    tecnicaLi1.textContent = "Técnica: " + obras.tecnica;
+   
+
+    // Agregar los elementos li a la lista ul
+    listaobra.appendChild(tecnicaLi1);
+    
+  } else {
+    // Puedes mostrar un mensaje de error o realizar otras acciones en caso de que 'obras' no esté presente en el localStorage
+    console.error('No se encontraron obras en el almacenamiento local');
+  }
 }
+
+
 carrito = []
 
 let contadorCarrito = 0;
@@ -364,13 +414,8 @@ alert("solo se puede agregar un producto agregar al carrito");
 
 
 
+////////////////producto de almacenamiento local////////////////////////////
 
-
-if (localStorage.getItem('obras')) {
-// Si existe, recuperar el array y convertirlo a un objeto JavaScript
-const arrayObras = JSON.parse(localStorage.getItem('obras'));
-console.log('obras', arrayObras);
-}
 
 
 
