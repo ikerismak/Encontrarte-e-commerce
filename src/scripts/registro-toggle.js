@@ -83,10 +83,7 @@ userForm.addEventListener('submit', function (event) {
                 pass: pass
             };
 
-            localStorage.setItem('nombre', nombre);
-            localStorage.setItem('telefono', telefono);
-            localStorage.setItem('email', email);
-            localStorage.setItem('pass', pass);
+            localStorage.setItem('user', JSON.stringify(usuario));
 
             $('.modal-backdrop').remove();
         } else {
@@ -101,7 +98,9 @@ userForm.addEventListener('submit', function (event) {
 var banderalogin = false;
 const formlogin = document.getElementById('formularioLogin');
 
-const userTest = {
+
+
+const userTest2 = {
     email: "prueba@gmail.com",
     password: "12345678",
 };
@@ -145,11 +144,11 @@ formlogin.addEventListener('submit', function (event) {
 
         let email = document.getElementById('inputEmailLogin').value;
         let pass = document.getElementById('inputPassword').value;
-
-        if (email === userTest.email && pass === userTest.password) {
+        let user = localStorage.getItem('user');
+        if (email === user.email && pass === user.pass) {
 
             // Crea un objeto JSON con los valores del formulario
-            localStorage.setItem('user', JSON.stringify(userTest));
+            localStorage.setItem('userLog', JSON.stringify(userTest));
 
             setTimeout(() => {
                 modal.style.display = "none";

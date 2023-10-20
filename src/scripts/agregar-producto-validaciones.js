@@ -36,6 +36,30 @@ export function formCheckSizes(input) {
 }
 
 //funcion para validar los datos y mandar erro de las pinturas
+
+export function formCheckvalues(input) {
+    const regex = {
+        titulo: /^[a-zA-Z\s]+$/,
+        certificado: /^[a-zA-Z0-9]+$/,
+        descripcion: /[a-zA-Z0-9]/,
+        largo: /^\d+$/,
+        ancho: /^\d+$/,
+        precio: /^\d+$/,
+
+    };
+    if (input.value.length === 0 && input.name !== "descripcion") {
+        return "El campo " + input.name + " es requerido \n"
+    }
+    if (input.name !== "imagen" && input.name !== "tecnica" && input.name !== "categoria" && input.value.length > 0) {
+        if (!regex[input.name].test(input.value)) {
+            return "-El campo " + input.name + " solo numeros o letras \n"
+
+        }
+    }
+    return false
+}
+
+
 export function formCheckPictures(input) {
     const regex = {
         titulo: /^[a-zA-Z\s]+$/,

@@ -149,7 +149,7 @@
             <!--Aqui va la columna izquierda de contenido-->
             <div class="col col-lg-6 col-md-6">
                 <!--Titulo de la obra-->
-                <h1 id="tituloobra">Ecos de la eternidad de la artista isabela montoya</h1>
+                <h1 id="tituloobra"></h1>
                 <!--Foto de la obra principal con carrusel/////////////////////////-->
                 <div id="imagecontain">
                     <div id="carouselExampleCaptions1" class="carousel slide">
@@ -163,21 +163,22 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img id="imprpal" class="imagencarusel" src="../assets/imagenes-pagina-del-producto/obra gral 3.png">
+                                <img id="imprpal" class="imagencarusel" src="">
                                 <div class="carousel-caption d-none d-md-block">
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img id="imprpal1" class="imagencarusel"  src="../assets/imagenes-pagina-del-producto/obra gral 2.jpg">
+                                <img id="imprpal1" class="imagencarusel" src="">
                                 <div class="carousel-caption d-none d-md-block">
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img id="imprpal2" class="imagencarusel" src="../assets/imagenes-pagina-del-producto/obra gral 41.jpg">
+                                <img id="imprpal2" class="imagencarusel" src="">
                                 <div class="carousel-caption d-none d-md-block">
                                 </div>
                             </div>
                         </div>
+                        
                         <button id="ocultarboton1" class="carousel-control-prev" type="button"
                             data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -220,16 +221,10 @@
                 </div>
                 <!--Aqui va la descripcion de la obra-->
                 <div id="descrobrgrl">
-                    <ul style="list-style-type: disc; font-weight: bold;">
-                        <li>Óleo sobre lienzo de lino</li>
-                        <li>100% pintado a mano</li>
-                        <li>Reproducción del cuadro</li>
-                        <li>Disponible para compra online.</li>
+                    <ul id="listaTecnicas" style="list-style-type: disc; font-weight: bold;">
+                
                     </ul>
-                    <div id="descripciobr">"Ecos de la Eternidad" es una pintura que captura la esencia de la eternidad
-                        en un lienzo. En el centro de la obra, un ángel etéreo se alza sobre un paisaje onírico, con sus
-                        alas desplegadas hacia el cielo. La figura angelical parece fundirse con la luz dorada que
-                        inunda el horizonte, creando una sensación de paz y trascendencia.</div>
+                    <div id="descripciobr"></div>
                 </div>
 
 
@@ -243,7 +238,7 @@
 
                         
                         <!--Descripcion y disponibilidad en precios-->
-                        <div id="precio"><span style="font-weight: bold; font-size:  x-large;">$800</span>
+                        <div id="precio"><span style="font-size: x-large;" ></span>
                             <span style="display: block; text-align: center;">Disponible</span>
                             <span style="display: block; text-align: center;">Precios en Pesos MXN</span>
                         </div>
@@ -251,10 +246,18 @@
                         <!--Botones de compras-->
                         <div>
                             <div id="btncompra">
-                                <button type="button" class="btn btn-outline-secondary1">Comprar ahora</button>
+                                <button id="comprarAhora" type="button" class="btn btn-outline-secondary1">Comprar ahora</button>
+                                <!-- <button id="verCarrito" type="button" class="btn btn-outline-secondary1">ver</button>  -->
                             </div>
-                            <button type="button" class="btn btn-outline-secondary">Agregar al carrito</button>
+                            <div id="btncarrito">
+                                <!-- Este sería tu botón "Agregar al carrito" en la página del producto -->
+                            <button id="agregarAlCarrito" type="button" class="btn btn-outline-secondary">Agregar al carrito</button>
+
+                              </div>
+                              
+                            <!-- /*boton para agregar al carrito////////////////////*/ -->
                         </div>
+                       
                         <!-- <div id="btncantidad" class="container">
                             <div id="cantpant">
                                 <span id="quantity">0</span>
@@ -272,20 +275,13 @@
                     <div id="btncompra1">
                         <button type="button" class="btn btn-outline-secondary2">Comprar ahora</button>
                     </div>
-                    <button type="button" class="btn btn-outline-secondary3">Agregar al carrito</button>
-                    <P id="dimensiones">Seleccionar dimensiones</P>
-                    <div id="Botones de medidas">
-                        <button type="button" class="btn btn-outline-dark">35x35</button>
-                        <button type="button" class="btn btn-outline-dark">75x75</button>
-                        <button type="button" class="btn btn-outline-dark">85x85</button>
+                    <div id="btncompra1">
+                        <button id="agregarAlCarrito2" type="button" class="btn btn-outline-secondary">Agregar al carrito</button>
                     </div>
-                    <div id="cantidadobjetos" class="container">
-                        <button id="subtractButton1">-</button>
-                        <div id="cantpant">
-                            <span id="quantity">0</span>
-                        </div>
-                        <button id="addButton1">+</button>
-                    </div>
+
+                    
+                    
+                
                 </div>
 
 
@@ -302,18 +298,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <ul id="listaobra" style="list-style-type: disc; font-weight: bold;">
-                        <li>Óleo sobre lienzo de lino</li>
-                        <li>100% pintado a mano</li>
-                        <li>Reproducción del cuadro</li>
-                        <li>Disponible para compra online.</li>
+                        
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <div id="descripcionobra">"Ecos de la Eternidad" es una pintura que captura la esencia de la
-                        eternidad
-                        en un lienzo. En el centro de la obra, un ángel etéreo se alza sobre un paisaje onírico, con sus
-                        alas desplegadas hacia el cielo. La figura angelical parece fundirse con la luz dorada que
-                        inunda el horizonte, creando una sensación de paz y trascendencia.
+                    <div id="descripcionobra">
                     </div>
                 </div>
             </div>
