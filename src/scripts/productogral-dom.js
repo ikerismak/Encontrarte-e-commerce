@@ -267,6 +267,7 @@ if (productoSeleccionado) {
   // Si el producto no se encuentra, puedes mostrar un mensaje de error o redirigir a una página de error.
   console.error('Producto no encontrado');
 }
+carrito = [];
 
 // Definir una función para cargar el carrito desde el localStorage
 function cargarCarrito() {
