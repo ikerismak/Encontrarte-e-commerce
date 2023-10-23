@@ -27,18 +27,18 @@
             if (inputTelefono.length == 0) {
                 mensajesAlertas.push("-el telefono no puede estar vacio\n");
             }
-            if (!regexTelefono.test(inputTelefono)) {
+            else if (!regexTelefono.test(inputTelefono)) {
                 mensajesAlertas.push("-solo puede tener numero y debe ser de 10 digitos\n");
 
             }
-            if (inputCorreo.length == 0) {
+            else if (inputCorreo.length == 0) {
                 console.log(inputCorreo);
                 mensajesAlertas.push("-el correo no puede estar vacio\n");
             }
-            if (!regexCorreo.test(inputCorreo)) {
+            else if (!regexCorreo.test(inputCorreo)) {
                 mensajesAlertas.push("-correo no valido\n");
             }
-            if (mensajesAlertas.length > 0) {
+            else if (mensajesAlertas.length > 0) {
                 alert(mensajesAlertas.join())
             }
 
