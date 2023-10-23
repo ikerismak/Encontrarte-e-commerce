@@ -1,3 +1,13 @@
+/*variable para colores*/
+:root {
+    --backgroundcolor: #d9d9d9;
+    --textcolor: #ffffff;
+    --primarycolor: #d0417e;
+    --secondarycolor: #0000008f;
+    --thirdcollor: #010101;
+    --extracolor: #cccccc;
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
 }
@@ -22,8 +32,6 @@ p {
     border: none;
 }
 
-
-
 .visibilty {
     display: none;
 }
@@ -42,36 +50,36 @@ p {
     border: none;
 }
 
-#botonSubmitRegistro {
-    background-color: #D0417E;
-    font-family: 'Roboto Mono', monospace;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-    padding: 5px 100px;
+.btn-3:hover {
+    color: var(--primarycolor);
+    font-weight: 700;
+    background: #ffffff33;
+    border: 1px solid var(--primarycolor);
+    box-shadow: 0 4px 4px 0 rgba(208, 65, 126, 0.5);
 }
 
-#botonSubmitRegistro:hover {
-    background-color: #f5237eaa;
+.btn-3 {
+    width: 100%;
+    color: var(--textcolor);
+    font-weight: 700;
+    background: var(--primarycolor);
+    border: 1px solid #f1f1f1;
+    box-shadow: 0 4px 4px 0 #75757580;
 }
 
-#botonsubmit {
-    background-color: #D0417E;
-    font-family: 'Roboto Mono', monospace;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-    padding: 5px 100px;
-}
-
-#botonsubmit:hover {
-    background-color: #f5237eaa;
+.btn-3:first-child:active {
+    transform: scale(1.2);
+    color: var(--primarycolor);
+    font-weight: 700;
+    background-color: #c9c9c9;
+    border: 1px solid var(--primarycolor);
+    box-shadow: 0 4px 4px 0 #75757580;
 }
 
 #red {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.324);
     /* Desplazamiento horizontal, desplazamiento vertical, desenfoque, color de sombra */
-    padding: 5px 100px;
+    padding: 6px 100px;
     width: 100%;
     display: block;
     margin: 0 auto;
@@ -100,6 +108,9 @@ a {
     text-decoration: none;
 }
 
+.valid-tooltip {
+    background-color: #d0417e;
+}
 
 /*.modal-visible {
     visibility: visible;
