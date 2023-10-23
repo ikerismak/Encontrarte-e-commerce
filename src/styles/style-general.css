@@ -58,24 +58,22 @@ h6 {
 
 /*
 clases para los label de los formularios 
-label-d  para desktop
-label-t  para table
-label-m  para mobile
 
 */
-.label-d {
+/*label  para desktop*/
+.label {
 	font-size: 14px;
 	line-height: 20px;
 	letter-spacing: 0.1px;
 }
-
-.label-t {
+/*label  para table*/
+.label {
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.5px;
 }
-
-.label-m {
+/*label  para mobile*/
+.label {
 	font-size: 11px;
 	line-height: 16px;
 	letter-spacing: 0.5px;
@@ -83,22 +81,25 @@ label-m  para mobile
 
 /*
 clases para los textos en general se puede usar en parraros
-label-d  para desktop
-label-t  para table
-label-m  para mobile
+label para desktop
+label para tablet
+label para mobile
 
 */
-.text-d {
+/*label para desktop*/
+.text {
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.5px;
 }
-.text-t {
+/*label para tablet*/
+.text {
 	font-size: 14px;
 	line-height: 20px;
 	letter-spacing: 0.25px;
 }
-.text-m {
+/*label para mobile*/
+.text {
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.4px;
