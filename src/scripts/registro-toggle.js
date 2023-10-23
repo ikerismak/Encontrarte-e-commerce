@@ -2,7 +2,7 @@ const btnSignUp = document.querySelector("#toggle-signup") //boton de registro
 const btnLogin = document.querySelector("#toggle-login")//boton de login
 const loginForm = document.querySelector(".modal-login")//elemento contenedor del login
 const signUp = document.querySelector(".modal-registro")//elemento contenedor del registro
-loginForm.classList.add("visibilty");
+signUp.classList.add("visibilty");
 
 //cuando click al boton de cambio  registro a login se ejecuta la arrow function event
 btnSignUp.addEventListener("click", event => {
