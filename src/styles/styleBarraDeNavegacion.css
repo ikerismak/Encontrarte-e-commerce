@@ -80,10 +80,37 @@ header {
     display: flex;
     text-align: left;
     position: absolute;
-    right: 13%;
+    /* right: 50%; */
     bottom: 54px;
-    width: 165px;
-    cursor: pointer;
+    height: fit-content;
+}
+.dropdownUser{
+    position: absolute;
+    right: 18%;
+    bottom: 54px;
+    height: fit-content;
+    width: fit-content;
+    
+}
+.dropdown-toggle{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    
+}
+.dropdown-toggle::after{
+color: #D0417E;
+scale: 1.4;
+}
+
+.innerDrop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.innerDrop p{
+    margin: 0;
 }
 
 
@@ -113,8 +140,8 @@ header {
 #imgPerfilUser{
     /* contenedor para  */
     object-fit: fill;
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 30px;
 }
 
 
@@ -157,7 +184,7 @@ border: 3px solid green;
     /* Contenedor general de la botonera de la cabecera de lado derecho */
     width:fit-content;
     height: 30px;
-    margin-right: 50px;
+    margin-right: 5%;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -251,7 +278,8 @@ height: 100%;
     visibility: hidden;
     width: 30px;
     height: 30px;
-    transition: all 1s;
+
+    transition: transform 0.s ease;
 
 }
  /*
@@ -293,6 +321,7 @@ body {
     width: 34%;
     height: 39px;
 }
+
 #lupaBarraBusqueda{
 width: 40px;
 height: 100%;
@@ -307,6 +336,7 @@ border-right: none;
     align-items: center;
     border: 1px solid black;
     border-left: none;
+    padding: 5px;
 
 }
 
@@ -332,8 +362,6 @@ border-right: none;
         flex-direction: column;
         align-items: center;
         top: 80px;
-        margin: auto;
-        margin-left: 12px;
         gap: 12px;
         align-items: baseline;
         height: 100%;
@@ -344,24 +372,27 @@ border-right: none;
 
     .menuBurguerContenedor{
         visibility: visible;
+
     }
 
     #contenedorNavList {
-        right: -35%;
         top: 0;
         position: absolute;
         width: 35%;
         height: 100%;
         background-color: #D9D9D9;
         visibility:hidden;
+        display: block;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         z-index: 2;
-
+        opacity: 0;
+        right: 0;
+        transition: all 500ms;
 
     }
     #contenedorNavList.visible{
         transition: all 500ms;
-        right: 0;
+        opacity: 1;
     }
 /*
     #botonCerrar {
@@ -405,13 +436,16 @@ border-right: none;
     }
     #botoneraCabecera{
         gap: 5px;
-        margin-right: 0px;
+        margin-right: 2%;
     }
     .userID{
 
         width: auto;
         right: 10px;
 
+    }
+    .dropdownUser{
+        right: 6%;
     }
 
 

@@ -7,17 +7,18 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    /* right: 5px; */
+     right: 10px;
     cursor: pointer;
     background: none;
-    transition: all 500ms linear;
+    transition: all 700ms linear;
     
     
     
 }
 .menuBurguerContenedor.active{
-   top: 5px;
+   /* top:20px; */
     z-index: 3;
+    transition: all 700ms linear
 }
 
 
@@ -28,7 +29,7 @@
     background: #9A00BF;
     margin-top: 6px;
     transform-origin: 0px 100%;
-    transition: all 500ms;
+    transition: all 700ms;
 }
 
  .activoBarraMenu1{
