@@ -172,22 +172,17 @@ const Obra = [
       },
 ];
 
-const listaElementos = document.querySelectorAll('#listaobjetos li strong');
-
-listaElementos.forEach(elemento => {
-  elemento.addEventListener('click', () => {
-    const categoria = elemento.textContent.trim();
-    redirigirAPagina(categoria);
-  });
-});
-
 function redirigirAPagina(categoria) {
   // Reemplaza espacios en blanco y caracteres especiales en el nombre de la categoría
-  const categoriaSinEspacios = categoria.replace(/\s/g, '_').toLowerCase();
+  const categoriaSinEspacios = categoria.replace(/ /g, '_').toLowerCase();
+  
+  // Construye la URL de la página utilizando el nombre de la categoría
+  const url = `${categoriaSinEspacios}.html`;
 
-  // Redirige a la página con el nombre de la categoría como parte de la URL
-  window.location.href = `${categoriaSinEspacios}.html`;
+  // Redirige a la página correspondiente
+  window.location.href = url;
 }
+
 
 ////////////////mandar a pagina principal///////////////////////
 const pinturasAlOleoElement = document.getElementById('pinturasAlOleo');
@@ -197,20 +192,12 @@ pinturasAlOleoElement.addEventListener('click', () => {
   window.location.href = 'pagina-lista-productos.html';
 });
 // Selecciona todos los elementos de la lista en el menú desplegable
-const listaDesplegableElements = document.querySelectorAll('#ventanaflotante .dropdown-item');
 
-// Agrega el evento de clic a cada elemento de la lista
-listaDesplegableElements.forEach(elemento => {
-  elemento.addEventListener('click', () => {
-    const categoria = elemento.textContent.trim();
-    redirigirAPagina(categoria);
-  });
-});
 
 const pintOleoElement = document.getElementById('pintOleo');
 
 pintOleoElement.addEventListener('click', () => {
-  // Aquí puedes especificar la URL a la que deseas redirigir al hacer clic en "Pinturas al Oleo"
+  // Aquí se especifica la URL a la que deseas redirigir al hacer clic en "Pinturas al Oleo"
   window.location.href = 'pagina-lista-productos.html';
 });
 
@@ -226,6 +213,8 @@ function agregarObjetosAContenedores(arr, contenedores) {
   arr.forEach((element, index) => {
       // Crea un nuevo elemento HTML (por ejemplo, un div)
 const card = document.createElement('div');
+const cardLink = document.createElement('a');
+cardLink.href = `Pagina del producto.html?user_id=${element.user_id}`;
 card.className = 'card';
 card.style.width = '15rem';
 card.dataset.user_id = String(element.user_id); // Cambia 'id' a 'user_id' para que coincida con la URL
