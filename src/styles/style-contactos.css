@@ -8,7 +8,7 @@
 	--extracolor: #cccccc;
 }
 html {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 }
 .oculto {
@@ -33,6 +33,10 @@ h2,
 h3 {
 	margin: 0;
 }
+
+p {
+	margin: 0;
+}
 body {
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
@@ -40,6 +44,8 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	background-color: var(--textcolor);
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 /*contenedores principales*/
@@ -50,7 +56,7 @@ body {
     flex-flow: column wrap;
     width: 100%; */
 	padding: 0 16px;
-	max-width: 1440px;
+
 	box-sizing: border-box;
 	margin: 40px 0;
 }
@@ -60,12 +66,13 @@ body {
 /*css para sidebar*/
 
 .contacto-sidebar {
-	width: 100%;
+	/* 	width: 100%;
+ */
 	max-width: 100%;
 }
 
 .contacto-sidebar-title {
-	height: 10vh;
+	margin-bottom: 20px;
 	width: 100%;
 }
 .contacto-sidebar-title-h1 {
@@ -79,6 +86,9 @@ body {
 .contacto-sidebar-text {
 	display: none;
 }
+.contacto-sidebar-text p {
+	text-align: left;
+}
 .contacto-sidebar-content {
 	display: none;
 }
@@ -86,7 +96,6 @@ body {
 /* css para formulario*/
 
 .contacto-form {
-	width: 100%;
 	max-width: 100%;
 }
 .tel-input {
@@ -179,78 +188,8 @@ body {
 	background: var(--thirdcollor);
 }
 
-/*Medias queries*/
+/*font sizes*/
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-	.btn-3 {
-		width: 80%;
-	}
-
-	.contacto-sidebar {
-		max-width: 100%;
-	}
-	.contacto-form {
-		border-radius: 30px;
-		box-shadow: 0 0 5px 2px var(--secondarycolor);
-		box-sizing: border-box;
-		padding: 10px;
-	}
-	.box-container {
-		padding: 0 32px;
-	}
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-	.box-contacto {
-		gap: 1rem;
-	}
-	.contacto-sidebar {
-		max-width: 38%;
-	}
-	.contacto-form,
-	.message-sent {
-		max-width: 58%;
-		padding: 20px;
-	}
-	.contacto-sidebar-text {
-		display: block;
-	}
-	.contacto-sidebar-content {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		height: 40vh;
-	}
-}
-
-/*  Large devices (desktops, 992px and up)
- */
-@media (min-width: 992px) {
-	.contacto-sidebar-content {
-		height: 50vh;
-	}
-}
-
-/*  X-Large devices (large desktops, 1200px and upx)
- */
-@media (min-width: 1200px) {
-	.box-contacto {
-		gap: 2rem;
-	}
-	.box-container {
-		padding: 0 72px;
-	}
-	.contacto-sidebar-content {
-		height: 55vh;
-	}
-}
-
-/*  XX-Large devices (larger desktops, 1400px and up)
- */
-@media (min-width: 1400px) {
-}
 .head-1 {
 	font-size: 36px;
 	line-height: 44px;
@@ -259,10 +198,7 @@ body {
 	font-size: 32px;
 	line-height: 40px;
 }
-.head-3 {
-	font-size: 28px;
-	line-height: 36px;
-}
+
 .head-4 {
 	font-size: 24px;
 	line-height: 32px;
@@ -295,18 +231,91 @@ body {
 	letter-spacing: 0.5px;
 }
 
-.text-d {
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0.5px;
-}
-.text-t {
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 0.25px;
-}
-.text-m {
+.text-p {
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.4px;
+}
+
+/*Medias queries*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	.btn-3 {
+		width: 80%;
+	}
+
+	.contacto-form {
+		border-radius: 10px;
+		box-shadow: 0 0 5px 2px var(--secondarycolor);
+		box-sizing: border-box;
+		padding: 10px;
+		overflow: hidden;
+	}
+	.box-container {
+		padding: 0 32px;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.text-p {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.25px;
+	}
+	.head-3 {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	.box-contacto {
+		gap: 1rem;
+	}
+
+	.contacto-form,
+	.message-sent {
+		max-width: 58%;
+		padding: 20px;
+	}
+
+	.contacto-sidebar-text {
+		display: block;
+	}
+	.contacto-sidebar-content {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		gap: 80px;
+	}
+}
+
+/*  Large devices (desktops, 992px and up)
+ */
+@media (min-width: 992px) {
+	.text-p {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.5px;
+	}
+	.head-3 {
+		font-size: 28px;
+		line-height: 36px;
+	}
+}
+
+/*  X-Large devices (large desktops, 1200px and upx)
+ */
+@media (min-width: 1200px) {
+	.box-contacto {
+		gap: 2rem;
+	}
+	.box-container {
+		padding: 0 72px;
+	}
+}
+
+/*  XX-Large devices (larger desktops, 1400px and up)
+ */
+@media (min-width: 1400px) {
 }
