@@ -70,6 +70,8 @@ font-size: 36px;
 font-style: normal;
 font-weight: 700;
 line-height: 27px;
+margin-top: 15px;
+
 }
 .contenedorDescripcion span{
    color: black; 
@@ -104,7 +106,8 @@ line-height: normal;
     /* width: 18rem; */
     border: 3px solid black;
     padding: 0px;
-    --bs-card-cap-padding-x: 0rem;
+    position: relative;
+    /* --bs-card-cap-padding-x: 0rem; */
 }
 
 .descripcionObra{
@@ -115,11 +118,11 @@ line-height: normal;
 
 .tituloObra{
     position: absolute;
-    top: 55%;
+    bottom: 8%;
     background-color:#0000008F;
     color: white;
-    left:0px;
-
+    left:8%;
+    width: 85%;
     font-family: Roboto Mono;
 font-size: 27.531px;
 font-style: normal;
@@ -140,7 +143,135 @@ line-height: normal;
 .contenedorObra{ 
     width: 87%; 
     border: 6px solid black;
-    
+    margin-bottom: 40px;
 
 
 } 
+.card-img, .card-img-top{
+    /* max-height: 240px; */
+    border: 6px solid black;
+    transition: all  ease 300ms;
+    /* max-height: 312px; */
+}
+.card-body {
+    position: absolute;
+    top: 0px;
+    max-width: 240px;
+    background-color: #0000008F;
+    
+    opacity: 0;
+    
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.753); */
+    /* opacity: 0;  */ /* después de que haga un buen contenedor para el texto podré quitar este */
+}
+
+.card-body:hover{
+    opacity: 0;
+}
+
+.card-text{
+    position: absolute;
+    top: 8%;
+    left: 7%;
+    width: 87%;
+    z-index: 4;
+    border-radius: 13px;
+
+    /* object-fit:inherit; */
+    
+        opacity: 0;
+    background-color: #D0417EAC;
+    color: white;
+
+    /* cuando ya esté bien le cambio la opacity a 0 */
+}
+.card-text:hover{
+opacity: 1;
+z-index: 4;
+/* color: #D0417E; */
+}
+.card-img:hover, .card-img-top:hover{
+    transition: transform 200ms;
+    transform: scale(1.12);
+    z-index: 100;
+
+}
+
+.head-4 {
+    font-size: 24px;
+    line-height: 32px;
+    
+    background-color: black;
+    color: white;
+    margin: 0;
+  }
+
+  .head-6 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    background-color: black;
+    color: white;
+    margin: 0;
+  }
+
+@media screen and (max-width:1587px) {
+
+    .card-img, .card-img-top{
+        max-height:  382px;
+    }
+}
+@media screen and (max-width:1921px) {
+
+    .card-img, .card-img-top{
+        max-height:354px;
+    }
+}
+@media screen and (max-width:1587px) {
+
+    .card-img, .card-img-top{
+        max-height:269px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+
+    .card-img, .card-img-top{
+        max-height: 226px;
+    }
+}
+@media screen and (max-width:1200px) {
+
+    .card-img, .card-img-top{
+        max-height: 181px;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .card-img, .card-img-top{
+        max-height: 186px;
+    }
+} 
+@media screen and (max-width:768px) {
+
+    .card-img, .card-img-top{
+        max-height: 186;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .card-img, .card-img-top{
+        max-height: 441px;
+    }
+}
+
+/* @media screen and (min-width:768px) {
+
+    .card-img, .card-img-top{
+        max-height: 441px;
+    }
+}  */
+
+

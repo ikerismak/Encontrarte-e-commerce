@@ -232,6 +232,7 @@
 .footer {
   background-color: #f8f9fa;
   padding: 20px 0;
+  padding-top: 50px;
 }
 
 .team-member {
@@ -269,9 +270,7 @@
   color: white;
 }
 
-.empty-column-gallery {}
 
-.column-gallery-one {}
 
 .img-container-main-01 {
   padding: 0px 5px 5px 5px;
@@ -294,7 +293,7 @@
 
 .text-container-two {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
@@ -305,7 +304,7 @@
 
 .text-container-three {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(26, 26, 26, 0.7);
@@ -327,7 +326,7 @@
 
 .text-container-five {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
@@ -374,7 +373,9 @@
 .text-container-two p,
 .text-container-three p,
 .text-container-four p,
-.text-container-five p {
+.text-container-five p,
+.text-container-six-artist p,
+.text-container-seven-artist p{
 
   color: white;
 }
@@ -387,6 +388,12 @@
 .text-container-five h2 {
 
   color: white;
+}
+
+.text-artist p{
+
+  font-size: 18px;
+
 }
 
 .welcome-container {
@@ -414,12 +421,13 @@
 .text-container-six-artist {
 
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   text-align: center;
+  width: 500px;
 }
 
 
@@ -435,12 +443,24 @@
 .text-container-seven-artist {
 
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   text-align: center;
+  width: 500px;
+}
+
+.email-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team-member{
+  filter: grayscale(100%)
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -450,7 +470,8 @@
     .text-container {
       top: 50%;
       left: 50%;
-      background-color: rgba(0, 225, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.7);
+
     }
     .text-container h2{
 
@@ -468,7 +489,8 @@
   .text-container-two {
     top: 30%;
     left: 50%;
-    background-color: rgba(252, 0, 189, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+
     width: 80px;
     height: 100px;
   }
@@ -484,7 +506,8 @@
     .text-container-five {
       top: 50%;
       left: 50%;
-      background-color: rgba(22, 8, 218, 0.7);
+      background-color: rgba(0, 0, 0, 0.7);
+
       width: 200px;
     }
 
@@ -500,7 +523,8 @@
     .text-container-three {
       top: 30%;
       left: 50%;
-      background-color: rgba(228, 187, 2, 0.7);
+      background-color: rgba(0, 0, 0, 0.7);
+
       width: 100px;
       height: 100px;
 
@@ -522,15 +546,46 @@
     .text-container-four {
       top: 20%;
       left: 50%;
-      background-color: rgba(77, 255, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.7);
+
       width: 200px;
     }
+
 
     .text-container-four h2{
         font-size: 18px;
     }
     .text-container-four p{
       font-size: 12px;
+    }
+
+    .text-container-six-artist {
+      top: 40%;
+      left: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 250px;
+    }
+
+
+    .text-container-six-artist p{
+      font-size: 8px;
+    }
+
+    .text-container-seven-artist {
+      top: 40%;
+      left: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 250px;
+    }
+
+
+    .text-container-seven-artist p{
+      font-size: 8px;
+    }
+
+    .img-container-artist-02{
+
+      padding-bottom: 30px;
     }
 
     .section-images-categories{
@@ -561,14 +616,15 @@
     }
 }
 
-@media only screen and (min-width: 350px) and (max-width: 767px){
+@media only screen and (min-width: 319px) and (max-width: 767px){
   /* Estilos para tabletas y dispositivos con pantalla más grande que 768px */
   /* Puedes agregar tus estilos específicos aquí */
 
   .text-container {
     top: 50%;
     left: 50%;
-    background-color: rgba(0, 225, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+
   }
   .text-container h2{
 
@@ -586,23 +642,25 @@
 .text-container-two {
   top: 30%;
   left: 50%;
-  background-color: rgba(252, 0, 189, 0.7);
-  width: 80px;
-  height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  width: 200px;
+  height: 150px;
 }
 .text-container-two h2{
-  font-size: 14px;
+  font-size: 18px;
 
 }
 .text-container-two p{
-  font-size: 8px;
+  font-size: 12px;
 
 }
 
   .text-container-five {
     top: 50%;
     left: 50%;
-    background-color: rgba(22, 8, 218, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+
     width: 200px;
   }
 
@@ -618,29 +676,31 @@
   .text-container-three {
     top: 30%;
     left: 50%;
-    background-color: rgba(228, 187, 2, 0.7);
-    width: 100px;
-    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    width: 200px;
+    height: 150px;
 
   }
 
   .text-container-three h2 {
 
-    font-size: 14px;
+    font-size: 18px;
 
 
   }
 
   .text-container-three p {
 
-    font-size: 8px;
+    font-size: 12px;
 
   }
 
   .text-container-four {
-    top: 20%;
+    top: 40%;
     left: 50%;
-    background-color: rgba(77, 255, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+
     width: 200px;
   }
 
@@ -649,6 +709,36 @@
   }
   .text-container-four p{
     font-size: 12px;
+  }
+
+
+  .text-container-six-artist {
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 300px;
+  }
+
+
+  .text-container-six-artist p{
+    font-size: 10px;
+  }
+
+  .text-container-seven-artist {
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 300px;
+  }
+
+
+  .text-container-seven-artist p{
+    font-size: 10px;
+  }
+
+  .img-container-artist-02{
+
+    padding-bottom: 30px;
   }
 
   .section-images-categories{
@@ -673,6 +763,21 @@
     z-index: 901;
     background-color: white;
   }
+
+.img-container-main-01,
+.img-container-main-02,
+.img-container-main-04,
+.img-container-main-03,
+.img-container-main-05{
+  padding: 0px 0px 10px 5px;
+  position: relative;
+}
+
+.img-container-main-02{
+  height: 300px;
+}
+
+
 
 
 }

@@ -31,7 +31,7 @@ header {
     /* border: #D0417E solid 2px; */
     height: 30px;
     width: 30px;
-    
+
 }
 #contenedorLogoFacebook{
     padding-left: 0px;
@@ -80,10 +80,37 @@ header {
     display: flex;
     text-align: left;
     position: absolute;
-    right: 13%;
+    /* right: 50%; */
     bottom: 54px;
-    width: 165px;
-    cursor: pointer;
+    height: fit-content;
+}
+.dropdownUser{
+    position: absolute;
+    right: 18%;
+    bottom: 54px;
+    height: fit-content;
+    width: fit-content;
+    
+}
+.dropdown-toggle{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    
+}
+.dropdown-toggle::after{
+color: #D0417E;
+scale: 1.4;
+}
+
+.innerDrop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.innerDrop p{
+    margin: 0;
 }
 
 
@@ -107,14 +134,14 @@ header {
     margin: 0;
 }
 #contenedorImgUserCabecera{
-    width: 30px;
+    width: 40px;
     height: 30px;
 }
 #imgPerfilUser{
     /* contenedor para  */
     object-fit: fill;
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 30px;
 }
 
 
@@ -137,7 +164,7 @@ border: 3px solid green;
 
 
 /* .contenedorImgBotonCabecera{
-    border: 3px solid blue; 
+    border: 3px solid blue;
 } */
 .contenedorImgBotonCabecera img{
     /* la altura el ancho de la imagen va a estar dado por su contenedor así no tendré que meter cambios a cada imagen */
@@ -157,7 +184,7 @@ border: 3px solid green;
     /* Contenedor general de la botonera de la cabecera de lado derecho */
     width:fit-content;
     height: 30px;
-    margin-right: 50px;
+    margin-right: 5%;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -207,7 +234,7 @@ border: 3px solid green;
     justify-content: center;
     /* margin-top: 0;
     margin-bottom: 0; */
-     align-items: center; 
+     align-items: center;
     gap: 20%;
 
 
@@ -251,10 +278,11 @@ height: 100%;
     visibility: hidden;
     width: 30px;
     height: 30px;
-    transition: all 1s;
+
+    transition: transform 0.s ease;
 
 }
- /* 
+ /*
 #botonCerrar{
     visibility: hidden;
     position: absolute;
@@ -293,6 +321,7 @@ body {
     width: 34%;
     height: 39px;
 }
+
 #lupaBarraBusqueda{
 width: 40px;
 height: 100%;
@@ -307,6 +336,7 @@ border-right: none;
     align-items: center;
     border: 1px solid black;
     border-left: none;
+    padding: 5px;
 
 }
 
@@ -319,7 +349,7 @@ border-right: none;
 /* querys para el menu de hamburguesa */
 @media screen and (max-width: 770px) {
 
-    
+
 .redesSociales {
 
     gap: 5px;
@@ -332,8 +362,6 @@ border-right: none;
         flex-direction: column;
         align-items: center;
         top: 80px;
-        margin: auto;
-        margin-left: 12px;
         gap: 12px;
         align-items: baseline;
         height: 100%;
@@ -344,26 +372,29 @@ border-right: none;
 
     .menuBurguerContenedor{
         visibility: visible;
+
     }
 
     #contenedorNavList {
-        right: -35%;
         top: 0;
         position: absolute;
         width: 35%;
         height: 100%;
         background-color: #D9D9D9;
         visibility:hidden;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5); 
+        display: block;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         z-index: 2;
-
+        opacity: 0;
+        right: 0;
+        transition: all 500ms;
 
     }
     #contenedorNavList.visible{
         transition: all 500ms;
-        right: 0;
+        opacity: 1;
     }
-/* 
+/*
     #botonCerrar {
         position: absolute;
         align-items: center;
@@ -375,7 +406,7 @@ border-right: none;
         border: none;
         visibility: hidden;
     } */
-    
+
     /* #botonCerrar.visible{
         visibility: visible;
     } */
@@ -401,11 +432,11 @@ border-right: none;
     .textoBotoneraCabecera{
         visibility: hidden;
         width: 0;
-        
+
     }
     #botoneraCabecera{
         gap: 5px;
-        margin-right: 0px;
+        margin-right: 2%;
     }
     .userID{
 
@@ -413,7 +444,10 @@ border-right: none;
         right: 10px;
 
     }
-    
+    .dropdownUser{
+        right: 6%;
+    }
+
 
 }
 

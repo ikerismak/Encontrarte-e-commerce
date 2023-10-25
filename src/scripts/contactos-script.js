@@ -5,9 +5,9 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
 
     //input[id^="validationCustom
     const inputs = document.querySelectorAll('[data-type]') //inputs y textarea
-    const form = document.querySelector('.needs-validation')//formulario
+    const form = document.querySelector("#formulario-contacto")//formulario
     const option = document.querySelector("#select-option");//select
-    const check = document.querySelector("#checkbox");//checkbox
+    const check = document.querySelector("#checkboxvalido");//checkbox
     const mensajeCompletado = document.querySelector("#mensaje-exitoso");//mensaje para mostrar al finalizar el envio
     let isInputs = false; //true si todos los input y are son validos
     let isOptions = false; //true si el option es valido
@@ -34,10 +34,7 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
         isOptions = validarOptiones(option)
 
     })//validamos el checkbox
-    check.addEventListener("change", event => {
-        //validamos  el checkbox
-        isCheckbox = validarCheckbox(check)
-    })
+
     //validamos el formulario cuando el boton es enviado
     form.addEventListener('submit', event => {
 
@@ -50,11 +47,13 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
             isInputs = validarInput(input)
         })
         isOptions = validarOptiones(option)
-        isCheckbox = validarCheckbox(check)
-        console.log(isInputs, isCheckbox, isOptions);
-        if (isInputs && isCheckbox && isOptions) {
-            /*  form.parentElement.classList.add("oculto")
-             mensajeCompletado.classList.remove("oculto") */
+        if (isInputs && isOptions) {
+            //valores para enviar al formulario
+            const valuesForm = Object.fromEntries(new FormData(event.target))
+            form.parentElement.classList.add("oculto")
+            mensajeCompletado.classList.remove("oculto")
+
+            localStorage.setItem('usuario', JSON.stringify(valuesForm));
 
         }
         form.classList.add('was-validated')
@@ -64,24 +63,3 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
 })()
 
 
-/* (() => {
-    'use strict'
-
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('input[id^="validationCustom"]')
-    // Loop over them and prevent submission
-    forms.forEach(form => {
-        form.addEventListener('blur', event => {
-            console.log(form.checkValidity());
-            console.log(form);
-            console.log("evento" + event.target);
-            if (form.checkValidity()) {
-                console.log(form);
-                event.preventDefault()
-                event.stopPropagation()
-            }
-
-            form.parentElement.classList.add('was-validated')
-        }, false)
-    })
-})() */
