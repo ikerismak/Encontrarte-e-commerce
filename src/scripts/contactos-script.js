@@ -34,10 +34,7 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
         isOptions = validarOptiones(option)
 
     })//validamos el checkbox
-    check.addEventListener("change", event => {
-        //validamos  el checkbox
-        isCheckbox = validarCheckbox(check)
-    })
+
     //validamos el formulario cuando el boton es enviado
     form.addEventListener('submit', event => {
 
@@ -50,8 +47,7 @@ import { validarCheckbox, validarInput, validarOptiones } from "./contactos-vali
             isInputs = validarInput(input)
         })
         isOptions = validarOptiones(option)
-        isCheckbox = validarCheckbox(check)
-        if (isInputs && isCheckbox && isOptions) {
+        if (isInputs && isOptions) {
             //valores para enviar al formulario
             const valuesForm = Object.fromEntries(new FormData(event.target))
             form.parentElement.classList.add("oculto")

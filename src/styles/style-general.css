@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+/* variable globales de los colores*/
+:root {
+	--backgroundcolor: #d9d9d9;
+	--textcolor: #ffffff;
+	--primarycolor: #d0417e;
+	--secondarycolor: #0000008f;
+	--thirdcollor: #010101;
+	--extracolor: #cccccc;
+}
+/* se agrega la font  al body para que sea a todas la paginas*/
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: var(--textcolor);
+}
+
+/*margin para los h reseteo de bootstrap*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+/* clase para  los h1 a h6*/
+.head-1 {
+	font-size: 36px;
+	line-height: 44px;
+}
+.head-2 {
+	font-size: 32px;
+	line-height: 40px;
+}
+.head-3 {
+	font-size: 28px;
+	line-height: 36px;
+}
+.head-4 {
+	font-size: 24px;
+	line-height: 32px;
+}
+.head-5 {
+	font-size: 20px;
+	line-height: 28px;
+}
+.head-6 {
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+}
+
+/*
+clases para los label de los formularios 
+
+*/
+/*label  para desktop*/
+.label {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.1px;
+}
+/*label  para table*/
+.label {
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.5px;
+}
+/*label  para mobile*/
+.label {
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0.5px;
+}
+
+/*
+clases para los textos en general se puede usar en parraros
+label para desktop
+label para tablet
+label para mobile
+
+*/
+/*label para desktop*/
+.text {
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+}
+/*label para tablet*/
+.text {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+}
+/*label para mobile*/
+.text {
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+}
+/* Medium devices (mobile, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/*  Large devices (desktops, 992px and up)
+   */
+@media (min-width: 992px) {
+}
+
+/*  X-Large devices (large desktops, 1200px and up)
+   */
+@media (min-width: 1200px) {
+}
+
+/*  XX-Large devices (larger desktops, 1400px and up)
+   */
+@media (min-width: 1400px) {
+}
