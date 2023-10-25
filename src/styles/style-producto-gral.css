@@ -496,6 +496,7 @@ width: 140px;
   border: 2px solid rgb(148, 42, 87);
   font-weight: bold;
   font-size: x-large;
+  
   /* Define los estilos de :hover aquí */
 }
 
@@ -530,6 +531,15 @@ width: 140px;
 
 /* iphone /////////////////////////////////////// */
 @media (max-width: 400px) {
+  #columnder {
+    text-align: center;
+  
+  
+  }
+  
+
+
+
   .linea-horizontalmovil{
     border-bottom: 1px solid black;
     /* Estilo de la línea horizontal */

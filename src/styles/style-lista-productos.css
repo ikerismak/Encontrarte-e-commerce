@@ -395,6 +395,7 @@ v #ventanaflotante li {
         background-color: rgba(0, 0, 0, 0.3);
         width: 30px;
         border-radius: 15px;
+        height: 100%;
 
     }
 
