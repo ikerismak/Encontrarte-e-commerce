@@ -53,6 +53,7 @@ width: 140px;
 #agregarAlCarrito{
   width: 140px;
   height: 80px;
+  font-weight: bold;
 }
 
 /*imagen principal del carrusel del producto*/
@@ -532,10 +533,19 @@ width: 140px;
 /* iphone /////////////////////////////////////// */
 @media (max-width: 400px) {
   #columnder {
-    text-align: center;
-  
-  
+    justify-content: center;
+    margin-right: 10%;
+
   }
+
+  #agregarAlCarrito2{
+    width: 198px;
+    height: 50px;
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  
   
 
 
