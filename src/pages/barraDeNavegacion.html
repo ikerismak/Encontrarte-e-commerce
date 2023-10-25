@@ -27,7 +27,7 @@
         <div class="logoRedSocial redesSociales">
           <div class="contenedorLogoRS">
             <!--Cada uno de lo logos tendrán su propio div para ajutar su tamaño al contenedor-->
-            <a href="https://www.instagram.com/">
+            <a target="_blank" href="https://www.instagram.com/encontrarte.gen">
               <img
                 class="logoInstagram logoRS"
                 src="../assets/ImgnavBar&acercaDeNosotros/Instagram.png"
@@ -37,7 +37,7 @@
           </div>
 
           <div class="contenedorLogoRS" id="contenedorLogoFacebook">
-            <a href="https://www.facebook.com/">
+            <a target="_blank" href="https://www.facebook.com/EncontrArte.Gen?mibextid=ZbWKwL">
               <img
                 id="facebookLogo"
                 class="logoFacebook logoRS"
@@ -48,7 +48,7 @@
             <!--Al ser el logo de FB mas grande se le dará un tratamiento distinto-->
           </div>
           <div class="contenedorLogoRS">
-            <a href="https://www.whatsapp.com/">
+            <a target="_blank" href="https://www.whatsapp.com/">
               <img
                 class="logoWhatsApp logoRS"
                 src="../assets/ImgnavBar&acercaDeNosotros/WhatsApp.png"
@@ -59,7 +59,7 @@
         </div>
         <!--Cierre de el div de redes sociales-->
         <div class="contenedorLogoCabecera logoNavbar">
-          <a href="../../index.html">
+          <a  href="../../index.html">
             <img
               id="logoCabecera"
               src="../assets/ImgnavBar&acercaDeNosotros/Logo.png"
@@ -85,29 +85,9 @@
             </a>
           </div>
           <!-- Cierre del login-->
-          <div class="contenedorBotonCabecera" id="contenedorFavoritosCabecera">
-            <a class="linkBotonCabecera" href="">
-              <div
-                class="contenedorImgBotonCabecera"
-                id="contenedorImgFavoriteBotonCabecera"
-              >
-                <img
-                  id="favoriteImg"
-                  src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png"
-                  alt=""
-                />
-              </div>
-              <p
-                id="resaltar"
-                class="textoBotoneraCabecera textoNormal resaltar"
-              >
-                Favoritos
-              </p>
-              <!--El id resaltar se utilizará en los elementos (creo que solo texto ) que deben de tener el color de pantone                       -->
-            </a>
-          </div>
-          <!-- Cierre del favorite-->
-          <div
+          
+          
+          <!-- <div
             class="contenedorBotonCabecera"
             id="contenedorCarritoComprasCabecera"
           >
@@ -129,24 +109,38 @@
                 Carrito
               </p>
             </a>
-            <!--De esta manera hago que tanto el texto como el png sean botones que direccionan a donde mismo-->
-          </div>
+           
+          </div> -->
+           <!--De esta manera hago que tanto el texto como el png sean botones que direccionan a donde mismo-->
           <!-- Cierre del botón de compras-->
         </div>
         <!--Cierre botoneraCabecera-->
+        <div class="dropdownUser UserID">
+          <button class="btn btn-secondary dropdown-toggle boton" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex;align-items: last baseline;background-color: white;border: none;">
+           <div class="innerDrop"> <img id="imgPerfilUser" src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _User avatar filled alt_.svg" alt="">
+            <p class="textoNormal" id="welcomeUser">Hola, inicia sesión</p></div>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+            <li><a class="dropdown-item" href="../pages/publicar-artista.html">Actualizar datos</a></li>
+            <li><a class="dropdown-item" href="../pages/agregar-productos.html">Subir obras</a></li>
+            <li><a class="dropdown-item" href="../pages/carrito.html">Carrito </a></li>
+            
+          </ul>
+        </div>
 
-        <div class="userID">
+        <!-- <div class="userID">
           <div id="contenedorImgUserCabecera">
             <img
               id="imgPerfilUser"
-              src="../assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png"
+              src="../assets/ImgnavBar&acercaDeNosotros/🦆 icon _User avatar filled alt_.svg"
               alt=""
             />
           </div>
           <p class="textoNormal" id="welcomeUser">
             Bienvenido (agregar usuario)
           </p>
-        </div>
+        </div> -->
         <!-- cierre de la personalización de la bienvenida de usuario-->
       </div>
       <!--Cierre del bloque1-->

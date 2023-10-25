@@ -1,182 +1,182 @@
 .footer {
-  text-align: center;
-  color: var(--textcolor);
-  background: var(--thirdcollor);
+	text-align: center;
+	color: var(--textcolor);
+	background: var(--thirdcollor);
 }
 :root {
-  --backgroundcolor: #d9d9d9;
-  --textcolor: #ffffff;
-  --primarycolor: #d0417e;
-  --secondarycolor: #0000008f;
-  --thirdcollor: #010101;
-  --extracolor: #cccccc;
+	--backgroundcolor: #d9d9d9;
+	--textcolor: #ffffff;
+	--primarycolor: #d0417e;
+	--secondarycolor: #0000008f;
+	--thirdcollor: #010101;
+	--extracolor: #cccccc;
 }
 
 html {
-  height: 100vh;
-  width: 100%;
+	height: 100vh;
+	width: 100%;
 }
 .visible-product {
-  display: none !important;
+	display: none !important;
 }
 body {
-  min-height: 100vh;
-  margin: 0 auto;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: var(--textcolor);
-  max-width: 1440px;
+	min-height: 100vh;
+	margin: 0 auto;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: var(--textcolor);
+	max-width: 1440px;
 }
 /*estilo contenido*/
 /*ModalLabelProducto*/
 #ModalLabelProducto {
-  color: var(--primarycolor);
+	color: var(--primarycolor);
 }
 .box-container {
-  min-height: 60vh;
-  background-color: var(--backgroundcolor);
-  width: 100%;
-  padding: 40px 16px;
-  max-width: 1440px;
-  box-sizing: border-box;
+	min-height: 60vh;
+	background-color: var(--backgroundcolor);
+	width: 100%;
+	padding: 40px 16px;
+	max-width: 1440px;
+	box-sizing: border-box;
 }
 /*stylos del formulario*/
 .form-label {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  margin: 0;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0;
 }
 .form-control-input {
-  border-left: none;
+	border-left: none;
 }
 .form-control,
 .form-select,
 .form-check-input {
-  resize: none;
-  border: 1px solid var(--thirdcollor);
+	resize: none;
+	border: 1px solid var(--thirdcollor);
 }
 .form-check-input:checked {
-  background-color: var(--primarycolor);
-  border-color: var(--primarycolor);
+	background-color: var(--primarycolor);
+	border-color: var(--primarycolor);
 }
 
 .form-check-input:checked,
 .form-control:focus,
 .form-check-input:focus,
 .form-select:focus {
-  resize: none;
-  box-shadow: none;
-  border: 1px solid var(--primarycolor);
+	resize: none;
+	box-shadow: none;
+	border: 1px solid var(--primarycolor);
 }
 
 .btn-3:hover {
-  color: var(--primarycolor);
-  font-weight: 700;
-  background: #ffffff33;
-  border: 1px solid var(--primarycolor);
-  box-shadow: 0 4px 4px 0 rgba(208, 65, 126, 0.5);
+	color: var(--primarycolor);
+	font-weight: 700;
+	background: #ffffff33;
+	border: 1px solid var(--primarycolor);
+	box-shadow: 0 4px 4px 0 rgba(208, 65, 126, 0.5);
 }
 .btn-3 {
-  width: 100%;
-  color: var(--textcolor);
-  font-weight: 700;
-  background: var(--primarycolor);
-  border: 1px solid #f1f1f1;
-  box-shadow: 0 4px 4px 0 #75757580;
+	width: 100%;
+	color: var(--textcolor);
+	font-weight: 700;
+	background: var(--primarycolor);
+	border: 1px solid #f1f1f1;
+	box-shadow: 0 4px 4px 0 #75757580;
 }
 .btn-3:first-child:active {
-  transform: scale(1.2);
-  color: var(--primarycolor);
-  font-weight: 700;
-  background-color: #c9c9c9;
-  border: 1px solid var(--primarycolor);
-  box-shadow: 0 4px 4px 0 #75757580;
+	transform: scale(1.2);
+	color: var(--primarycolor);
+	font-weight: 700;
+	background-color: #c9c9c9;
+	border: 1px solid var(--primarycolor);
+	box-shadow: 0 4px 4px 0 #75757580;
 }
 
 /*stylos de contenedor de imagens*/
 .drop-zone {
-  display: flex;
-  background-color: var(--textcolor);
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  border: 2px dashed var(--thirdcollor);
-  padding: 5px;
-  text-align: center;
-  cursor: pointer;
+	display: flex;
+	background-color: var(--textcolor);
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: 2px dashed var(--thirdcollor);
+	padding: 5px;
+	text-align: center;
+	cursor: pointer;
 }
 
 .center-image {
-  padding: 10px;
-  border-radius: 10px;
+	padding: 10px;
+	border-radius: 10px;
 }
 .center-image > img {
-  border: 2px solid var(--primarycolor);
-  border-radius: 10px;
-  background-color: var(--backgroundcolor);
+	border: 2px solid var(--primarycolor);
+	border-radius: 10px;
+	background-color: var(--backgroundcolor);
 }
 .image-preview-box {
-  position: relative;
-  background-color: var(--backgroundcolor);
-  border-radius: 10px;
-  border: 2px solid var(--primarycolor);
-  box-sizing: border-box;
-  display: inline-block;
-  margin: 5px;
+	position: relative;
+	background-color: var(--backgroundcolor);
+	border-radius: 10px;
+	border: 2px solid var(--primarycolor);
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 5px;
 }
 .image-preview-box .icon-position {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-weight: 600;
-  color: var(--primarycolor);
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-weight: 600;
+	color: var(--primarycolor);
 }
 .image-preview-box img {
-  padding: 5px;
-  width: 150px;
-  height: 115px;
-  max-width: 100%;
-  max-height: 100%;
-  cursor: pointer;
+	padding: 5px;
+	width: 150px;
+	height: 115px;
+	max-width: 100%;
+	max-height: 100%;
+	cursor: pointer;
 }
 /*pinturas sidebar css*/
 #pinturass {
-  border-radius: 10px;
-  border: 2px solid var(--primarycolor);
+	border-radius: 10px;
+	border: 2px solid var(--primarycolor);
 }
 /*label*/
 .label-container {
-  min-height: 40px;
-  gap: 5px;
-  background-color: var(--textcolor);
-  border: 1px solid var(--primarycolor);
-  border-radius: 10px;
-  padding: 5px;
+	min-height: 40px;
+	gap: 5px;
+	background-color: var(--textcolor);
+	border: 1px solid var(--primarycolor);
+	border-radius: 10px;
+	padding: 5px;
 }
 .label-box {
-  background-color: var(--backgroundcolor);
-  border-radius: 10px;
-  padding: 5px;
+	background-color: var(--backgroundcolor);
+	border-radius: 10px;
+	padding: 5px;
 }
 .icon-close {
-  font-size: 16px;
+	font-size: 16px;
 }
 @media (min-width: 576px) {
-  .drop-zone {
-    display: flex;
-  }
+	.drop-zone {
+		display: flex;
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #categoria-label {
-    margin-top: -2px !important ;
-    margin-bottom: 0px !important;
-  }
+	#categoria-label {
+		margin-top: -2px !important ;
+		margin-bottom: 0px !important;
+	}
 }
 
 /*  Large devices (desktops, 992px and up)
@@ -187,9 +187,9 @@ body {
 /*  X-Large devices (large desktops, 1200px and up)
  */
 @media (min-width: 1200px) {
-  .box-container {
-    padding: 40px 72px;
-  }
+	.box-container {
+		padding: 40px 72px;
+	}
 }
 
 /*  XX-Large devices (larger desktops, 1400px and up)
@@ -198,61 +198,63 @@ body {
 }
 
 .head-1 {
-  font-size: 36px;
-  line-height: 44px;
+	font-size: 36px;
+	line-height: 44px;
 }
 .head-2 {
-  font-size: 32px;
-  line-height: 40px;
+	font-size: 32px;
+	line-height: 40px;
 }
 .head-3 {
-  font-size: 28px;
-  line-height: 36px;
+	font-size: 28px;
+	line-height: 36px;
 }
 .head-4 {
-  font-size: 24px;
-  line-height: 32px;
+	font-size: 24px;
+	line-height: 32px;
 }
 .head-5 {
-  font-size: 20px;
-  line-height: 28px;
+	font-weight: 500;
+
+	font-size: 14px;
+	line-height: 22px;
 }
 .head-6 {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.15px;
 }
 
 .label-d {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.1px;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.1px;
 }
 
 .label-t {
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.5px;
 }
 
 .label-m {
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0.5px;
 }
 
 .text-d {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
 }
 .text-t {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.25px;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
 }
 .text-m {
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.4px;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
 }

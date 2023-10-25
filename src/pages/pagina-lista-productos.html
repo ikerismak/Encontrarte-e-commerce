@@ -162,14 +162,14 @@
                 <div class="fondo-oscuro" id="fondo-oscuro"></div>
                 <div class="dropdown">
                     <button id="boton" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categorias
+                        Categorías
                     </button>
                     <ul id="ventanaflotante" class="dropdown-menu dropdown-menu-center">
-                      <li><a id="pintOleo" class="dropdown-item" href="#">Pinturas al Oleo</a></li>
-                      <li><a class="dropdown-item" href="#">Pinturas Acuarelas</a></li>
-                      <li><a class="dropdown-item" href="#">Pinturas Acrilicas</a></li>
-                      <li><a class="dropdown-item" href="#">Pinturas Abstractas</a></li>
-                      <li><a class="dropdown-item" href="#">Pinturas Paisajisticas</a></li>
+                      <li><a id="pintOleo" class="dropdown-item" href="#">Pinturas al Óleo</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="redirigirAPagina('pinturas_acuarelas')">Pinturas Acuarelas</a></li>
+                      <li><a class="dropdown-item" onclick="redirigirAPagina('pinturas_acrilicas')" href="#">Pinturas Acrilicas</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="redirigirAPagina('pinturas_abstractas')" >Pinturas Abstractas</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="redirigirAPagina('pinturas_paisajisticas')">Pinturas Paisajísticas</a></li>
                 
                     </ul>
                 </div>
@@ -186,11 +186,11 @@
                     <!-- Lista con las categorias de pinturas///////////////////////////////////////////// -->
                     <h1 id="titulopinturas"><b><span style="color: rgb(208, 65, 126);">P</span>inturas</b></h1>
                     <ul id="listaobjetos">
-                        <li ><strong id="pinturasAlOleo">Pinturas al Oleo</strong></li>
-                        <li ><strong id="pinturasAcuarelas">Pinturas Acuarelas</strong></li>
-                        <li ><strong id="pinturasAcrilicas">Pinturas Acrilicas</strong></li>
-                        <li ><strong id="pinturasAbstractas">Pinturas Abstractas</strong></li>
-                        <li ><strong id="pinturasPaisajisticas">Pinturas Paisajisticas</strong></li>
+                        <li ><strong id="pinturasAlOleo">Pinturas al Óleo</strong></li>
+                        <li ><strong id="pinturasAcuarelas" onclick="redirigirAPagina('pinturas_acuarelas')">Pinturas Acuarelas</strong></li>
+                        <li ><strong id="pinturasAcrilicas" onclick="redirigirAPagina('pinturas_acrilicas')">Pinturas Acrílicas</strong></li>
+                        <li ><strong id="pinturasAbstractas" onclick="redirigirAPagina('pinturas_abstractas')">Pinturas Abstractas</strong></li>
+                        <li ><strong id="pinturasPaisajisticas" onclick="redirigirAPagina('pinturas_paisajisticas')">Pinturas Paisajísticas</strong></li>
                     </ul>
                     
                 </div>
@@ -202,19 +202,19 @@
         <!--Esta es la columna del lado derecho de la pagina, donde estan las fotos de las pinturas y titulos//////////-->
         <div id="colder" class="col-lg-8 col-md-12">
             <!-- Este es el contenedor de las imagenes por categoria //////////////////////////////////-->
-            <h3 id="titulocategoria"><b>-Pinturas al Oleo-</b></h3>
-            <!-- Aqui inicia el carrusel //////////////////////////////////////////////////// -->
+            <h3 id="titulocategoria"><b>-Pinturas al Óleo-</b></h3>
+            <!-- Aqui inicia el carrusel ///////////////////////////////////////////////////// -->
             <div id="carouselExampleIndicators" class="carousel slide">
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <!-- Aqui van 3  tarjetas dentro del carrusel//////////////////////////////// -->
+                        <!-- Aqui van 3  tarjetas dentro del carrusel///////////////////////////////// -->
                         <div class="contenedorcardsc11">
 
 
                         </div>
                     </div>
-                    <!-- Aqui van 3 tarjetas en segunda del carrusel//////////////////////////////// -->
+                    <!-- Aqui van las 3 tarjetas en segunda del carrusel//////////////////////////////// -->
                     <div class="carousel-item">
                         <div class="contenedorcardsc12">
 
@@ -235,9 +235,7 @@
 
                         </div>
                     </div>
-
-
-
+                  
                     <!-- Aqui va una tarjeta dentro del carrusel//////////////////////////////// -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">

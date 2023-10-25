@@ -172,22 +172,17 @@ const Obra = [
       },
 ];
 
-const listaElementos = document.querySelectorAll('#listaobjetos li strong');
-
-listaElementos.forEach(elemento => {
-  elemento.addEventListener('click', () => {
-    const categoria = elemento.textContent.trim();
-    redirigirAPagina(categoria);
-  });
-});
-
 function redirigirAPagina(categoria) {
   // Reemplaza espacios en blanco y caracteres especiales en el nombre de la categoría
-  const categoriaSinEspacios = categoria.replace(/\s/g, '_').toLowerCase();
+  const categoriaSinEspacios = categoria.replace(/ /g, '_').toLowerCase();
+  
+  // Construye la URL de la página utilizando el nombre de la categoría
+  const url = `${categoriaSinEspacios}.html`;
 
-  // Redirige a la página con el nombre de la categoría como parte de la URL
-  window.location.href = `${categoriaSinEspacios}.html`;
+  // Redirige a la página correspondiente
+  window.location.href = url;
 }
+
 
 ////////////////mandar a pagina principal///////////////////////
 const pinturasAlOleoElement = document.getElementById('pinturasAlOleo');
@@ -197,20 +192,12 @@ pinturasAlOleoElement.addEventListener('click', () => {
   window.location.href = 'pagina-lista-productos.html';
 });
 // Selecciona todos los elementos de la lista en el menú desplegable
-const listaDesplegableElements = document.querySelectorAll('#ventanaflotante .dropdown-item');
 
-// Agrega el evento de clic a cada elemento de la lista
-listaDesplegableElements.forEach(elemento => {
-  elemento.addEventListener('click', () => {
-    const categoria = elemento.textContent.trim();
-    redirigirAPagina(categoria);
-  });
-});
 
 const pintOleoElement = document.getElementById('pintOleo');
 
 pintOleoElement.addEventListener('click', () => {
-  // Aquí puedes especificar la URL a la que deseas redirigir al hacer clic en "Pinturas al Oleo"
+  // Aquí se especifica la URL a la que deseas redirigir al hacer clic en "Pinturas al Oleo"
   window.location.href = 'pagina-lista-productos.html';
 });
 
@@ -225,8 +212,9 @@ function agregarObjetosAContenedores(arr, contenedores) {
 
   arr.forEach((element, index) => {
       // Crea un nuevo elemento HTML (por ejemplo, un div)
-      // Crea un nuevo elemento HTML (por ejemplo, un div)
 const card = document.createElement('div');
+const cardLink = document.createElement('a');
+cardLink.href = `Pagina del producto.html?user_id=${element.user_id}`;
 card.className = 'card';
 card.style.width = '15rem';
 card.dataset.user_id = String(element.user_id); // Cambia 'id' a 'user_id' para que coincida con la URL
@@ -296,6 +284,11 @@ const contenedores3 = [carruselContenedor9, carruselContenedor10, carruselConten
 // Llama a la función con tu arreglo de objetos y los contenedores del segundo conjunto
 agregarObjetosAContenedores(Obra, contenedores3);
 
+
+
+
+///////////////////////////////////////////se agregan tarjetas desde el local storage//////////////////////////
+
 // Obtén el contenido actual del cuarto contenedor desde el localStorage
 const cuartoContenedorJSON = localStorage.getItem('cuartoContenedor');
 let cuartoContenedor = [];
@@ -318,14 +311,23 @@ if (productos && productos.length > 0) {
     const card = document.createElement('div');
     card.className = 'card';
     card.style.width = '15rem';
+    card.dataset.user_id = String(producto.user_id);
     card.innerHTML = `
+    
       <img class="card-img" src="../assets/list-products-images/${producto.imagen}" alt="...">
       <div class="card-body">
         <h5 class="card-title">${producto.titulo}</h5>
-        <p class="card-text">${producto.descripcion}</p>
       </div>
     `;
+    // Agrega un manejador de eventos de clic a la tarjeta
+card.addEventListener('click', () => {
+  // Obtiene el identificador único cuando se hace clic en la tarjeta
+  const user_id = card.dataset.user_id; // Cambia 'id' a 'user_id'
 
+  // Redirige a la página independiente y pasa el identificador como parámetro en la URL
+  window.location.href = `Pagina del producto.html?user_id=${user_id}`; // Cambia 'id' a 'user_id'
+});
+    
     // Agrega el elemento al contenedor
     contenedor.appendChild(card);
   });
@@ -333,6 +335,9 @@ if (productos && productos.length > 0) {
   // Maneja el caso en el que el array de productos esté vacío o no exista
   console.log('No hay productos en el localStorage');
 }
+
+
+
 
 
 

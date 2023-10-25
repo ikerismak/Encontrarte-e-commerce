@@ -3,6 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Contáctanos</title>
+		<!-- Font de google -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<!-- css bootstrap -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -10,27 +24,22 @@
 			crossorigin="anonymous"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
 			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-		/>
-		<link rel="stylesheet" href="./src/styles/main-page.css" />
-		<link rel="stylesheet" href="./src/styles/styleBarraDeNavegacion.css" />
-		<!-- Styles and links register -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./src/styles/registro.css" />
-		<script defer src="./src/scripts/registo.js"></script>
-		<script defer src="./src/scripts/registro-toggle.js"></script>
-		<title>Landing Page</title>
+		<!-- style locales  -->
+		<link rel="stylesheet" href="../styles/registro.css" />
+		<link rel="stylesheet" href="../styles/styleBarraDeNavegacion.css" />
+		<link rel="stylesheet" href="../styles/contactos-normalize.css" />
+		<link rel="stylesheet" href="../styles/style-contactos.css" />
+
+		<!-- scripts  locales -->
+		<script defer src="../scripts/scriptBarraDeNavegacion.js"></script>
+		<script defer src="../scripts/contactos-script.js" type="module"></script>
+		<script defer src="../scripts/registo.js"></script>
+		<script defer src="../scripts/registro-toggle.js"></script>
 	</head>
+
 	<body>
 		<!--comienza navbar-->
 		<header>
@@ -42,7 +51,7 @@
 						<a href="https://www.instagram.com/">
 							<img
 								class="logoInstagram logoRS"
-								src="./src/assets/ImgnavBar&acercaDeNosotros/Instagram.png"
+								src="../assets/ImgnavBar&acercaDeNosotros/Instagram.png"
 								alt=""
 							/>
 						</a>
@@ -53,7 +62,7 @@
 							<img
 								id="facebookLogo"
 								class="logoFacebook logoRS"
-								src="./src/assets/ImgnavBar&acercaDeNosotros/facebook.png"
+								src="../assets/ImgnavBar&acercaDeNosotros/facebook.png"
 								alt=""
 							/>
 						</a>
@@ -63,7 +72,7 @@
 						<a href="https://www.whatsapp.com/">
 							<img
 								class="logoWhatsApp logoRS"
-								src="./src/assets/ImgnavBar&acercaDeNosotros/WhatsApp.png"
+								src="../assets/ImgnavBar&acercaDeNosotros/WhatsApp.png"
 								alt=""
 							/>
 						</a>
@@ -74,7 +83,7 @@
 					<a href="../../index.html">
 						<img
 							id="logoCabecera"
-							src="./src/assets/ImgnavBar&acercaDeNosotros/Logo.png"
+							src="../assets/ImgnavBar&acercaDeNosotros/Logo.png"
 							alt=""
 						/>
 					</a>
@@ -91,7 +100,7 @@
 							>
 								<img
 									id="loginImg"
-									src="./src/assets/ImgnavBar&acercaDeNosotros/Enter.png"
+									src="../assets/ImgnavBar&acercaDeNosotros/Enter.png"
 									alt=""
 								/>
 							</button>
@@ -107,7 +116,7 @@
 							>
 								<img
 									id="favoriteImg"
-									src="./src/assets/ImgnavBar&acercaDeNosotros/Favorite.png"
+									src="../assets/ImgnavBar&acercaDeNosotros/Favorite.png"
 									alt=""
 								/>
 							</div>
@@ -123,7 +132,7 @@
 							<div class="contenedorImgBotonCabecera" id="contenedorImgCarritoBotonCabecera">
 								<img
 									id="CarritoImg"
-									src="./src/assets/ImgnavBar&acercaDeNosotros/carrito.png"
+									src="../assets/ImgnavBar&acercaDeNosotros/carrito.png"
 									alt=""
 								/>
 							</div>
@@ -139,7 +148,7 @@
 					<div id="contenedorImgUserCabecera">
 						<img
 							id="imgPerfilUser"
-							src="./src/assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png"
+							src="../assets/ImgnavBar&acercaDeNosotros/Foto de perfil Usuario.png"
 							alt=""
 						/>
 					</div>
@@ -161,38 +170,34 @@
 					<!-- <button id="botonCerrar" type="button"><i class="bi bi-x-square"></i></button> -->
 					<ul id="navList">
 						<li id="inicio">
-							<a class="textoNormal" href="./index.html" rel="noopener noreferrer">Inicio</a>
+							<a class="textoNormal" href="../../index.html" rel="noopener noreferrer"
+								>Inicio</a
+							>
 						</li>
 						<!--Se agregó el link con target blank para que abra el link en una nueva pestaña, y  ya que esté el navbar terminado cambiar la dirección de la pestaña actual-->
 						<li id="productos">
 							<a
 								class="textoNormal"
-								href="./src/pages/pagina-lista-productos.html"
+								href="../pages/pagina-lista-productos.html"
 								rel="noopener noreferrer"
 								>Productos</a
 							>
 						</li>
 						<li id="Artistas">
-							<a
-								class="textoNormal"
-								href="./src/pages/Artista.html"
-								rel="noopener noreferrer"
+							<a class="textoNormal" href="../pages/Artista.html" rel="noopener noreferrer"
 								>Artistas</a
 							>
 						</li>
 						<li id="Nosotros">
 							<a
 								class="textoNormal"
-								href="./src/pages/indexAcercaDeNosotros.html"
+								href="../pages/indexAcercaDeNosotros.html"
 								rel="noopener noreferrer"
 								>Nosotros</a
 							>
 						</li>
 						<li id="Contactanos">
-							<a
-								class="textoNormal"
-								href="./src/pages/contactos.html"
-								rel="noopener noreferrer"
+							<a class="textoNormal" href="../pages/contactos.html" rel="noopener noreferrer"
 								>Contáctanos</a
 							>
 						</li>
@@ -205,7 +210,7 @@
 				<div id="contenedorBarraBusqueda">
 					<img
 						id="lupaBarraBusqueda"
-						src="./src/assets/ImgnavBar&acercaDeNosotros/Lupa.png"
+						src="../assets/ImgnavBar&acercaDeNosotros/Lupa.png"
 						alt=""
 					/>
 					<input id="barraBusqueda" type="text" />
@@ -225,7 +230,7 @@
 		>
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<img id="logo" src="./src/assets/registro/logo-login.png" alt="logo" />
+					<img id="logo" src="../assets/registro/logo-login.png" alt="logo" />
 
 					<div class="modal-registro">
 						<!-- inicia modal registro -->
@@ -382,7 +387,7 @@
 
 					<!-- VENTANA INICIO SESION-->
 
-					<div class="modal-login visibilty">
+					<div class="modal-login">
 						<!-- header del modal-->
 						<div class="modal-header">
 							<h2 class="fw-bold text-center">Bienvenido a EncontrArte</h2>
@@ -503,400 +508,22 @@
 			</div>
 		</div>
 
-		<!-- Main Gallery seccion 1-->
-		<section id="caracteristicas" class="section py-4">
-			<div class="container-fluid p-0 px-1 py-0">
-				<div class="row">
-					<!-- Columna 1 -->
-					<div class="col-md-1 empty-column-gallery"></div>
-					<!-- Columna 2 -->
-					<div class="col-md-4 column-gallery-one">
-						<div class="row h-100">
-							<div class="col-12 img-container-main-01">
-								<img
-									src="./src/assets/main-gallery/image-main-grid-05.webp"
-									alt="Imagen 3a"
-									class="img-fluid image-gallery-05"
-								/>
-								<div class="text-container-five">
-									<h2>#Pintura al óleo</h2>
-									<p>
-										Técnica clásica con pigmentos y aceites, logrando profundidad y
-										realismo en los detalles.
-									</p>
-								</div>
-							</div>
-							<div class="col-12 pb-5 img-container-main-02">
-								<img
-									src="./src/assets/main-gallery/image-main-grid-06.webp"
-									alt="Imagen 3b"
-									class="img-fluid image-gallery-06"
-								/>
+		<!-- contenedor main -->
+		<main class="box-container">
+			<section class="row box-contacto justify-content-center"></section>
+		</main>
 
-								<div class="text-container-four">
-									<h2>#Acrílico</h2>
-									<p>
-										Pintura de secado rápido a base de agua, versátil y brillante, ideal
-										para diversas superficies
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Columna 3 -->
-					<div class="col-md-2">
-						<div class="row h-100">
-							<div class="col-12 img-container-main-03 position-relative column-three">
-								<img
-									src="./src/assets/main-gallery/image-main-grid-02.webp "
-									alt="Imagen 2a"
-									class="img-fluid h-100 image-gallery-07"
-								/>
-
-								<div class="text-container-three">
-									<h2>#Pintura abstracta</h2>
-									<p>
-										Expresión libre y no representativa, enfocada en formas, colores y
-										texturas emocionales.
-									</p>
-								</div>
-							</div>
-							<div class="col-12 img-container-main-04 position-relative column-two">
-								<img
-									src="./src/assets/main-gallery/image-main-grid-03.webp"
-									alt="Imagen 2b"
-									class="img-fluid h-100 image-gallery-03"
-								/>
-
-								<div class="text-container-two">
-									<h2>#Pintura mural</h2>
-									<p>
-										Arte en gran escala en paredes o techos, contando historias culturales
-										y sociales de comunidades.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Columna 4 -->
-					<div class="col-md-4 img-container-main-05">
-						<div class="col-12 h-100 column1">
-							<img
-								src="./src/assets/main-gallery/image-main-grid-01.webp"
-								alt="Imagen 1"
-								class="img-fluid h-100 image-gallery-01"
-							/>
-							<div class="text-container">
-								<h2>#Pintura hiperrealista</h2>
-								<p>
-									Estilo que busca una representación extremadamente detallada, a menudo
-									confundiéndose con fotografías.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-1"></div>
-					<button class="btn-bajar">
-						<span class="material-symbols-outlined"> expand_more </span>
-					</button>
-				</div>
-			</div>
-		</section>
-
-		<!-- Banner 1 -->
-
-		<div class="container-fluid banner">
-			<a class="btn button-banner-one btn-lg" href="#" role="button">Ver más</a>
-		</div>
-
-		<!-- seccion 2 -->
-
-		<div class="container-fluid banner-title">
-			<h1 class="display-4">#Artista del mes</h1>
-			<p>
-				Descubre el genio creativo detrás de nuestros artistas del mes: sus inspiraciones,
-				técnicas y obras maestras en esta sección exclusiva.
-			</p>
-		</div>
-
-		<section id="caracteristicas" class="section py-4 seccion-main-artist">
-			<div class="container-fluid px-1 py-0">
-				<div class="row">
-					<!-- Columna 1 -->
-
-					<div class="col-md-1"></div>
-					<!-- Columna 2 -->
-
-					<div class="col-md-5 m-0 p-2 pb-5">
-						<div class="col-12 p-0 m-0 h-100 column1">
-							<img
-								src="./src/assets/main-gallery/artist.webp"
-								alt="Imagen 1"
-								class="img-fluid h-100 image-gallery-01"
-							/>
-							<div class="text-container text-artist">
-								<h2>Maria Cervantez</h2>
-							</div>
-						</div>
-					</div>
-					<!-- Columna 4 -->
-
-					<div class="col-md-5 p-4">
-						<div class="row h-100">
-							<div class="col-12 img-container-artist-02">
-								<img
-									src="./src/assets/main-gallery/artist-01.webp"
-									alt="Imagen 3a"
-									class="img-fluid image-gallery-05"
-								/>
-
-								<div class="text-container-six-artist">
-									<p>
-										María Cervantes, nacida en una pequeña ciudad costera, se ha elevado
-										como una fuerza creativa en el mundo del arte urbano. Su estilo
-										distintivo y su pasión por transformar los paisajes urbanos han
-										capturado la imaginación del mundo. Inspirada por la vida cotidiana y
-										las narrativas locales, Cervantes infunde sus murales con una mezcla
-										audaz de colores vibrantes y formas fluidas.
-									</p>
-								</div>
-							</div>
-							<div class="col-12 img-container-artist-03">
-								<img
-									src="./src/assets/main-gallery/artist-02.webp"
-									alt="Imagen 3b"
-									class="img-fluid image-gallery-06"
-								/>
-
-								<div class="text-container-seven-artist">
-									<p>
-										Su arte es una celebración de la diversidad y la comunidad, con temas
-										que van desde la preservación del medio ambiente hasta la igualdad
-										social. María Cervantes no solo pinta murales; crea experiencias que
-										transforman las calles en galerías de arte, haciendo que el arte sea
-										accesible para todos. Su legado perdurará como un testimonio del poder
-										del arte para inspirar, unir y cambiar el mundo.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Columna 5 -->
-
-					<div class="col-md-1"></div>
-					<button class="btn-bajar">
-						<span class="material-symbols-outlined"> expand_more </span>
-					</button>
-				</div>
-			</div>
-		</section>
-		<!--Categories -->
-
-		<section id="contacto" class="section section-images-categories">
-			<div class="container-fluid banner-title-categories">
-				<h1 class="display-4">#Categorias</h1>
-				<p>
-					"Explora nuestro variado mundo de expresión artística: desde óleo a acuarela,
-					descubre las ricas categorías que dan vida al lienzo."
-				</p>
-			</div>
-			<div class="container categories-container">
-				<div class="row categories-cards-container">
-					<!-- Primera columna -->
-					<div class="col-lg-3 col-md-6 mb-4 card-container-column">
-						<div class="card">
-							<img
-								src="./src/assets/categories/grafitti.webp"
-								class="card-img-top"
-								alt="Imagen 2"
-							/>
-							<div class="card-body">
-								<button class="btn btn-dark btn-block toggle-description">
-									<span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-								</button>
-								<p class="card-text mt-3 description" style="display: none">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-									sint ullam doloremque tempore, expedita quo reprehenderit velit placeat
-									voluptatem, quod aspernatur earum animi vel tempora odio consequuntur
-									alias eaque rem!
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- Segunda columna -->
-					<div class="col-lg-3 col-md-6 mb-4 card-container-column">
-						<div class="card">
-							<img
-								src="./src/assets/categories/seccion_drawing.webp"
-								class="card-img-top"
-								alt="Imagen 2"
-							/>
-							<div class="card-body">
-								<button class="btn btn-dark btn-block toggle-description">
-									<span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-								</button>
-								<p class="card-text mt-3 description" style="display: none">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-									sint ullam doloremque tempore, expedita quo reprehenderit velit placeat
-									voluptatem, quod aspernatur earum animi vel tempora odio consequuntur
-									alias eaque rem!
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- Tercera columna -->
-					<div class="col-lg-3 col-md-6 mb-4 card-container-column">
-						<div class="card">
-							<img
-								src="./src/assets/categories/photography.webp"
-								class="card-img-top"
-								alt="Imagen 2"
-							/>
-							<div class="card-body">
-								<button class="btn btn-dark btn-block toggle-description">
-									<span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-								</button>
-								<p class="card-text mt-3 description" style="display: none">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-									sint ullam doloremque tempore, expedita quo reprehenderit velit placeat
-									voluptatem, quod aspernatur earum animi vel tempora odio consequuntur
-									alias eaque rem!
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- Cuarta columna -->
-					<div class="col-lg-3 col-md-6 mb-4 card-container-column">
-						<div class="card">
-							<img
-								src="./src/assets/categories/seccion_aqua.webp"
-								class="card-img-top"
-								alt="Imagen 2"
-							/>
-							<div class="card-body">
-								<button class="btn btn-dark btn-block toggle-description">
-									<span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-								</button>
-								<p class="card-text mt-3 description" style="display: none">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-									sint ullam doloremque tempore, expedita quo reprehenderit velit placeat
-									voluptatem, quod aspernatur earum animi vel tempora odio consequuntur
-									alias eaque rem!
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<div class="container-fluid banner-paper">
-			<h1 class="paper-title-section">#Best Sales</h1>
-		</div>
-
-		<!-- FOOTER -->
+		<!-- contenedor footer -->
 		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2 team-member">
-						<img
-							src="./src/assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegrantePepe.png"
-							alt="Integrante 1"
-						/>
-						<h5>Nombre Integrante 1</h5>
-						<p>Cargo Integrante 1</p>
-					</div>
-
-					<div class="col-md-2 team-member">
-						<img
-							src="./src/assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteMarco.png"
-							alt="Integrante 2"
-						/>
-						<h5>Nombre Integrante 2</h5>
-						<p>Cargo Integrante 2</p>
-					</div>
-
-					<div class="col-md-2 team-member">
-						<img
-							src="./src/assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteIker.png"
-							alt="Integrante 3"
-						/>
-						<h5>Nombre Integrante 3</h5>
-						<p>Cargo Integrante 3</p>
-					</div>
-
-					<div class="col-md-2 team-member">
-						<img
-							src="./src/assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteAngel-modified (1).png"
-							alt="Integrante 4"
-						/>
-						<h5>Nombre Integrante 4</h5>
-						<p>Cargo Integrante 4</p>
-					</div>
-					<div class="col-md-2 team-member">
-						<img
-							src="./src/assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegranteAlicia.png"
-							alt="Integrante 5"
-						/>
-						<h5>Nombre Integrante 5</h5>
-						<p>Cargo Integrante 5</p>
-					</div>
-					<div class="col-md-2 team-member">
-						<img
-							src="./src/assets/ImgnavBar&acercaDeNosotros/FotoPerfilIntegrantePaola.png"
-							alt="Integrante 5"
-						/>
-						<h5>Nombre Integrante 5</h5>
-						<p>Cargo Integrante 5</p>
-					</div>
-				</div>
-
-				<div class="row contact-info">
-					<div class="col-md-6 email-footer">
-						<p>Email: info@example.com</p>
-						<p>Teléfono: (123) 456-7890</p>
-					</div>
-				</div>
-				<div class="row brand-info">
-					<div class="col-md-6">
-						<p class="brand">
-							&copy; 2023 Mi Marca Registrada. Todos los derechos reservados.
-						</p>
-					</div>
-				</div>
-			</div>
+			<p class="head-4">#ArtMovesWorld</p>
+			<p class="head-6">Encontrate 2023,Mexico. Derechos reservados ™Encontrate and Co</p>
 		</footer>
+
+		<!-- script bootstrap -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 			crossorigin="anonymous"
 		></script>
-
-		<script>
-			// Script para mostrar/ocultar la descripción cuando se hace clic en el botón
-			const buttons = document.querySelectorAll(".toggle-description");
-
-			buttons.forEach((button) => {
-				button.addEventListener("click", () => {
-					const card = button.closest(".card");
-					const description = card.querySelector(".description");
-					const icon = card.querySelector(".toggle-icon i");
-					card.classList.toggle("expanded");
-
-					console.log(card.classList);
-					if (card.classList.contains("expanded")) {
-						icon.classList.remove("fa-chevron-down");
-						icon.classList.add("fa-chevron-up");
-						description.style.display = "block";
-					} else {
-						icon.classList.remove("fa-chevron-up");
-						icon.classList.add("fa-chevron-down");
-						description.style.display = "none";
-					}
-				});
-			});
-		</script>
-		<script src="./src/scripts/template-literal.js"></script>
 	</body>
 </html>

@@ -61,7 +61,7 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "9876543210",
     precio: 600,
-    imagen_normal: "ImgnavBar&acercaDeNosotros/Imagenvioleta.png",
+    imagen_normal: "../assets/list-products-images/eyes_pictures.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
     imagen_tres: "/assets/artist.webp",
     imagen_cuatro: "/assets",
@@ -78,7 +78,7 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "5678901234",
     precio: 950,
-    imagen_normal: "list-products-images/mirada_del_alma.png",
+    imagen_normal: "../assets/list-products-images/mancha_plastica.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
     imagen_tres: "/assets/artist.webp",
     imagen_cuatro: "/assets",
@@ -95,9 +95,9 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "2345678901",
     precio: 750,
-    imagen_normal: "list-products-images/mar_y_plantas.png",
+    imagen_normal: "../assets/list-products-images/impacto_colorido.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
-    imagen_tres: "/assets/artist.webp",
+    imagen_tres: "../assets/list-products-images/conexion.jpg",
     imagen_cuatro: "/assets",
     descripcion: "Una pieza abstracta en tonos rojos y vibrantes que despierta emociones y desafía la percepción. Los intrincados detalles y las texturas hacen que esta pintura sea única."
   },
@@ -112,9 +112,9 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "6789012345",
     precio: 1100,
-    imagen_normal: "list-products-images/manchas_opticas.png",
+    imagen_normal: "../assets/list-products-images/mural_oso.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
-    imagen_tres: "/assets/artist.webp",
+    imagen_tres: "../assets/list-products-images/conexion.jpg",
     imagen_cuatro: "/assets",
     descripcion: "Una impresionante representación de una mujer sonriente. La técnica de óleo sobre lienzo añade profundidad y realismo a esta obra, y la sonrisa de la modelo ilumina la pintura."
   },
@@ -129,9 +129,9 @@ const Obra = [
     categoria: "Pinturas",
     certificacion: "0123456789",
     precio: 900,
-    imagen_normal: "list-products-images/manchas_opticas.png",
+    imagen_normal: "../assets/list-products-images/fruteros_abstracto.jpg",
     imagen_dos: "../assets/list-products-images/mirada_al_pasado.png",
-    imagen_tres: "/assets/artist.webp",
+    imagen_tres: "../assets/list-products-images/conexion.jpg",
     imagen_cuatro: "/assets",
     descripcion: "Una representación detallada y vívida de frutas frescas dispuestas en un bodegón. Los colores y las sombras en esta acuarela son sorprendentemente realistas."
   },
@@ -175,41 +175,41 @@ const Obra = [
 
 
 
-
+/////////////imagenes del contendor principal/////////////////////////////////////////////////////////
 // Define una función para agregar objetos a contenedores
 function agregarObjetosAContenedores(arr, contenedores) {
   let contenedorActual = 0; // Inicializa el contenedor actual
   let objetosPorContenedor = 3; // Número máximo de objetos por contenedor
 
   arr.forEach((element, index) => {
-      // Crea un nuevo elemento HTML (por ejemplo, un div)
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.style.width = '15rem';
-      card.dataset.user_id = String(element.user_id); // Cambia 'id' a 'user_id' para que coincida con la URL
-      card.innerHTML = `
+    // Crea un nuevo elemento HTML (por ejemplo, un div)
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.width = '15rem';
+    card.dataset.user_id = String(element.user_id); // Cambia 'id' a 'user_id' para que coincida con la URL
+    card.innerHTML = `
                       <img class="imagenrelacionada" src="../assets/${element.imagen_normal}" width="200px" height="200px" alt="...">
                       <p class="card-text">"${element.titulo}"</p>
                   </div>
       `;
 
-      // Agrega el elemento al contenedor actual
-      contenedores[contenedorActual].appendChild(card);
-      
-      // Agrega un manejador de eventos de clic a la tarjeta
-card.addEventListener('click', () => {
-  // Obtiene el identificador único cuando se hace clic en la tarjeta
-  const user_id = card.dataset.user_id; // Cambia 'id' a 'user_id'
+    // Agrega el elemento al contenedor actual
+    contenedores[contenedorActual].appendChild(card);
 
-  // Redirige a la página independiente y pasa el identificador como parámetro en la URL
-  window.location.href = `Pagina del producto.html?user_id=${user_id}`; // Cambia 'id' a 'user_id'
-});
+    // Agrega un manejador de eventos de clic a la tarjeta
+    card.addEventListener('click', () => {
+      // Obtiene el identificador único cuando se hace clic en la tarjeta
+      const user_id = card.dataset.user_id; // Cambia 'id' a 'user_id'
 
-      // Verifica si el contenedor actual ha alcanzado su capacidad
-      if (contenedorActual < contenedores.length - 1 && (index + 1) % objetosPorContenedor === 0) {
-          // Cambia al siguiente contenedor
-          contenedorActual++;
-      }
+      // Redirige a la página independiente y pasa el identificador como parámetro en la URL
+      window.location.href = `Pagina del producto.html?user_id=${user_id}`; // Cambia 'id' a 'user_id'
+    });
+
+    // Verifica si el contenedor actual ha alcanzado su capacidad
+    if (contenedorActual < contenedores.length - 1 && (index + 1) % objetosPorContenedor === 0) {
+      // Cambia al siguiente contenedor
+      contenedorActual++;
+    }
   });
 }
 
@@ -225,12 +225,15 @@ const contenedores = [carruselContenedor1, carruselContenedor2, carruselContened
 // Llama a la función con tu arreglo de objetos y los contenedores
 agregarObjetosAContenedores(Obra, contenedores);
 
+
+///////////////////////////////////////////////////valores de user id////////////////////
+
 // Obtén el valor del parámetro 'user_id' de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const user_id = urlParams.get('user_id');
 
 
-// Encuentra el producto correspondiente según 'user_id'
+// Encuentra el producto correspondiente según 'user_id'/////////////////////////////////////////////////
 const productoSeleccionado = Obra.find(producto => producto.user_id === parseInt(user_id));
 
 if (productoSeleccionado) {
@@ -238,11 +241,12 @@ if (productoSeleccionado) {
   document.getElementById('tituloobra').textContent = productoSeleccionado.titulo;
   document.getElementById('descripciobr').textContent = productoSeleccionado.descripcion;
   document.getElementById('descripcionobra').textContent = productoSeleccionado.descripcion;
-  document.getElementById('precio').querySelector('span').textContent = productoSeleccionado.precio;
+  document.getElementById('precio').querySelector('span').textContent = `$${productoSeleccionado.precio}`;
   // Obtén las imágenes del carrusel por su ID y establece la fuente (src) de cada una
   document.getElementById('imprpal').src = productoSeleccionado.imagen_normal;
   document.getElementById('imprpal1').src = productoSeleccionado.imagen_dos;
   document.getElementById('imprpal2').src = productoSeleccionado.imagen_tres;
+  document.getElementById('imagenmini').src = productoSeleccionado.imagen_normal;
 
   // Agregar a la lista de técnicas
   const listaTecnicas = document.getElementById('listaTecnicas');
@@ -274,72 +278,129 @@ if (productoSeleccionado) {
   listaobra.appendChild(tecnicaLi1);
   listaobra.appendChild(categoriaLi1);
 } else {
-  // Si el producto no se encuentra, puedes mostrar un mensaje de error o redirigir a una página de error.
-  console.error('Producto no encontrado');
+  // Obtén el arreglo de obras desde el Local Storage
+const obrasJSON = localStorage.getItem('obras');
+const obras = JSON.parse(obrasJSON);
+console.log(obras,[0])
+
+// Verifica si se han obtenido las obras correctamente
+if (obras && obras.length > 0) {
+  // Itera sobre las obras y actualiza los elementos 
+  obras.forEach((obra, index) => {
+    // Actualiza el título en la página con el título de la obra seleccionada
+    document.getElementById('tituloobra').textContent = obra.titulo;
+    
+    // Actualiza la descripción en la página con la descripción de la obra
+    document.getElementById('descripciobr').textContent = obra.descripcion;
+    
+    // Actualiza el precio en la página
+    document.getElementById('precio').querySelector('span').textContent = `$${obra.precio}`;
+
+    // Obtén las imágenes del carrusel por su ID y establece la fuente (src) de cada una
+    document.getElementById('imprpal').src = `../assets/list-products-images/${obra.imagen}`;
+
+     // Obtén las imágenes del carrusel por su ID y establece la fuente (src) de cada una
+     document.getElementById('imagenmini').src = `../assets/list-products-images/${obra.imagen}`;
+ 
+
+  });
+} else {
+  console.log('No se encontraron obras en el Local Storage');
+}
 }
 carrito = []
 
+let contadorCarrito = 0;
+
 // Definir una función para cargar el carrito desde el localStorage
 function cargarCarrito() {
-  const carritoGuardado = localStorage.getItem('carrito');
-  if (carritoGuardado) {
-    // Si hay datos en el localStorage, analízalos y actualiza el arreglo carrito
-    carrito.push(...JSON.parse(carritoGuardado));
-  }
+const carritoGuardado = localStorage.getItem('carrito');
+if (carritoGuardado) {
+// Si hay datos en el localStorage, analízalos y actualiza el arreglo carrito
+carrito.push(...JSON.parse(carritoGuardado));
+}
 }
 // Llama a la función para cargar el carrito cuando la página se carga
 cargarCarrito();
 
+
 // Función para cargar el carrito desde el localStorage
 function cargarCarrito() {
-  const carritoEnLocalStorage = localStorage.getItem('carrito');
-  if (carritoEnLocalStorage) {
-    carrito = JSON.parse(carritoEnLocalStorage);
-  }
+const carritoEnLocalStorage = localStorage.getItem('carrito');
+if (carritoEnLocalStorage) {
+carrito = JSON.parse(carritoEnLocalStorage);
+}
 }
 // Función para agregar un producto al carrito
-function agregarAlCarrito(productoSeleccionado) {
-  const productoEnCarrito = {
-    titulo: productoSeleccionado.titulo,
-    artista: productoSeleccionado.artista,
-    descripcion: productoSeleccionado.descripcion,
-    precio: productoSeleccionado.precio,
-    imagen: productoSeleccionado.imagen_normal,
-    largo: productoSeleccionado.dimension_largo,
-    ancho: productoSeleccionado.dimension_ancho
-  };
+function agregarAlCarrito(producto) {
+const productoEnCarrito = {
+titulo: productoSeleccionado.titulo,
+artista: productoSeleccionado.artista,
+descripcion: productoSeleccionado.descripcion,
+precio: productoSeleccionado.precio,
+imagen: productoSeleccionado.imagen_normal,
+largo: productoSeleccionado.dimension_largo,
+ancho: productoSeleccionado.dimension_ancho
+};
 
-  carrito.push(productoEnCarrito);
-
-  localStorage.setItem('carrito', JSON.stringify(carrito));
-
-  alert(`"${productoSeleccionado.titulo}" se ha agregado al carrito`);
-
-  // Luego, puedes realizar otras acciones, como actualizar la cantidad de productos en el carrito en la interfaz de usuario, si es necesario.
+const obraEnCarrito = {
+  titulo: productoSeleccionado.titulo,
 }
+
+
+carrito.push(productoEnCarrito);
+
+
+localStorage.setItem('carrito', JSON.stringify(carrito));
+
+
+alert(`"${productoSeleccionado.titulo}" se ha agregado al carrito`);
+
+
+
+
+
+// Luego, puedes realizar otras acciones, como actualizar la cantidad de productos en el carrito en la interfaz de usuario, si es necesario.
+}
+
 
 // Obtén el botón "Agregar al Carrito" por su ID
 const botonCarrito = document.getElementById('agregarAlCarrito');
 
+
 // Agregar un manejador de eventos al botón
-botonCarrito.addEventListener('click', function() {
-  agregarAlCarrito(productoSeleccionado);
+botonCarrito.addEventListener('click', function () {
+console.log("carrito");
+if (contadorCarrito == 0) {
+agregarAlCarrito(productoSeleccionado);
+contadorCarrito++;
+}
+else {
+alert("solo se puede agregar un producto agregar al carrito");
+}
+
+
 });
+
 
 const botonCarrito2 = document.getElementById('agregarAlCarrito2');
 
+
 // Agregar un manejador de eventos al segundo botón
-botonCarrito2.addEventListener('click', function() {
-  agregarAlCarrito(productoSeleccionado);
+botonCarrito2.addEventListener('click', function () {
+if (contadorCarrito == 0) {
+agregarAlCarrito(productoSeleccionado);
+}
+else {
+alert("solo se puede agregar un producto agregar al carrito");
+}
 });
 
 
 
-if (localStorage.getItem('obras')) {
-  // Si existe, recuperar el array y convertirlo a un objeto JavaScript
-  const arrayObras = JSON.parse(localStorage.getItem('obras'));
-  console.log('obras',arrayObras);
-}
+
+////////////////producto de almacenamiento local////////////////////////////
+
 
 
 
