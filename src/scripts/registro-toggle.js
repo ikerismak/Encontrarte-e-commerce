@@ -69,18 +69,22 @@ userForm.addEventListener('submit', function (event) {
     })()
     if (bandera) {
         // Obtiene los valores de los campos del formulario
-        const nombre = document.getElementById('inputName').value;
+        const nombres = document.getElementById('inputName').value;
+        const apellidos = document.getElementById('inputLastName').value;
         const telefono = document.getElementById('inputnumber').value;
-        const email = document.getElementById('inputemail').value;
-        const pass = document.getElementById('password').value;
+        const correo = document.getElementById('inputemail').value;
+        const contrasena = document.getElementById('password').value;
         const passConf = document.getElementById('confirmpassword').value;
         // Crea un objeto JSON con los valores del formulario
-        if (pass === passConf) {
+        if (contrasena === passConf) {
             const usuario = {
-                nombre: nombre,
+                nombres: nombres,
+                apellidos: apellidos,
+                correo: correo,
+                contrasena: contrasena,
+                role: "comprador",
                 telefono: telefono,
-                email: email,
-                pass: pass
+                id_compras: "1"
             };
 
             localStorage.setItem('user', JSON.stringify(usuario));
