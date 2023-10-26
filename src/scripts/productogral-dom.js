@@ -294,7 +294,7 @@ if (obras && obras.length > 0) {
   // Encuentra la obra seleccionada basada en user_id
   obraSeleccionada = obras.find(obra => obra.user_id === user_id);
 
-  // Verifica si se encontró la obra
+  // Verifica si se encontró la obra o no
   if (obraSeleccionada) {
     // Actualiza los elementos en la página con los datos de la obra seleccionada
     document.getElementById('tituloobra').textContent = obraSeleccionada.titulo;
